@@ -59,6 +59,12 @@ tools/buildFirm.cmd
 test/
 web/
 docs/
+data/bootstrap.min.css
+data/bootstrap.min.js
+data/chart.umd.min.js
+data/jquery.min.js
+data/jquery.tabletojson.min.js
+data/toast.min.js
 Display/
 Backup/
 *.ino
