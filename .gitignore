@@ -59,6 +59,7 @@ tools/buildFirm.cmd
 test/
 web/
 docs/
+data/
 Display/
 Backup/
 *.ino
