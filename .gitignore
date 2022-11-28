@@ -59,6 +59,7 @@ tools/buildFirm.cmd
 test/
 web/
 docs/
+info/
 data/bootstrap.min.css
 data/bootstrap.min.js
 data/chart.umd.min.js
