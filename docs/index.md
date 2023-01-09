@@ -27,9 +27,10 @@ Updates können im Brautomat bequem über das Menü "Update" eingespielt werden.
 Die Firmware bietet ein Web Update. Über das Web Interface kann eine neue Version eingespielt werden. Ein Kabel oder das Script aus der Installation ist nicht erforderlich.
 Eine zweite Möglichkeit Updates einzuspielen bietet die Möglichkeit "Datei Update". Über diese Möglichkeit muss für ein Update die Firmware Datei (.bin) ausgewählt werden.
 
-## Einrichtung
+## Grundeinrichtung
 
-Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Dallas DS18B20 und ein Induktionskochfeld GGM IDS. Mit dieser Mindestausstattung wird nun eine Grundkonfiguration erstellt. Mit dieser sehr detaillierten Schritt-für-Schritt Anleitung gelingt auch dem Anfänger der Start in die Brausteuerung mit dem Brautomat. Es werden in der Grundeinrichtung nur die benötigten Einstellungen gezeigt. Alle optionalen Einstellungen werden später erläutert.
+Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Dallas DS18B20 und ein Induktionskochfeld GGM IDS. Mit dieser Mindestausstattung wird im Folgenden eine Grundkonfiguration erstellt. Mit dieser sehr detaillierten Schritt-für-Schritt Anleitung gelingt auch dem Anfänger der Start in die Brausteuerung mit dem Brautomat. Es werden in der Grundeinrichtung nur die benötigten Einstellungen gezeigt. Alle optionalen Einstellungen werden später erläutert.
+Hinweis: während der Weiterentwicklung des Brautomaten können sich die Menüs der aktuellen Firmware von den hier dargestellten Bildern geringfügig unterscheiden.
 
 1. Einen Temperatursensor einrichten
 Im Abschnitt Sensoren wird mit einem Klick auf das Plus Zeichen ein neuer Sensor angelegt
