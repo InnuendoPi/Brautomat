@@ -63,8 +63,7 @@ Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerich
 
 ![IDS](img/IDS_pid-einrichten.jpg)
 
-Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei werte PID Kp Ki und Kd selbstständig. Die Parameter im tab "PID Manager" klingen kompliziert und verwirren auf den ersten Blick. Bitte einfach so hinnehmen und alle Werte eintippen. Eine Erläuterung für Interessierte folgt.
-Jetzt wird die Konfugraiton der Induktionskochplatte gespeichert.
+Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte PID Kp Ki und Kd selbstständig. Eine Erläuterung aller Parameter folgt später. Für eine erste Grundeinrichtung sind die Standardwerte gut geeignet. Die Konfugraiton der Induktionskochplatte abspeichern.
 
 An dieser Stelle ist die Grundkonfiguration bereits abgeschlossen. Mit einem Sensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan erforderlich.
 
@@ -94,3 +93,24 @@ Und was passiert, wenn bei "autonext" kein Häkchen gesetzt ist? Die Eigenschaft
 ![Maischeplan](img/Maischeplan_pause.jpg)
 
 Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn der Schritt "Abmaischen 78°C" erledigt ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Brauer wartet.
+
+## Alle Parameter im Überblick
+
+### Max. Leistung IDS
+
+Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten in Umgebungen mit kleineren Braukesseln zusammen betrachtet werden.
+
+### Temperatur delta zum Ziel
+
+Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur der Timer einer Rast starten soll. Der Standardwert ist 0.3°C.
+Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteuerung. Eine Rasttemperatur wird mit +-0.2°C genau erreicht, indem der PID Controller die Energiezufuhr kurz vor Erreichen der Rasttemperatur kontrolliert reduziert. Würde die Energiezufuhr erst mit Erreichen der Rasttemperatur reduziert werden, wäre ein deutliches Überschwingen um mehr als 1°C unvermeidlich. Die Reduzierung der Energiezufuhr hat als Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "delta zum Ziel" ins Spiel: soll bspw. eine Rasttemperatur von 63°C erreicht werden und ist die aktuelle Temperatur 62.7°C, dann würde mit einem Temperatur delta zum Ziel von 0.3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden. Zu beachten gilt auch, dass die IST-Temperatur mit einer Genauigkeit von 0.125°C ermittelt wird.
+
+### Temperatur Kochen
+
+Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 98°C. Dieser Parameter beschreibt NICHT, ab welcher Temperatur die Würze beginnt zu kochen! Anders als bei den Rasttemperaturen ist beim Kochen nicht das genaue erreichen und halten der Temperatur das Ziel, sondern das wallend kochen. Es ist in den allermeisten Fällen nicht erwünscht, dass der PID Controller kurz vor dem Kochen bei ca. 100°C die Leistung reduziert. Die Temperatur Kochen beschreibt also die Temperatur, ab der der PID Controller deaktiviert wird. Je nach Umgebung ist dieser Wert auf 95°C zu setzen.
+
+### Leistung Kochen
+
+Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Temperatur kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung kochen" wird nun die feste Ausgangsleistung der IDS ab der Temperatur Kochen vorgegeben. Wird ein Braukessel mit großem Volumen (40l oder mehr) eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr zum Kochen ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
+
+Diese vier Parameter sind je Brauanlage individuell einzustellen. Die Parameter können während eines Maischeprozesses geändert werden. Mit einem Testlauf mit einer typischen Menge Wasser können die Paramter vor einem Brautag leicht ermittelt werden.
