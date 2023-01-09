@@ -60,11 +60,11 @@ Als nächste Eigenschaft muss der Sensor angegeben werden, welcher mit dem Kesse
 
 ![IDS](img/IDS_konfigurieren.jpg)
 
-Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller ist ein sehr wichtiges Element. Je besser der PID-Controller eingestellt ist, desto genauer wird die Rasttemperatur über die Rastzeit gehalten. Mit dem Thema PID beschäftigt sioch diese Anleitung später genauer. Für eine erste Grundeinrichtung werden folgende Werte eingetragen:
+Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller ist ein sehr wichtiges Element. Je besser der PID-Controller eingestellt ist, desto genauer wird die Rasttemperatur über die Rastzeit gehalten. Mit dem Thema PID beschäftigt sioch diese Anleitung später genauer. Für eine erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen:
 
 ![IDS](img/IDS_pid-einrichten.jpg)
 
-Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte PID Kp Ki und Kd selbstständig. Eine Erläuterung aller Parameter folgt später. Für eine erste Grundeinrichtung sind die Standardwerte gut geeignet. Die Konfugraiton der Induktionskochplatte abspeichern.
+Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte PID Kp Ki und Kd selbstständig. Eine Erläuterung aller Parameter erfolgt später. Für eine erste Grundeinrichtung sind die Standardwerte gut geeignet. Die Konfugraiton der Induktionskochplatte abspeichern.
 
 An dieser Stelle ist die Grundkonfiguration bereits abgeschlossen. Mit einem Sensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan erforderlich.
 
