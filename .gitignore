@@ -70,3 +70,4 @@ Backup/
 *.ino
 *.h
 *.cpp
+*.hintrc

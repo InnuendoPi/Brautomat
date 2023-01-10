@@ -68,6 +68,10 @@ Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind
 
 An dieser Stelle ist die Grundkonfiguration bereits abgeschlossen. Mit einem Sensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan erforderlich.
 
+## Sensor Kalibrierung
+
+Sensoren vom Typ Dallas DS18B20 haben teilweise gravierende Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
+
 ## Der Maischeplan
 
 ![Maischeplan](img/Maischeplan.jpg)
@@ -95,7 +99,61 @@ Und was passiert, wenn bei "autonext" kein Häkchen gesetzt ist? Die Eigenschaft
 
 Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn der Schritt "Abmaischen 78°C" erledigt ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Brauer wartet.
 
-## Alle Parameter im Überblick
+## AutoTune
+
+AutoTune hat die wichtige Aufgabe, passende Parameter für die Brauanlage zu ermitteln, damit der Maischeprozess exakt durchgeführt wird. Im Fokus stehen die IST- und die zugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass ein Über- und Unterschwingen vermieden werden soll.
+
+![AutoTune4](img/IDS_AutoTune_Ziel.jpg)
+
+Die folgende Beschreibung dient ausschließlich als Hilfe zur Verwendung der Firmware.
+Der PID-Controller steuert die Leistung der Induktonsplatte. Es ist wichtig, geeignete P I D Werte zu ermitteln. Dabei sind die PID Werte je Brauanlage und Umgebung individuell. AutoTune ist ein Prozess, der bei der Ermittlung geeigneter Werte unterstützt.
+Die benötigte Leistung der Induktionsplatte, um von der Ist-Temperatur zur Zieltemperatur zu gelangen, wird aus der Summe der drei Werte berechnet:
+Erforderliche Leistung = P + I + D
+
+### Der P-Wert
+
+Dieser Parameter wirkt auf der Basis Unterschied zwischen Ist und Soll. Je größer der Unterschied zwischen der Ist- und der Zieltemperatur ist, desto stärker heizt die Induktionsplatte mit dem P-Anteil. Ist die Zieltemperatur erreicht oder überschritten, ist der P-Anteil gleich 0. Ein reiner P-Regler kann daher nie die Zieltemperatur erreichen, weil beim Erreichen der Zieltemperatur P = 0 ist und somit gar nicht mehr geheizt wird. Ein sehr hoher P-Wert bewirkt ein starkes Über- bzw. Unterschwingen.
+
+### Der I-Wert
+
+Der I-Wert wird, während die Induktionsplatte heizt, bei null beginnend fortlaufend größer. Je länger die Induktionsplatte von der Ist-Temperatur zur Zieltemperatur benötigt, desto größer wird der I-Wert. Zusammen mit dem P-Wert ergibt sich nun folgende Addition:
+Der P-Wert wird bei Annäherung an die Zieltemperatur kleiner und der I-Wert größer. Nur über den I-Wert wird die Zieltemperatur erreicht. Der I-Wert wird oberhalb der Zieltemperatur wieder kleiner. Der I-Wert erzeugt ein Überschwingen.
+
+### Der D-Wert
+
+Der D-Wert ist ein Dämpfer, der die Schwingungen der ersten beiden Anteile mindert. Ein zu starker D-Anteil verlangsamt das Auf- und Nachheizen der Induktionsplatte. Dieser Wert kann auch null sein.
+
+### Der AutoTune Prozess: Schritt für Schritt
+
+Das praktische Vorgehen AutoTune schaut wie folgt aus:
+
+![AutoTune](img/IDS_AutoTune.jpg)
+
+1. Befülle Deinen Kessel mit einer typischen Menge Wasser
+
+    a. Eine typische Menge entspricht dem Hauptguss + Schüttung
+
+    Beispiel: 20l Hauptguss und 5kg Schüttung ergibt eine typische Menge von 25l
+
+    b. Schalte das Rührwerk ein
+
+2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte mindestens 10°C über der aktuellen Ist-Temperatur liegen.
+3. Aktiviere „PID AutoTune“
+4. Aktiviere „AutoTune debug“
+5. Speichere diese Einstellung ab (IDS speichern)
+6. Mit einem Klick auf den grünen Power Button wird "AutoTune IDS" gestartet.
+
+![AutoTune2](img/IDS_AutoTune_start.jpg)
+
+Der AutoTune Prozess dauert je nach Umgebung 45 bis 90min. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt.
+
+Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
+
+![AutoTune3](img/IDS_AutoTune_erg.jpg)
+
+Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Diese zwei Werte bitte notieren bzw. ein Backup der config.txt erstellen. Aus diesen zwei Brauanlagen-Werten werden die PID-Werte berechnet werden.
+
+## Alle GGM IDS Parameter im Überblick
 
 ### Max. Leistung IDS
 
@@ -115,3 +173,33 @@ Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen
 Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Temperatur kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung kochen" wird nun die feste Ausgangsleistung der IDS ab der Temperatur Kochen vorgegeben. Wird ein Braukessel mit großem Volumen (40l oder mehr) eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr zum Kochen ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
 
 Diese vier Parameter sind je Brauanlage individuell einzustellen. Die Parameter können während eines Maischeprozesses geändert werden. Mit einem Testlauf mit einer typischen Menge Wasser können die Paramter vor einem Brautag leicht ermittelt werden.
+
+### AutoTune noiseband
+
+Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. AutoTune noiseband gibt an, welche Mindeständeurng zum vorherigen Messwert vorhanden sein muss, um einen neuen Extremalwert zu erkennen. Der Standardwert beträgt 0.2. Es gilt zu beachten, dass die Messgenauigkeit bei 0.125 liegt.
+
+### AutoTune Intervall
+
+Dieser Parameter gibt an, in welchem zeitlichen Abstand Messwerte ermittelt werden. Der Standardwert ist 5000ms. Zu beachten gilt, dass der Temperatursensor alle 2500ms abgefragt wird.
+
+### AutoTune Datenreihe
+
+Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwerten betrachtet werden sollen. Der Standardwert beträgt 75 Messwerte. Zu beachten gilt, dass maximal 100 Messwerte konfiguriert werden können. Bei sehr gut wärmeisolierten Braukesseln (bspw. mit Armaflex) kann eine Erhöhung auf 100 Messwerte in der Datenreihe die Erkennung von Extremalwerten in der Abkühlphase vom AutoTune Prozess verbessern.
+
+## Alle System Parameter im Überblick
+
+### Aktiviere Alarm-Buzzer
+
+Mit diesem parameter kann ein Piezo Buzzer aktiviert werden. Zu beachten gilt, dass der Buzzer an GPIO D8 angeschlossen sein muss. Buzzer Alarme unterstützen den Maischeprozess durch Signaltöne.
+
+### Aktiviere Info Nachrichten Toasts
+
+Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel oben rechts im Browser. Toasts vom Typ Information verschwinden nach wenigen Sekunden selbstständig. Toasts vom Typ Warnung oder Fehler verbleiben im Browserfenster, bis der User die wegklickt.
+
+### Aktviere Porterweiterung PCF8574
+
+Mit diesem Parameter kann eine 8-Port GPIO Erweiterung am ESP8266 betrieben werden. Zu beachten gilt, dass die Port Erweiterung an D5, D6 angeschlossen werden muss. Der Interrupt Modus wird nciht unterstützt.
+
+### Aktiviere Touchdisplay
+
+Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden. Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Displays.
