@@ -99,6 +99,26 @@ Und was passiert, wenn bei "autonext" kein Häkchen gesetzt ist? Die Eigenschaft
 
 Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn der Schritt "Abmaischen 78°C" erledigt ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Brauer wartet.
 
+### Funktion Power Button
+
+Über den Power Button wird der Maischeprozess ein- bzw. ausgeschaltet. Sobald AutoTune in den Einstellungen der GGM IDS oder im Nachguss aktiviert ist, wird der AutoTune Prozess üb den Power Button gestartet bzw. gestoppt.
+
+### Funktion Play Button
+
+Mit dem Play Button hat im Maischeprozess zwei Funktionen:  setze den Maischeprozess mit der nächsten Rast fort und starte sofort Rast-Timer. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" erläutert. Die zweite Funktion "starte sofort den Rast-Timer" setzt die Überprüfung der IST-Temperatur gegenüber der Rast-Temperatur aus und startet unabhängig von der IST-Temperatur den Rast-Timer. Ein Anwendungsfälle ist, wenn der Maischeprozess nicht nach Plan verläuft und der Brauer eingreifen muss. Beim Schritt Kochen der Würze kann der Rast-Timer gestartet werden, wenn augenscheinlich das wallend Kochen beginnt.
+
+### Funktion Pause Button
+
+Mit dem Pause Button wird der Rast-Timer im Maischeprozess angehalten. Der Play Button erschreint rot. Der Maischeprozess wird mit einem Klick auf den PLay Button fortgesetzt. Wichtig zu beachten gilt es, dass die aktuelle Temperatur gehalten wird. Hier unterscheiden sich "Pause" und "autonext": bei deaktiviertem autonext schaltet die GGM IDS ab, während bei einem pausierten Rast-Timer die aktuelle Temperatur gehalten wird.
+
+### Funktion Forward Button
+
+Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Planb war der Maischeprozess beendet.
+
+### Funktion Graph Button
+
+Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bzw. ausgeblendet werden. Zusätzlich können einzelne Graphen durch Klick auf den Graphnamen ein- und ausgeblendet werden.
+
 ## AutoTune
 
 AutoTune hat die wichtige Aufgabe, passende Parameter für die Brauanlage zu ermitteln, damit der Maischeprozess exakt durchgeführt wird. Im Fokus stehen die IST- und die zugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass ein Über- und Unterschwingen vermieden werden soll.
