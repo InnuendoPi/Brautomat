@@ -2,6 +2,7 @@
 
 Version 1.0e
 
+Korrektur:  WebUpdate Tools ist Teil von WebUpdate Firmware. Button WebUpdate Tools entfernt
 Neu:        Neue Option für Toasts "Info": alle Nachrichten
 Neu:        Neue Option für Toasts "Fehler": nur Nachrichten bei Sensor oder WLAN Fehler
 Update:     ESP8266 core fix #8796 #8797
