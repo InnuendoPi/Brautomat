@@ -1,7 +1,11 @@
 # Changelog
 
-Version 1.0c
+Version 1.0e
 
+Neu:        Neue Option für Toasts "Info": alle Nachrichten
+Neu:        Neue Option für Toasts "Fehler": nur Nachrichten bei Sensor oder WLAN Fehler
+Update:     ESP8266 core fix #8796 #8797
+Update:     VSCode 1.74.3
 Korrektur:  Umwandlung Sensor Adresse in Hex (SetResolution)
 Neu:        Parameter Maximale Leistung IDS kann nun während des Brauens verändert werden
 Neu:        Parameter Temperatur Kochen IDS kann nun während des Brauens verändert werden
