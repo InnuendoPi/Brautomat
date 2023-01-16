@@ -1,7 +1,13 @@
 # Changelog
 
-Version 1.0e
+Version 1.0f
 
+Update:     ESP8266 Arduino 3.1.1
+Geändert:   Refresh Sensoren, IDS und HLT auf 2000ms
+Geändert:   AutoTune timeout auf 20min
+Geändert:   Max Leistung als oberes Limit in die PID Berechnung integriert
+Neu:        Eigenschaft Max Leistung HLT eingefügt
+Korrektur:  Fehler HLT PID Berechnung behoben
 Korrektur:  WebUpdate Tools ist Teil von WebUpdate Firmware. Button WebUpdate Tools entfernt
 Neu:        Neue Option für Toasts "Info": alle Nachrichten
 Neu:        Neue Option für Toasts "Fehler": nur Nachrichten bei Sensor oder WLAN Fehler
