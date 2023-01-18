@@ -1,5 +1,20 @@
 # Changelog
 
+Version 1.0g
+
+* Geändert:   Parameter AutoTune Intervall umbenanntn in PID Intervall (IDS und Nachguss) [2sek bis 5sek]
+* Geändert:   Parameter PID Intervall in Tab PID-Manager verschoben
+* Geändert:   das PID Intervall (SampleTime) legt die Taktung Auslesen Sensor und Leistung an Indution fest
+* Anmerkung:  Reihenfolge: Sensorwert auslesen - PID Berechnung - berechnete Leistung an IDS senden
+* Anmerkung:  ein sehr kleines Intervall (alle 2sek) führt zu sehr vielen Berechnungen wordurch der Brautomat träger reagiert.
+* Anmerkung:  kleinere Intervalle (2sek) kann bei kleinen Maischevolumen (10-15l) vorteilhaft sein
+* Korrektur:  Fehler HLT PID Anzeige behoben
+* Korrektur:  HLT AutoTune Zieltemperatur readonly
+* Korrektur:  Web Interface Parameterbeschreibungen
+* Geändert:   Das Ein- und Ausblenden der Tabellen Nachguss, Sensoren und Aktoren wird nicht mehr automatisch gespeichert
+* Geändert:   Das Ändern der Tuning Regel wird nicht mehr automatisch gespeichert
+* Neu:        Überprüfung Wertebereich für Eingaben der Paramtertypen Leistung, Temperatur, Anzahl und Zeit eingefügt
+
 Version 1.0f
 
 * Update:     ESP8266 Arduino 3.1.1

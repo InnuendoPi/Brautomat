@@ -11,6 +11,13 @@ Changelog: <https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md>
 
 ## WebInterface
 
+Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein  Browser mit Unterstützung für CSS3, HTML5 und Javascript benötigt (Bootstrap 4.6), u. a.
+
+* Edge ab Version 12 (getestet auf Win10, Win11 und iOS 16)
+* Chrome ab Version 45
+* iOS ab Version 9
+* Android ab Version 4.4
+
 ![Startseite](docs/img/brautomat.jpg)
 
 ![Startseite](docs/img/IDS_AutoTune_Ziel.jpg)
@@ -19,10 +26,10 @@ Changelog: <https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md>
 
 ## Nextion HMI Touchdisplay
 
-Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werden nur Nextion ITEAD HMI 3.5 Zoll Display unterstützt.
+Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werden nur Nextion ITEAD HMI 3.5 Zoll Displays unterstützt.
 
-* Braustatus Info               (nur visuelle Darstellung, keine Steuerung)
-* MaischeSud Info               (nur visuelle Darstellung, keine Steuerung)
+* Braustatus Info               (Infoscreen, keine Steuerung)
+* MaischeSud Info               (Infoscreen, keine Steuerung)
 * Manuelle Steuerung Kochen     (manuelle Steuerung der IDS (beta) )
 
 ![Startseite](docs/img/kettlepage.jpg) ![Startseite](docs/img/brewpage.jpg) ![Startseite](docs/img/induction_mode.jpg)

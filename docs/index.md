@@ -236,9 +236,9 @@ Diese vier Parameter sind je Brauanlage individuell einzustellen. Die Parameter 
 
 Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. AutoTune noiseband gibt an, welche Mindeständeurng zum vorherigen Messwert vorhanden sein muss, um einen neuen Extremalwert zu erkennen. Der Standardwert für die GGM IDS beträgt 0.2. Für einen Nachguss Kocher über ein Relais oder SSR beträgt der Standardwert 0.3. Es gilt zu beachten, dass die Messgenauigkeit bei 0.125 liegt.
 
-### AutoTune Intervall
+### PID Intervall
 
-Dieser Parameter gibt an, in welchem zeitlichen Abstand Messwerte ermittelt werden. Der Standardwert ist 5000ms. Zu beachten gilt, dass der Temperatursensor alle 2500ms abgefragt wird.
+Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 5000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. Zu beachten gilt, dass der Temperatursensor alle 2500ms abgefragt wird.
 
 ### AutoTune Datenreihe
 
