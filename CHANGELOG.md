@@ -1,5 +1,14 @@
 # Changelog
 
+Version 1.0h
+
+* Korrektur:  Speicherzuteilung Rezept nicht ausreichend für 15 Maischeschritte. Neue Größe Rezpet JSON 2048
+* Korrektur:  Fehler in autonext behoben, wenn setpoint vom nachfolgenden Maischeschritt unter Ist-Temperatur liegt
+* Neu:        Wenn die Zieltemperatur auf 0°C gesetzt wird und autonext aktiv, wird der Step ohne Temperaturprüfung gestartet
+* Korrektur:  Typo: Änderung am Objekt IDS während des Brauens ändert die Leistung Objekt HLT.
+* Korrektur:  Temperatur delta zum Ziel sowohl über als auch unter setpoint (fabs)
+* Korrektur:  HLT Standardregel INDIVIDUAL_PID
+
 Version 1.0g
 
 * Geändert:   Parameter AutoTune Intervall umbenanntn in PID Intervall (IDS und Nachguss) [2sek bis 5sek]
