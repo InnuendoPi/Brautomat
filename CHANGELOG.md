@@ -1,5 +1,14 @@
 # Changelog
 
+Version 1.0i
+
+* Update:     ESP8266 cores aktualisiert
+* Update:     Arduino for Visual Code 0.4.13
+* Korrektur:  Ticker Bibliothek
+* Korrektur:  Name im AP Modus Brautomat
+* Korrektur:  Im Modus Kochen wurde ein logischer Fehler in der Auswertung autonext behoben
+* Neu:        Zubrühen
+
 Version 1.0h
 
 * Korrektur:  Speicherzuteilung Rezept nicht ausreichend für 15 Maischeschritte. Neue Größe Rezpet JSON 2048
