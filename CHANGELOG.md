@@ -1,5 +1,12 @@
 # Changelog
 
+Version 1.0j
+
+* Neu:        Button vorheriger Step. Springt einen Maischeschritt zurück.
+              Wenn Pause aktiviert ist, wird der Rast-Timer der aktuellen Rast zurückgesetzt.
+* Korrektur:  Bibliothek ESPSoftSerial aktualisiert (github #267)
+* Geändert:   Anleitung auf gitpages aktualisiert
+
 Version 1.0i
 
 * Update:     ESP8266 cores aktualisiert

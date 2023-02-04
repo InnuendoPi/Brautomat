@@ -113,6 +113,9 @@
 .icon-pause:before {
   content: "\f04c";
 }
+.icon-step-backward:before {
+  content: "\e904";
+}
 .icon-step-forward:before {
   content: "\f051";
 }
