@@ -68,16 +68,18 @@ Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Da
     * PIN gelb [Command] - Standardeinstellung: D6
     * PIN blau [Interrupt] - Standardeinstellung: D7
 
-    Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt. Wichtig: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen.
+    Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
+    Wichtig: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen.
+
     Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte werden übernommen.
 
     ![IDS](img/IDS_konfigurieren.jpg)
 
-    Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet fortlaufend die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Zeit gehalten. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen:
+    Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet fortlaufend die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
 
     ![IDS](img/IDS_pid-einrichten.jpg)
 
-    Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte P, I und D selbstständig. Eine Erläuterung aller Parameter erfolgt später.
+    Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte P, I und D automatisch. Eine Erläuterung aller Parameter erfolgt später.
 
     Mit dem Speichern der Konfiguration ist die Grundkonfiguration bereits abgeschlossen. Mit einem Temperatursensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan und eine Steuerung erforderlich.
 
@@ -87,12 +89,12 @@ Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Da
 
 ![Maischeplan](img/Maischeplan.jpg)
 
-Der Brautomat arbeiten nach einem Maischeplan. Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. In diesem Beispiel ist die Zeile "Einmaischen 50°C" ist der erste Maische-Schritt und "Kochen Hopfengabe 2" der letzte Maische-Schritt. Jede Zeile der Tabelle hat diese Spalten:
+Der Brautomat arbeiten nach einem Maischeplan. Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. In diesem Beispiel ist die Zeile "Einmaischen 50°C" ist der erste Maische-Schritt und "Nachisomerisierung" der letzte Maische-Schritt. Jede Zeile der Tabelle hat diese Spalten:
 
 * Die Spalte "Rast" zeigt einen Namen für diesen Maische-Schritt
 * Die Spalte "Temperatur" zeigt die Rast-Temperatur
-* Die Spalte "Dauer" ist die Rast-Zeit (Timer), wie lange der Brautomat die Rast-Temperatur halten soll
-* Die Spalte "autonext" besagt, ob automatisch zum nächsten Schritt gwechselt wird, wenn die Rast-Zeit (Timer) erreicht ist
+* Die Spalte "Dauer" ist die Rast-Dauer (Timer), wie lange der Brautomat die Rast-Temperatur halten soll
+* Die Spalte "autonext" besagt, ob automatisch zum nächsten Schritt gwechselt wird, wenn die Rast-Dauer (Timer) erfüllt ist
 
 Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons mit den folgenden Funktionen:
 
@@ -110,14 +112,15 @@ Die Eigenschaft "autonext" im fünften Schritt "Abmaischen 78°C" ist nicht akti
 
 Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn der Schritt "Abmaischen 78°C" erledigt ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet.
 
-Wenn die Funktion "autonext" aktiviert ist, überprüft der Brautomat forlaufend die aktuelle Ist-Temperatur mit der Rast-Temperatur. Die Eigenschaft "Temperatur delta zum Ziel" gibt an, wie viel Grad Unterschied vorhanden sein darf, um den nächsten Maische-Schritt zu starten. In dem Beispiel Maltoserast 63°C und bei einem "Temperatur delta zum Ziel" von 0.3°C würde der Maischeschritt ab einem Messwert von 62.7°C gestartet (bzw. ab 63.3°C).
-Wichtig: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben.
+Wenn die Funktion "autonext" aktiviert ist, überprüft der Brautomat forlaufend die aktuelle Ist-Temperatur mit der Rast-Temperatur. Die Eigenschaft "Temperatur delta zum Ziel" gibt an, wie viel Grad Unterschied vorhanden sein darf, um den nächsten Maische-Schritt zu starten. In dem Beispiel Maltoserast 63°C und bei einem "Temperatur delta zum Ziel" von 0.3°C würde der Maischeschritt ab einer Ist-Temperatur von 62.7°C gestartet (bzw. ab 63.3°C).
+
+    Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird.
 
 Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Diese Sonderfunktion kann bspw. nach dem Kochen der Würze nützlich sein, wenn einer Timer für die Nachisomerisierung gestartet und die GGM IDS ausgeschaltet werden soll.
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Hat ein Schritt im Maischeplan die Eigenschaft "autonext" deaktivert und ist eine Aktion durch den Anwender erfolgt, dann kann mittels dem Play Button der nächste Schritt gestartet werden.
 
-    * Tipp: Hopfengaben - Im Bild Maischeplan ist das Würzekochen unterteilt in "Kochen", "Kochen Hopfengabe 1" und "Kochen Hopfengabe 2". Die Unterteilung kann passend zur Anzahl der Hopfengaben vorgenommen werden. Wenn ein Buzzer angeschlossen ist, ertönt mit jedem Schritt ein Signalton.
+    Tipp: Hopfengaben - Im Bild Maischeplan ist das Würzekochen unterteilt in "Kochen", "Kochen Hopfengabe 1" und "Kochen Hopfengabe 2". Die Unterteilung kann passend zur Anzahl der Hopfengaben vorgenommen werden. Wenn ein Buzzer angeschlossen ist, ertönt mit jedem Schritt ein Signalton.
 
 ## Steuerung Maischeplan
 
@@ -155,7 +158,7 @@ Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder
 
 Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
 
-    * Tipp: das Induktionskochfeld sollte zur Messung ausgeschaltet sein.
+    Tipp: das Induktionskochfeld sollte zur Messung ausgeschaltet sein.
 
 ---
 
@@ -213,7 +216,7 @@ Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-M
 
 Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch in CraftBeerPi PIDBoil eingestezt wird.
 
-    * Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden.
+    Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden.
 
 Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann über den Explorer das Protokoll "autotune_log.txt" eingesehen werden. Diese Datei sollte nach AutoTune kontrolliert werden. Entscheidend sind die letzten Zeilen in der Protokoll Datei:
 
@@ -257,7 +260,7 @@ Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteu
 Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt NICHT, ab welcher Temperatur die Würze beginnt zu kochen. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung Kochen" das Induktionskochfeld steuert.
 Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer gleichbleibenden Leistng betrieben.  
 
-    * Tipp: Bei Ist-Temperaturen über dem Wert Temperatur Kochen und über der Rast-Temepratur wird der Parameter "Temperatur Delta zum Ziel" nicht beachtet.
+    Tipp: Bei Ist-Temperaturen über dem Wert Temperatur Kochen und über der Rast-Temepratur wird der Parameter "Temperatur Delta zum Ziel" nicht beachtet.
 
 ### Leistung Kochen
 
@@ -331,7 +334,7 @@ Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bz
 
 Mit dem Auge-Button können Teile der Webseite sichtbar bzw. unsichtbar geschaltet werden. Wen bspw. keine Aktoren eingesetzt werden, kann die Tabelle Aktoren ausgeblendet werden.
 
-    * Tipp: alle nicht benötigten Elemente auf der Webseite ausgeblenden und anschließend die Systemkonfiguration öffnen und auf Speichern klicken. Damit übernimmt der Brautomat die Einstellung und blendet beim nächsten Start alle markierten Elemente aus.
+    Tipp: alle nicht benötigten Elemente auf der Webseite ausgeblenden und anschließend die Systemkonfiguration öffnen und auf Speichern klicken. Damit übernimmt der Brautomat die Einstellung und blendet beim nächsten Start alle markierten Elemente aus.
 
 ---
 
