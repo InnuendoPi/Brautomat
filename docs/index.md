@@ -261,9 +261,9 @@ Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.
 
 In der Datei "idsAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
 
-* Tipp: Der Brautomat eignet sich auch ganz wunderbar zum Rinderfilet sous-vide gegaren
+* Tipp: Der Brautomat eignet sich auch Rinderfilet sous-vide garen
 
-![sous-vide](img/sous-vide.mov)
+![sous-vide](https://github.com/InnuendoPi/Brautomat/blob/902ebc2d2e0bdd0c15b0d2033b902c2b185cac1f/docs/img/sous-vide.mov)
 
 ---
 
