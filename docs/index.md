@@ -34,44 +34,46 @@ Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktue
 
 ## Grundeinrichtung
 
-Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Dallas DS18B20 und ein Induktionskochfeld GGM IDS. Mit dieser Mindestausstattung wird im Folgenden eine Grundkonfiguration erstellt. Mit dieser sehr detaillierten Schritt-für-Schritt Anleitung gelingt auch dem Anfänger der Start in die Brausteuerung mit dem Brautomat. Es werden in der Grundeinrichtung nur die benötigten Einstellungen gezeigt. Alle optionalen Einstellungen werden später erläutert.
+Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Dallas DS18B20 und ein Induktionskochfeld GGM IDS. Mit dieser Mindestausstattung wird im Folgenden eine Grundkonfiguration erstellt. Es werden in der Grundeinrichtung nur die benötigten Einstellungen gezeigt. Alle optionalen Einstellungen werden später erläutert.
 
 1. Schritt: einen Temperatursensor einrichten
-Im Abschnitt Sensoren wird mit einem Klick auf das Plus Zeichen ein neuer Sensor angelegt
 
-![Sensoren](img/Sensor_einrichten.jpg)
+    Im Abschnitt Sensoren wird mit einem Klick auf das Plus Zeichen ein neuer Sensor angelegt
 
-Sensoren vom Typ Dallas DS18B20 haben eine eindeutige Adresse. Über diese Adresse erkennt die Firmware intern bis zu 5 Sensoren. Die Sensor Adresse kann aus der Auswahlliste ausgewählt. Die Adresse kann nicht editiert werden. Die Firmware erkennt selbstständig alle angeschlossenen Sensoren. Wird ein Sensor nicht angezeigt, kann mit dem Reload Button die Erkennung der Sensoren neu gestartet werden. Wird ein Sensor weiterhin nicht angezeigt, muss die Kabelverbindung überprüft werden. Als zweite Eigenschaft besitzt ein Sensor einen Namen. Über den Namen kann der Benutzer die Sensoren unterscheiden. In dieser Grundkonfiguration hat der Sensor den Namen "Sensor IDS2".
+    ![Sensoren](img/Sensor_einrichten.jpg)
 
-![Sensoren](img/Sensor_einstellungen.jpg)
+    Temperatursensoren vom Typ Dallas DS18B20 haben eine eindeutige Adresse. Über diese Adresse erkennt der Brautomat bis zu 5 Sensoren. Die Sensor Adresse kann aus der Auswahlliste ausgewählt. Wird kein Sensor angezeigt, kann mit dem Reload Button die Erkennung der Sensoren neu gestartet werden. Wird weiterhin kein Sensor angezeigt, ist die Kabelverbindung zu überprüfen. Als zweite Eigenschaft besitzt ein Sensor einen Namen. Über den Namen kann der Benutzer die Sensoren unterscheiden. In dieser Grundkonfiguration hat der Sensor den Namen "Sensor IDS2".
 
-Die Eigenschaften Offset 1 und Offset 2 werden später erläutert. Für die Grundkonfiguration belassen wir beide Werte auf 0.00. Mit einem Klick auf "Sensor speichern" wird der Sensor angelegt und im Dashboard im Abschnitt Sensoren angezeigt:
+    ![Sensoren](img/Sensor_einstellungen.jpg)
 
-![Sensoren](img/Sensor_dashboard.jpg)
+    Die Eigenschaften Offset 1 und Offset 2 werden später erläutert. Für die Grundkonfiguration belassen wir beide Werte auf 0.00. Mit einem Klick auf "Sensor speichern" wird der Sensor angelegt und im Dashboard im Abschnitt Sensoren angezeigt:
+
+    ![Sensoren](img/Sensor_dashboard.jpg)
 
 2. Schritt: das Induktionskochfeld GGM IDS einrichten
-Im ersten Abschnitt "Maischeplan" wird das Induktionskochfeld über das Zahnrad angelegt
 
-![IDS](img/IDS_einrichten.jpg)
+    Im ersten Abschnitt "Maischeplan" wird das Induktionskochfeld über das Zahnrad angelegt
 
-Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
+    ![IDS](img/IDS_einrichten.jpg)
 
-* PIN weiß [Relais] - Standardeinstellung: D5
-* PIN gelb [Command] - Standardeinstellung: D6
-* PIN blau [Interrupt] - Standardeinstellung: D7
+    Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
 
-Als nächste Eigenschaft muss der Sensor angegeben werden, welcher dem Induktionskochfeld in Schritt 1 zugewiesen wurde. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt. Wichtig: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktulle Temperatur genannt und wird im Masicheprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen.
-Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte sollen übernommen werden.
+    * PIN weiß [Relais] - Standardeinstellung: D5
+    * PIN gelb [Command] - Standardeinstellung: D6
+    * PIN blau [Interrupt] - Standardeinstellung: D7
 
-![IDS](img/IDS_konfigurieren.jpg)
+    Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt. Wichtig: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen.
+    Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte werden übernommen.
 
-Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet fortlaufend die benötigte Leistung der GGM IDS. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Zeit gehalten. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen:
+    ![IDS](img/IDS_konfigurieren.jpg)
 
-![IDS](img/IDS_pid-einrichten.jpg)
+    Nach der Grundkonfigruation muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet fortlaufend die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Zeit gehalten. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen:
 
-Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte PID Kp, Ki und Kd selbstständig. Eine Erläuterung aller Parameter erfolgt später. Die Konfugraiton der Induktionskochplatte abspeichern.
+    ![IDS](img/IDS_pid-einrichten.jpg)
 
-An dieser Stelle ist die Grundkonfiguration bereits abgeschlossen. Mit einem Sensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan erforderlich.
+    Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte P, I und D selbstständig. Eine Erläuterung aller Parameter erfolgt später.
+
+    Mit dem Speichern der Konfiguration ist die Grundkonfiguration bereits abgeschlossen. Mit einem Temperatursensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan und eine Steuerung erforderlich.
 
 ---
 
@@ -113,55 +115,59 @@ Tipp: Hopfengaben
 
 Im Bild Maischeplan ist der Schritt Kochen unterteilt in "Kochen Hopfengabe 1" und "Kochen Hopfengabe 2". Die Unterteilung kann passend zur Anzahl der Hopfengaben vorgenommen werden. Wenn ein Buzzer angeschlossen ist, ertönt mit jedem Schritt ein Signalton.
 
-## Beschreibung der Buttons
+## Steuerung Maischeplan
 
-Der Masicheplan wird über Buttons gesteuert. Zunächst werden die Buttons zum Editieren der Tabelle Maischeplan erläutert. Diese sind eher selbsterklärend. Anschließend werden die 5 Buttons Power, Play, Pause, Backward und Forward erläutert. Mit diesen 5 Buttons wird der Maischeprozess gesteuert.
+Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
 
-### Funktion grüner Speichern Button
+![Maischeplan](img/Buttons.jpg)
 
-Mit dem günen Button Tabelle speichern in der Kopfzeile der Tabelle Maischeplan wird der Inhalt der Tabelle in eine Datei (JSON) abgespeichert.
-
-### Funktion blauer Speichern Button
-
-Mit dem blauen Button Zeile speichern wird die Ändeurng der aktuellen Zeile in die Tabelle übernommen.
-
-### Funktion Aktualisiere Maischeplan Button
-
-Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen ohne Rückfrage verworfen werden.
-
-### Funktion Löschen Button
-
-Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern die Änderung übernommen wird.
-
-### Funktion + Button
-
-Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit einem Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
-
-### Funktion Power Button
+### Der Power Button
 
 Über den Power Button wird der Maischeprozess ein- bzw. ausgeschaltet. Sobald AutoTune in den Einstellungen der GGM IDS oder im Nachguss aktiviert ist, wird der AutoTune Prozess über den Power Button gestartet bzw. gestoppt.
 
-### Funktion Play Button
+### Der Play Button
 
 Der Play Button hat im Maischeprozess zwei Funktionen:
 
-* setze den Maischeprozess mit der nächsten Rast fort und starte den Rast-Timer. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" erläutert. Der Play Button wird rot angezeigt.
+* setze den Maischeprozess mit der nächsten Rast fort und starte den Rast-Timer. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" im Maischeplan erläutert. Der Play Button wird rot angezeigt.
 
-* Die zweite Funktion "starte sofort den Rast-Timer" setzt die Überprüfung der IST-Temperatur gegenüber der Rast-Temperatur aus und startet unabhängig von der IST-Temperatur den Rast-Timer. Ein Anwendungsfall ist, wenn der Maischeprozess nicht nach Plan verläuft und der Brauer eingreifen muss. Beim Schritt Kochen der Würze kann der Rast-Timer gestartet werden, wenn augenscheinlich das wallend Kochen beginnt. Der Play Button wird blau angezeigt.
+* Die zweite Funktion "starte sofort den Rast-Timer" startet unabhängig von der IST-Temperatur den Rast-Timer. Ein Anwendungsfall ist, wenn der Maischeprozess nicht nach Plan verläuft und der Brauer eingreifen muss. Beim Schritt Kochen der Würze kann der Rast-Timer gestartet werden, wenn augenscheinlich das wallend Kochen beginnt. Der Play Button wird blau angezeigt.
 
-### Funktion Pause Button
+### Der Pause Button
 
-Mit dem Pause Button wird der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Der Maischeprozess wird mit einem Klick auf den Pause Button fortgesetzt.
-Wichtig: während der Pause wird die aktuelle Temperatur gehalten, d. h. das Induktionskochfeld bleibt eingeschaltet. Hier unterscheiden sich "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.
+Mit dem Pause Button wird der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Der Maischeprozess wird mit einem Klick auf den Pause Button fortgesetzt. Wichtig: Während einer Pause wird die aktuelle Ist-Temperatur gehalten, d. h. das Induktionskochfeld bleibt eingeschaltet. Hier unterscheiden sich "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.
 
-### Funktion Backward Button
+### Der Backward Button
 
 Mit dem Backward Button wird zum vorherigem Schritt im Maischeplan gesprungen. War der Maischeprozess pausiert, wird der Rast-Timer der aktuellen Rast zurückgesetzt und neu gestartet.
-Wichtig: wenn die aktuelle Ist-Temperatur von der Rast-Temperatur abweicht, kann ein Klick auf den Play Button erforderlich sein, um den Rast-Timer sofort zu starten.
 
-### Funktion Forward Button
+### Der Forward Button
 
 Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
+
+## Beschreibung der Buttons
+
+Der Maischeplan verfügt über Buttons zum Editieren, erweitern oder Löschen der Tabelle. Diese sind eher selbsterklärend.
+
+### Der grüne Speichern Button
+
+Mit dem günen Button Tabelle speichern in der Kopfzeile der Tabelle Maischeplan wird der Inhalt der Tabelle in eine Datei (JSON) abgespeichert.
+
+### Der blaue Speichern Button
+
+Mit dem blauen Button Zeile speichern wird die Ändeurng der aktuellen Zeile in die Tabelle übernommen.
+
+### Der Aktualisiere Maischeplan Button
+
+Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen ohne Rückfrage verworfen werden.
+
+### Der Löschen Button
+
+Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern die Änderung übernommen wird.
+
+### Der + Button
+
+Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit einem Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
 
 ### Funktion Graph Button
 
@@ -169,19 +175,19 @@ Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bz
 
 ---
 
-## Sensor Kalibrierung
+## Kalibrierung Temperatursensor
 
 Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
 
 ---
 
-## AutoTune
+## Der AutoTune Prozess
 
 AutoTune hat die wichtige Aufgabe, passende Parameter für die Brauanlage zu ermitteln, damit der Maischeprozess so genau wie möglich durchgeführt wird. Im Fokus stehen die IST- und die zugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass ein Über- und Unterschwingen vermieden werden soll.
 
 ![AutoTune4](img/IDS_AutoTune_Ziel.jpg)
 
-Die folgende Beschreibung dient ausschließlich als Hilfe zur Verwendung der Firmware.
+Die folgende Beschreibung der PID-Werte ist lediglich eine Hilfe zur Verwendung der Firmware und kann auch übersprungen werden. Der AutoTune Prozess wird ab "Der AutoTune Prozess: Schritt für Schritt" beschrieben.
 Der PID-Controller steuert die Leistung der Induktonsplatte. Es ist wichtig, geeignete P, I und D Werte zu ermitteln. Dabei sind die PID Werte je Brauanlage und Umgebung individuell. AutoTune ist ein Prozess, der bei der Ermittlung geeigneter Werte unterstützt.
 Die benötigte Leistung der Induktionsplatte, um von der Ist-Temperatur zur Zieltemperatur zu gelangen, wird aus der Summe der drei Werte berechnet:
 Erforderliche Leistung = P + I + D
@@ -213,7 +219,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
     b. Schalte das Rührwerk ein
 
-2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte mindestens 20°C über der aktuellen Ist-Temperatur liegen.
+2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte 20°C oder mehr über der aktuellen Ist-Temperatur liegen.
 3. Aktiviere „PID AutoTune“
 4. Aktiviere „AutoTune debug“
 5. Speichere diese Einstellung ab (IDS speichern)
@@ -221,13 +227,15 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
 ![AutoTune2](img/IDS_AutoTune_start.jpg)
 
-Der AutoTune Prozess dauert je nach Umgebung 45 bis 90min. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt.
+Der AutoTune Prozess dauert je nach Umgebung bis zu 90min. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel wärmegedämmt ist, desto länger dauert der AutoTune Prozess. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der AutoTune-Schritte. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt.
 
 Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
 
 ![AutoTune3](img/IDS_AutoTune_erg.jpg)
 
-Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Die Parameter Ku und Pu sind für jede Brauanlage individuell. Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist. Tipp: mit diesen PID-Werten kann sehr gut im Braukessel sous-vide gegart werden. Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden.
+Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch in CraftBeerPi PIDBoil eingestezt wird.
+
+* Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden.
 
 Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann über den Explorer das Protokoll "autotune_log.txt" eingesehen werden. Diese Datei sollte nach AutoTune kontrolliert werden. Entscheidend sind die letzten Zeilen in der Protokoll Datei:
 
@@ -252,6 +260,10 @@ Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann
 Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.
 
 In der Datei "idsAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
+
+* Tipp: Der Brautomat eignet sich auch ganz wunderbar zum Rinderfilet sous-vide gegaren
+
+![sous-vide](img/sous-vide.mov)
 
 ---
 
