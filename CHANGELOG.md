@@ -1,5 +1,13 @@
 # Changelog
 
+Version 1.0k
+
+* Neu:        MP3 Audio für Toast Nachrichten (info.mp3 und error.mp3)
+              die MP3 Dateien können ausgetuascht werden
+* Korrektur:  Auswahl Toastnachrichten: Aus, Ein oder nur Fehler
+* Korrektur:  Anzeige Toast Nachrichten angepasst: Uhrzeit #lfdNr : Nachricht
+* Korrektur:  ESP8266 cores (#8844)
+
 Version 1.0j
 
 * Neu:        Button vorheriger Step. Springt einen Maischeschritt zurück.
