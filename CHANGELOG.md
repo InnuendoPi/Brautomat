@@ -1,9 +1,14 @@
 # Changelog
 
+Version 1.0l
+
+* Korrektur:  logischer Fehler in Abfrage Zieltemperatur 0°C behoben
+* Update:     mp3 Audio für iOS
+
 Version 1.0k
 
 * Neu:        MP3 Audio für Toast Nachrichten (info.mp3 und error.mp3)
-              die MP3 Dateien können ausgetuascht werden
+              die MP3 Dateien können ausgetauscht werden
 * Korrektur:  Auswahl Toastnachrichten: Aus, Ein oder nur Fehler
 * Korrektur:  Anzeige Toast Nachrichten angepasst: Uhrzeit #lfdNr : Nachricht
 * Korrektur:  ESP8266 cores (#8844)
