@@ -290,7 +290,9 @@ Mit diesem parameter kann ein Piezo Buzzer aktiviert werden. Zu beachten gilt, d
 
 ### Aktiviere Info Nachrichten Toasts
 
-Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel oben rechts im Browser. Toasts vom Typ Information verschwinden nach wenigen Sekunden selbstständig. Toasts vom Typ Warnung oder Fehler verbleiben im Browserfenster, bis der User die wegklickt.
+Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel unten rechts im Browser. Nach ca. 10sek verschwinden die Toasts wieder. Es gibt Toast Nachrichten zum Maischeprozess und Toast Nachrichten zu Systemfehler. Dazu passend hat die Eigenschaft Toasts 3 Optionen: Aus, Ein und Fehler. Die Auswahl "Aus" schaltet Toast Nachrichten ab. Die Option "Ein" sendet alle Toasts Nachrichten. Die Option "Fehler" sendet nur Toast Nachrichten bei Systemfehler, aber keine Nachrichten zum Maischeprozess.
+
+Toasts unterstützen eine Audio Ausgabe. So werden Toasts im Maischeprozess nicht nur zu einer visuelle, sondern auch einer akkustischen Erinnerung. Die Firmware beinhaltet zwei Audio Dateien "info.mp3" und "error.mp3". Die Audio Dateien (mp3) können ausgetauscht werden. Lediglich die Benennung muss gleich bleiben. Die Audio Ausgabe wird nicht auf allen Geräten unterstützt.
 
 ### Aktviere Porterweiterung PCF8574
 
