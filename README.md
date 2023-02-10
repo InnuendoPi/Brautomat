@@ -34,5 +34,5 @@ Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werde
 
 ![Startseite](docs/img/kettlepage.jpg) ![Startseite](docs/img/brewpage.jpg) ![Startseite](docs/img/induction_mode.jpg)
 
-*"Boxing Bell" (info) und "Short School Bell" (error) mp3 von Free Sounds Library <http://www.freesoundslibrary.com>*
+*"Boxing Bell" (info), "Short School Bell" (error), "Ding Sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library <http://www.freesoundslibrary.com>*
 *Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes.*
