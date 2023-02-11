@@ -11,6 +11,8 @@ Version 1.0m
 * Update:     ArduinoJSON Bibliothek
 * Update:     PCF8574 Bibliothek (GPIO Erweiterung)
 * Entfernt:   Debug Ausgaben
+* Korrektur:  Log Datei AutoTune
+* Geändert:   Datei handling
 
 Version 1.0l
 
