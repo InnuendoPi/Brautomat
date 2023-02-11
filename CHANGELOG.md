@@ -13,6 +13,7 @@ Version 1.0m
 * Entfernt:   Debug Ausgaben
 * Korrektur:  Log Datei AutoTune
 * Geändert:   Datei handling
+* Geändert:   Display Dateien HMI
 
 Version 1.0l
 
