@@ -307,7 +307,31 @@ Mit diesem Parameter kann eine 8-Port GPIO Erweiterung am ESP8266 betrieben werd
 
 ### Aktiviere Touchdisplay
 
-Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden. Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Displays.
+Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der Brautomat bietet drei Ansichten
+
+    - die Kessel Seite:     auf dieser Ansicht werden IDS und Nachguss mit Ist- und Zieltemperaturen dargestellt.
+                            Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
+                            Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
+
+![Display](img/kettlepage.jpg)
+
+    - die Brauen Seite:     auf dieser Ansicht wird das Induktionskochfeld dargestellt.
+                            Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt.
+                            Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
+
+![Display](img/brewpage.jpg)
+
+    - die Kochen Seite:     auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld
+                            Im manuellen Betrieb stehen 6 Powerstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung
+                            Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!) 
+
+![Display](img/induction_mode.jpg)
+
+Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Touchdisplays (Basic und Discovery Series).
+
+Das Display wird mit einer SD Karte konfiguriert. Die zum Display passende TFT Datei aus dem Ordner Info wird auf eine SD Karte kopiert und in das Display eingesteckt. Sobald das Display eingeschaltet wird, startet die Konfiguration. Der Vorgang dauert etwa eine Minute. Im Display steht der Fortschritt. Sobald die Konfiguration aufgespielt ist, wird das Display abgeschaltet und die SD Karte entfernt. Das Display ist nun einsatzbereit.
+
+Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
 ---
 

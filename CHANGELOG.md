@@ -2,9 +2,9 @@
 
 Version 1.0m
 
-* Korrektur:  Anzeige Toast zeitgleich auf unterschiedlichen Geräten
+* Korrektur:  Anzeige Toast zeitgleich auf unterschiedlichen Geräten. Auf iOS weiterhin nur ein workaround möglich
 * Geändert:   wenn der Maischeprozess gestartet ist, muss der Maischeprozess pausiert werden, um den Maischeplan editieren zu können.
-* Neu:        die aktuelle Rast wird im Maischeplan farblich (background warning) markiert.
+* Neu:        die aktuelle Rast wird im Maischeplan farblich markiert.
 * Korrektur:  Toasts timer handling (Toast wurden nicht zugestellt)
 * Neu:        success.mp und warning.mp3 (Benennung beibehalten)
 * Neu:        Toasts werden nach 60 Sekunden gelöscht oder durch neuen Toast überschrieben
