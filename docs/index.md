@@ -156,14 +156,6 @@ Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder
 
 ---
 
-## Kalibrierung Temperatursensor
-
-Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
-
-*Tipp: das Induktionskochfeld sollte zur Messung ausgeschaltet sein.*
-
----
-
 ## Der AutoTune Prozess
 
 AutoTune hat die wichtige Aufgabe, passende Parameter für die Brauanlage zu ermitteln, damit der Maischeprozess so genau wie möglich durchgeführt wird. Im Fokus stehen die IST- und die zugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass ein Über- und Unterschwingen vermieden werden soll.
@@ -243,6 +235,31 @@ Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann
 Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.
 
 In der Datei "idsAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
+
+---
+
+## Die Sensoren
+
+### Kalibrierung Temperatursensor
+
+Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
+
+---
+
+## Der Nachguss
+
+Der Brautomat bietet optional die Möglichkeit, einen "Kessel" für den Nachguss zu konfigurieren. Der Nachguss kann bspw. ein einfacher Wasserkocher sein. Die Konfiguration wird in fast identischer Weise wie die GGM IDS durchgeführt. Im Gegensatz zur GGM IDS Konfiguration steht nur ein GPIO zur Verfügung: es handelt sich um ein Temperaturregler für eine Relais Schaltung (i. S. v. Ein oder Aus).
+
+Ein neuer Konfigurationsparameter "GPIO invertieren" wird bei der Nachguss und auch bei der Konfigruation von Aktoren angeboten. GPIOs können beim Einschalten des Wemos per Standardeinstellung auf HIGH stehen. HIGH bedeteutet "es fließt Strom". Dementsprechend bedeutet LOW es fließt kein Strom. Die Werkseinstellung vom Wemos und das allgemeine Verständnis von einem Ein-Aus Schalter wäre demnach, dass mit der Stromzufuhr Wemos alle GPIOS (Schalter) auf Eingeschaltet stehen. GPIO invertieren dreht die Werkseinstellung um.
+
+*Tipp:*
+*Wenn Aktoren nach der Konfigruation und Stromzufuhr eingeschaltet starten, muss die Eigenschaft GPIO invertieren aktiviert werden*
+
+---
+
+## Die Aktoren
+
+Aktoren wie bspw. Rührwerk, Pumpen oder Ringheizelemente werden mit einem Namen und einem GPIO (Schalter) konfiguriert. GPIO invertieren wurde im Abschnitt Nachguss erläutert. EIne neue Eigenschaft ist PWM oder Pulsweitenmodulation. PWM im Brautomat ist ein takten. Genauer beschreiben: das takten von Ein und Ausschalten oder Storm fließt und Strom fließt nicht. Die Eingabe ist in Prozent. Permanent eingeschaltet sind 100%. Bei einem Wasserkocher wäre dies sinngemäß dauerhaft maximale Leistung. Ein PWM von 50% wäre 50:50 Strom fließt und Strom fließt nicht. Bei einem Wasserkocher wäre dies sinngemäß halbe Leistung. Nicht alle Aktoren sind für PWM geeignet. Sehr gut geeignet ist ein Ringheizelement (220V AC) mit einer PWM Taktung über ein SSR. Gleichstrom Aktoren lassen sich besser und einfacher mit PWM Modulen regeln.
 
 ---
 
