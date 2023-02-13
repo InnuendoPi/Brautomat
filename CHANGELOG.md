@@ -3,8 +3,12 @@
 Version 1.0m
 
 * Korrektur:  Anzeige Toast zeitgleich auf unterschiedlichen Geräten. Auf iOS weiterhin nur ein workaround möglich
-* Geändert:   wenn der Maischeprozess gestartet ist, muss der Maischeprozess pausiert werden, um den Maischeplan editieren zu können.
+* Geändert:   wenn der Maischeprozess gestartet ist, muss der Maischeprozess pausiert werden, um den Maischeplan editieren zu können
+* Neu:        die Buttons und Icons zum Editieren werden während des Maischeprozesses ausgeblendet
+              auf Smartphones und kleinen Tablets ist die Tabelle Maischeplan durch das Ausblenden vollständig sichtbar
 * Neu:        die aktuelle Rast wird im Maischeplan farblich markiert.
+* Geändert:   die Buttons Power (grün), Play und Pause (rot) werden im aktiven Zustand mit voller Farbe dargestellt (vorher outline)
+* Geändert:   der aktuelle Status Power, Play und Pause wird geräteübergreifend gespeichert
 * Korrektur:  Toasts timer handling (Toast wurden nicht zugestellt)
 * Neu:        success.mp und warning.mp3 (Benennung beibehalten)
 * Neu:        Toasts werden nach 60 Sekunden gelöscht oder durch neuen Toast überschrieben
@@ -14,6 +18,7 @@ Version 1.0m
 * Korrektur:  Log Datei AutoTune
 * Geändert:   Datei handling
 * Geändert:   Display Dateien HMI
+* Geändert:   Anleitung auf gitpages aktualisiert
 
 Version 1.0l
 
