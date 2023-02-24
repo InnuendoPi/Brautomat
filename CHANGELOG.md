@@ -1,6 +1,6 @@
 # Changelog
 
-Version 1.1 (first release)
+Version 1.1 (rel)
 
 * Update:     bootstrap minified CSS (purged)
 * Optimiert:  Ladegeschwindigkeit verbessert
