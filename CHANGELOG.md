@@ -1,7 +1,12 @@
 # Changelog
 
-Version 1.0m
+Version 1.1 (first release)
 
+* Update:     bootstrap minified CSS (purged)
+* Optimiert:  Ladegeschwindigkeit verbessert
+* Update:     Arduino für VSCode 0.5.0
+* Update:     VSCode 1.75
+* Update:     Bibliothek PCF8574 0.3.8
 * Korrektur:  Anzeige Toast zeitgleich auf unterschiedlichen Geräten. Auf iOS weiterhin nur ein workaround möglich
 * Geändert:   wenn der Maischeprozess gestartet ist, muss der Maischeprozess pausiert werden, um den Maischeplan editieren zu können
 * Neu:        die Buttons und Icons zum Editieren werden während des Maischeprozesses ausgeblendet
@@ -12,6 +17,8 @@ Version 1.0m
 * Korrektur:  Toasts timer handling (Toast wurden nicht zugestellt)
 * Neu:        success.mp und warning.mp3 (Benennung beibehalten)
 * Neu:        Toasts werden nach 60 Sekunden gelöscht oder durch neuen Toast überschrieben
+* Neu:        mp3 Alarme für Systemevents
+* Geändert:   Reboot initiert nun automatisch ein page reload
 * Update:     ArduinoJSON Bibliothek
 * Update:     PCF8574 Bibliothek (GPIO Erweiterung)
 * Entfernt:   Debug Ausgaben
