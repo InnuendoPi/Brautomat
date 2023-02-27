@@ -1,5 +1,23 @@
 # Changelog
 
+Version 1.1 - das kleinerBrauhelfer2 Update
+
+* Neu:        Import aus dem Tab Maischeplan: Einmaischen, Aufheizen, Zubrühen und Dekoktion
+* Neu:        Import aus dem Tab Kochen: Vorderwürze, Ausschlagen und Hopfengabe Kochbeginn, Kochen und Kochende
+* Neu:        Kochdauer und Nachisomerisierungszeit werden aus kbh2 verwendet
+* Neu:        der Sudname aus kbh2 wird als Rezeptname im Brautomat verwendet
+* Angepasst:  Maximale Anzahl Einzelschritte im Maischeplan auf 20 erhöht (Dekoktion)
+* Angepasst:  Maischeschritt Einmaischen, Zubrühen und Dekoktion werden mit deaktiviertem autonext importiert
+* Angepasst:  Maischschritt Aufheizen über 76°C wird mit deaktiviertem autonext importiert (Abmaischen)
+* Angepasst:  Vorderwürzenhopfung wird mit 0min Dauer und 0°C importiert
+* Angepasst:  ist keine Hopfengabe vom Typ Kochbeginn enthalten, wird vor der ersten Hopfengabe Kochen ein Kochenschritt eingefügt
+* Angepasst:  die Dauer errechnet sich in dem Fall aus Kochdauer abzüglich der Summe der Hopfengaben
+* Angepasst:  eine Hopfengabe Ausschlagen mird mit positiver Dauer und 80°C importiert
+* Angepasst:  die Dauer entspricht beim Ausschlagen der Nachisomerisierungszeit
+* Geändert:   Der Rezeptimport aus dem kleinenBrauhelfer2 benötigt Version 2.5 oder neuer
+
+Vielen Dank an bourgeoislab für die Unterstützung ;-)
+
 Version 1.1 (rel)
 
 * Update:     bootstrap minified CSS (purged)

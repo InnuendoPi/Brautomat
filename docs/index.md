@@ -1,8 +1,8 @@
 # Brautomat
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess nahezu vollständig automatisieren.
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. *Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden.*
 
-***Schnelleinstieg in den Brautomaten: folgene Abschnitte lesen und Brauen***
+***Schnelleinstieg in den Brautomaten: diese drei Abschnitte lesen und dann Brauen***
 
     - Grundeinrichtung
     - Der Maischeplan
@@ -17,8 +17,8 @@ Die Hauptfunktionen vom Brautomat sind:
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * einfaches PWM für Aktoren
 * Temperaturverlauf im Sudhaus als Grafik (line chart)
-* Maischeplan Import aus Maische Malz und mehr
 * Maischeplan Import aus dem kleinen Brauhelfer2
+* Maischeplan Import aus Maische Malz und mehr
 * Maischeplan Export zur Rezept Archivierung
 * Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
 * Optionale Unterstützung für eine GPIO Erweiterung PCF8574
@@ -269,7 +269,21 @@ Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann
 
 Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.
 
-In der Datei "idsAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
+In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind PID-Werte über verschiedene Berechnungsmethoden aufgeführt.
+
+* IDS
+* HLT
+* INTEGRAL_PID
+* SOME_OVERSHOOT_PID
+* NO_OVERSHOOT_PID
+* ZIEGLER_NICHOLS_PID
+* ZIEGLER_NICHOLS_PI
+* TYREUS_LUYBEN_PID
+* TYREUS_LUYBEN_PI
+* CIANCONE_MARLIN_PID
+* CIANCONE_MARLIN_PI
+
+Die Werte sind lediglich eine Hilfe in Ausnahmefällen. Bspw. kann die Methode Integral_PID für Wasserkocher ggfs. ein besseres Ergebnis liefern, als die als die voreingestellte Nachguss Methode HLT. Die jeweiligen PID Werte sind als INDIVIDUAL_PID einzutragen.
 
 ---
 
@@ -352,7 +366,7 @@ Toasts unterstützen eine Audio Ausgabe. So werden Toasts im Maischeprozess nich
 *mp3 Audio benötigt auf iOS Geräten eine "user gesture", bspw. ein Klick oder Touch event. Einfach ein Element auf der Webseite anklicken und mp3 Audio wird ausgegeben. Ohne die user gesture wird die Audio Ausgabe vom iOS System blockiert*
 
 *Tipp: automatische Medienwiedergabe -*
-*Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat übder die IP-Adresse eingetragen*
+*Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat mit dem mDNS Namen im Microsoft Edge Browser hinzugefügt worden. Alternativ kann auch die IP-Adresse eingetragen werden*
 
 ![media](img/autoplay_media.jpg)
 
