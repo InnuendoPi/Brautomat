@@ -1,6 +1,15 @@
 # Changelog
 
-Version 1.1 - das kleinerBrauhelfer2 Update
+Version 1.12
+
+* Neu:        Name Maischeplan editierbar (Rezeptname)
+* Neu:        Info zur Kochdauer und Nachisomerisierungszeit (readonly)
+* Korrketur:  Zeitberechnung Hopfengabe Typ Ausschlagen
+* Korrektur:  Nachisomerisierung wenn Hopfengabe Typ Ausschlagen vorhanden ist
+* Korrektur:  Zeitpunktberechnung Hopfengabe Typ Kochen (3)
+* Korrektur:  Benachrichtigung Firmware Update WebUpdate (Alert)
+
+Version 1.11 - das kleinerBrauhelfer2 Update
 
 * Neu:        Import aus dem Tab Maischeplan: Einmaischen, Aufheizen, Zubrühen und Dekoktion
 * Neu:        Import aus dem Tab Kochen: Vorderwürze, Ausschlagen und Hopfengabe Kochbeginn, Kochen und Kochende
