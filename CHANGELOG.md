@@ -6,8 +6,10 @@ Version 1.12
 * Neu:        Info zur Kochdauer und Nachisomerisierungszeit (readonly)
 * Korrketur:  Zeitberechnung Hopfengabe Typ Ausschlagen
 * Korrektur:  Nachisomerisierung wenn Hopfengabe Typ Ausschlagen vorhanden ist
+* Korrektur:  Reihenfolge bei Nachisomerisierung und Ausschlagen korrigiert
 * Korrektur:  Zeitpunktberechnung Hopfengabe Typ Kochen (3)
 * Korrektur:  Benachrichtigung Firmware Update WebUpdate (Alert)
+* Optimiert:  CSS Dateien
 
 Version 1.11 - das kleinerBrauhelfer2 Update
 
