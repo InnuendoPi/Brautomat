@@ -579,6 +579,14 @@ Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://github.com/kleine
 
 ### Der kbh2 Tab Maischplan
 
+Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion ist aber nur mit halber automatik möglich (autonext).  
+
+![Kochen](img/kbh2_maischplan.jpg)
+
+Einen Typ Abmaischen kennt der kbh2 nicht, weil er diesen Typ auch nicht benötigt. Der Brautomat benötigt diesen Maischeschritt, um das Ende vom Maischen  und den Übergang zum Läutern zu erkennen. Es sollte in jedem Maischplan ans Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
+
+![Kochen](img/kbh2_maischplan2.jpg)
+
 ### Der kbh2 Tab Kochen
 
 Der kbh2 denkt anders, als der Brautomat. Im folgenden wird erläutert, wie der kbh2 Export im Brautomat eingelesen wird. Das passiert völlig automatisch. Anders gesagt: man kann die Logik einfach als gegeben hinnehmen. Es ist nicht erforderlich das Thema genauer zu betrachten und zu verstehen.
