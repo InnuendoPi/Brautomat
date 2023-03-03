@@ -1,5 +1,14 @@
 # Changelog
 
+Version 1.13
+
+*Korrektur:   Fehler beim Speichern Einstelung Toast Nachrichten behoben (typo)
+*Korrektur:   Toast Objekte
+*Korrektur:   Die Ladezeit für die toast.min.js verbessert (dauert trotzdem noch zu lange)
+*Geändert:    Toasts vom Typ Error bleiben stehen, bis sie angeklickt werden
+*Geändert:    Abfragen Toasttypen
+*Korrektur:   Fehler Toasts und Alarme mp3 Einstellung Nur Fehler
+
 Version 1.12
 
 * Neu:        Name Maischeplan editierbar (Rezeptname)
