@@ -1,29 +1,19 @@
----
-description: Anleitung und Beschreibung
----
+# Installation
 
-# Brautomat
+Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.ZIP in einem beliebigen ordner entpackt. Der Wemos wird mit einem USB Kabel am PC/Notebook angeschlossen. Ein Doppelklick auf das Script Flashen.cmd startet die Installation.
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. _Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden._
-
-_**Schnelleinstieg in den Brautomaten: diese zwei Abschnitte lesen und dann Brauen**_
+Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
 
 ```
-- Grundeinrichtung
-- Der Maischeplan
+1: @ECHO OFF
+2: CLS
+3: SET SCRIPT_LOCATION=%~dp0
+4: cd %SCRIPT_LOCATION%
+5: echo erase flash
+6: esptool.exe -cp COM3 -cd nodemcu -ce
+7: echo Flash firmware and LittleFS
+8: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin
+9: echo ESC to quit
+10: pause
+11: exit
 ```
-
-Die Hauptfunktionen vom Brautomat sind:
-
-* Steuerung der Induktionskochfelder GGM IDS1 und IDS2 über einen PID-Controller
-* PID AutoTune zur Ermittlung der benötigten Einstellungen
-* ein Maischeplan mit bis zu 15 Teilschritten
-* Steuerung für einen Nachguss Kessel (HLT) über einen PID-Controller
-* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
-* einfaches PWM für Aktoren
-* Temperaturverlauf im Sudhaus als Grafik (line chart)
-* Maischeplan Import aus dem kleinen Brauhelfer2
-* Maischeplan Import aus Maische Malz und mehr
-* Maischeplan Export zur Rezept Archivierung
-* Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
-* Optionale Unterstützung für eine GPIO Erweiterung PCF8574
