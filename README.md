@@ -32,7 +32,7 @@ Die Hauptfunktionen vom Brautomat sind:
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [https://innuendopi.github.io/Brautomat/](https://innuendopi.github.io/Brautomat/)
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat\_de/](https://innuendopi.gitbook.io/brautomat\_de/)
 
 Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 
