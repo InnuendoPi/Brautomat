@@ -1,3 +1,6 @@
 # Table of contents
 
-* [Brautomat](README.md)
+* [Changelog](README.md)
+* [Der Brautomat](readme.md)
+* [docs](docs/README.md)
+  * [Brautomat](docs/index.md)
