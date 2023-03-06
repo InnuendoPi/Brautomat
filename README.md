@@ -2,6 +2,8 @@
 
 Brausteuerung für das Induktionskochfeld GGM IDS auf der Baus ESP8266 Wemos D1 mini. Unterstützt werden Nextion HMI 3.5" Displays und I2C Port Erweiterung PCF8574. Integrierter AutoTune PID-Controller. Rezeptimport aus kleinerBrauhelfer2 und MMum.
 
+## 📚 Dokumentation
+
 Beschreibung & Anleitung: <https://innuendopi.github.io/Brautomat/>
 
 Diskussion: <https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504>
