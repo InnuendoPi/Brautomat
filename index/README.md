@@ -1,12 +1,18 @@
+---
+description: Anleitung und Beschreibung
+---
+
 # Brautomat
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. *Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden.*
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. _Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden._
 
-***Schnelleinstieg in den Brautomaten: diese drei Abschnitte lesen und dann Brauen***
+_**Schnelleinstieg in den Brautomaten: diese drei Abschnitte lesen und dann Brauen**_
 
-    - Grundeinrichtung
-    - Der Maischeplan
-    - Steuerung Maischeplan
+```
+- Grundeinrichtung
+- Der Maischeplan
+- Steuerung Maischeplan
+```
 
 Die Hauptfunktionen vom Brautomat sind:
 
@@ -23,100 +29,80 @@ Die Hauptfunktionen vom Brautomat sind:
 * Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
 * Optionale Unterstützung für eine GPIO Erweiterung PCF8574
 
----
-
-## Installation
-
-Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.ZIP in einem beliebigen ordner entpackt. Der Wemos wird mit einem USB Kabel am PC/Notebook angeschlossen. Ein Doppelklick auf das Script Flashen.cmd startet die Installation.
-
-Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
-
-<pre><code>1: @ECHO OFF
-2: CLS
-3: SET SCRIPT_LOCATION=%~dp0
-4: cd %SCRIPT_LOCATION%
-5: echo erase flash
-6: esptool.exe -cp COM3 -cd nodemcu -ce
-7: echo Flash firmware and LittleFS
-8: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin
-9: echo ESC to quit
-10: pause
-11: exit
-</code></pre>
+***
 
 ## Updates
 
-Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden.
-Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
+Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden. Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
 
----
+***
 
 ## Grundeinrichtung
 
 Der Brautomat benötigt als Mindestausstattung einen Temperatursensor vom Typ Dallas DS18B20 und ein Induktionskochfeld GGM IDS. Es werden in der folgenden Grundeinrichtung nur die benötigten Einstellungen gezeigt. Alle optionalen Einstellungen werden später erläutert.
 
-1. Schritt: einen Temperatursensor einrichten
+1.  Schritt: einen Temperatursensor einrichten
 
     Im Abschnitt Sensoren wird mit einem Klick auf das Plus Zeichen ein neuer Sensor angelegt
 
-    ![Sensoren](img/Sensor_einrichten.jpg)
+    ![Sensoren](../docs/img/Sensor\_einrichten.jpg)
 
     Temperatursensoren vom Typ Dallas DS18B20 haben eine eindeutige Adresse. Über diese Adresse unterscheidet die Firmware die angeschlossenen Sensoren. Die Sensor Adresse kann aus der Auswahlliste ausgewählt. Wird kein Sensor angezeigt, kann mit dem Reload Button die Erkennung der Sensoren neu gestartet werden. Wird weiterhin kein Sensor angezeigt, ist die Kabelverbindung zu überprüfen. Als zweite Eigenschaft besitzt ein Sensor einen Namen. Über den Namen kann der Anwender die Sensoren unterscheiden. In dieser Grundkonfiguration hat der Sensor den Namen "Sensor IDS2".
 
-    ![Sensoren](img/Sensor_einstellungen.jpg)
+    ![Sensoren](../docs/img/Sensor\_einstellungen.jpg)
 
     Die Eigenschaften Offset 1 und Offset 2 werden später erläutert. Für die Grundkonfiguration belassen wir beide Werte auf 0.00. Mit einem Klick auf "Sensor speichern" wird der Sensor angelegt und im Dashboard im Abschnitt Sensoren angezeigt:
 
-    ![Sensoren](img/Sensor_dashboard.jpg)
-
-2. Schritt: das Induktionskochfeld GGM IDS einrichten
+    ![Sensoren](../docs/img/Sensor\_dashboard.jpg)
+2.  Schritt: das Induktionskochfeld GGM IDS einrichten
 
     Im ersten Abschnitt "Maischeplan" wird das Induktionskochfeld über das Zahnrad angelegt
 
-    ![IDS](img/IDS_einrichten.jpg)
+    ![IDS](../docs/img/IDS\_einrichten.jpg)
 
     Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
 
-    * PIN weiß [Relais] - Standardeinstellung: D5
-    * PIN gelb [Command] - Standardeinstellung: D6
-    * PIN blau [Interrupt] - Standardeinstellung: D7
+    * PIN weiß \[Relais] - Standardeinstellung: D5
+    * PIN gelb \[Command] - Standardeinstellung: D6
+    * PIN blau \[Interrupt] - Standardeinstellung: D7
 
-    Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (mit Anschluss an einer JST-HX Buchse).
-    Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
+    Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (mit Anschluss an einer JST-HX Buchse). Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
 
-    *Tipp*:*
-    *dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen.*
+    _Tipp_:\* _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen._
 
     Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte werden übernommen.
 
-    ![IDS](img/IDS_konfigurieren.jpg)
+    ![IDS](../docs/img/IDS\_konfigurieren.jpg)
 
     Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
 
-    ![IDS](img/IDS_pid-einrichten.jpg)
+    ![IDS](../docs/img/IDS\_pid-einrichten.jpg)
 
     Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte P, I und D automatisch. Eine Erläuterung aller Parameter erfolgt später.
 
-    *Tipp:*
-    *Bei einerm Kesselvolumen von 36l und einem Maischevolumen von ca. 20l sind folgende Startparameter gut geeignet:*
+    _Tipp:_ _Bei einerm Kesselvolumen von 36l und einem Maischevolumen von ca. 20l sind folgende Startparameter gut geeignet:_
 
-    <pre><code>Ultimate gain Ku:     182
-   Ultimate period Pu:   2245</code></pre>
+    ```
+    Ultimate gain Ku:     182
+    Ultimate period Pu:   2245
+    ```
 
-    *Bei einerm Kesselvolumen von 70l und einem Maischevolumen von über 40l sind folgende Startparameter gut geeignet:*
+    _Bei einerm Kesselvolumen von 70l und einem Maischevolumen von über 40l sind folgende Startparameter gut geeignet:_
 
-    <pre><code>Ultimate gain Ku:     225
-   Ultimate period Pu:   1500</code></pre>
+    ```
+    Ultimate gain Ku:     225
+    Ultimate period Pu:   1500
+    ```
 
     Mit dem Speichern der Konfiguration ist die Grundkonfiguration bereits abgeschlossen. Mit einem Temperatursensor und einer GGM IDS kann nun gebraut werden. Zum Brauen ist ein Maischeplan und eine Steuerung erforderlich.
 
----
+***
 
 ## Der Maischeplan
 
-![Maischeplan](img/Maischeplan.jpg)
+![Maischeplan](../docs/img/Maischeplan.jpg)
 
-Der Brautomat arbeiten nach einem Maischeplan. Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. In diesem Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "Nachisomerisierung" der letzte Maische-Schritt. Elementar wichtig im Maischeplan ist die Funktion *autonext*. Die Funktion wird im Detail erläutert.
+Der Brautomat arbeiten nach einem Maischeplan. Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. In diesem Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "Nachisomerisierung" der letzte Maische-Schritt. Elementar wichtig im Maischeplan ist die Funktion _autonext_. Die Funktion wird im Detail erläutert.
 
 Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Jede Zeile der Tabelle hat diese Spalten:
 
@@ -135,46 +121,45 @@ Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons zum Editiere
 
 Die Funktion von "autonext" wird an einem Beispiel erläutert:
 
-der zweite Schritt im Maischeplan mit dem Namen *Maltoserast 63°C* hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautmoat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft *autonext*. Wenn das Häkchen gesetzt ist (autonext aktiviert), springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt *Zwischenrast*. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen. Der Masicheprozess verläuft bei aktiviertem autonext automatisch.
+der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautmoat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn das Häkchen gesetzt ist (autonext aktiviert), springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Zwischenrast_. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen. Der Masicheprozess verläuft bei aktiviertem autonext automatisch.
 
-Die Eigenschaft *autonext* im fünften Schritt *Abmaischen 78°C* ist nicht aktiviert. Wenn der Brautomat auf ein deaktivertes autonext trifft, beendet der Brautomat die aktuelle Rast nach Ablauf der Rast-Dauer und setzt die Leistung vom Induktionskochfeld auf 0% (aus). In diesem Status wird der "Play Button" rot angezeigt. Zum Fortsetzen des Brauvorgangs muss auf den Play Button geklickt werden:
+Die Eigenschaft _autonext_ im fünften Schritt _Abmaischen 78°C_ ist nicht aktiviert. Wenn der Brautomat auf ein deaktivertes autonext trifft, beendet der Brautomat die aktuelle Rast nach Ablauf der Rast-Dauer und setzt die Leistung vom Induktionskochfeld auf 0% (aus). In diesem Status wird der "Play Button" rot angezeigt. Zum Fortsetzen des Brauvorgangs muss auf den Play Button geklickt werden:
 
-![Maischeplan](img/Maischeplan_pause.jpg)
+![Maischeplan](../docs/img/Maischeplan\_pause.jpg)
 
-Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn die Rast *Abmaischen 78°C* beendet ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet. Der Masicheprozess verläuft bei deaktiviertem autonext manuell.
+Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn die Rast _Abmaischen 78°C_ beendet ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet. Der Masicheprozess verläuft bei deaktiviertem autonext manuell.
 
 Im Bild Maischeplan sind das Einmaischen und das Abmaischen mit deaktiviertem autonext dargestellt. Das Einmaischen ist beendet, wenn das Schrot im Hauptgusswasser. Wenn nun der Button Play geklickt wird, startet der Maischeprozess. Das Abmaischen ist meist nach sehr kurzer Zeit (im Bild 1 Minute) beendet. Es folgt die Läuterruhe und das Läutern. Hier entscheidet der Brauer, wann das Aufheizen zum Kochen beginnen soll.
 
-*Tipp: bei deaktiviertem autonext am Rastende wird die GGM IDS abgeschaltet. Mit dem Pause Button wird die Rast-Zeit angehalten (Timer). Die GGM IDS bleibt eingeschaltet und hält die aktuelle Temperatur.*
+_Tipp: bei deaktiviertem autonext am Rastende wird die GGM IDS abgeschaltet. Mit dem Pause Button wird die Rast-Zeit angehalten (Timer). Die GGM IDS bleibt eingeschaltet und hält die aktuelle Temperatur._
 
-Wenn die Funktion *autonext* aktiviert ist, überprüft der Brautomat forlaufend die aktuelle Ist-Temperatur mit der Rast-Temperatur. Die Eigenschaft "Temperatur delta zum Ziel" gibt an, wie viel Grad Unterschied vorhanden sein darf, um den nächsten Maische-Schritt zu starten. In dem Beispiel Maltoserast 63°C und bei einem "Temperatur delta zum Ziel" von 0.3°C würde der Maischeschritt ab einer Ist-Temperatur von 62.7°C gestartet (bzw. ab 63.3°C).
+Wenn die Funktion _autonext_ aktiviert ist, überprüft der Brautomat forlaufend die aktuelle Ist-Temperatur mit der Rast-Temperatur. Die Eigenschaft "Temperatur delta zum Ziel" gibt an, wie viel Grad Unterschied vorhanden sein darf, um den nächsten Maische-Schritt zu starten. In dem Beispiel Maltoserast 63°C und bei einem "Temperatur delta zum Ziel" von 0.3°C würde der Maischeschritt ab einer Ist-Temperatur von 62.7°C gestartet (bzw. ab 63.3°C).
 
-*Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird.*
+_Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird._
 
 Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Diese Sonderfunktion kann bspw. nach dem Kochen der Würze nützlich sein, wenn einer Timer für die Nachisomerisierung gestartet und die GGM IDS ausgeschaltet werden soll.
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein. Hat ein Schritt im Maischeplan die Eigenschaft "autonext" deaktivert und ist eine Aktion durch den Anwender erfolgt, dann kann mittels dem Play Button der nächste Schritt gestartet werden.
 
-*Tipp: Hopfengaben - Im Bild Maischeplan ist das Würzekochen unterteilt in "Kochen", "Kochen Hopfengabe 1" und "Kochen Hopfengabe 2". Die Unterteilung kann passend zur Anzahl der Hopfengaben vorgenommen werden. Wenn ein Buzzer angeschlossen ist, ertönt mit jedem Schritt ein Signalton.*
+_Tipp: Hopfengaben - Im Bild Maischeplan ist das Würzekochen unterteilt in "Kochen", "Kochen Hopfengabe 1" und "Kochen Hopfengabe 2". Die Unterteilung kann passend zur Anzahl der Hopfengaben vorgenommen werden. Wenn ein Buzzer angeschlossen ist, ertönt mit jedem Schritt ein Signalton._
 
 ## Steuerung Maischeplan
 
 Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
 
-![Maischeplan](img/Buttons.jpg)
+![Maischeplan](../docs/img/Buttons.jpg)
 
 ### Der Power Button
 
 Über den Power Button wird der Maischeprozess ein- bzw. ausgeschaltet. Sobald AutoTune in den Einstellungen der GGM IDS oder im Nachguss aktiviert ist, wird der AutoTune Prozess über den Power Button gestartet bzw. gestoppt.
 
-*Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren des Maischeplans deaktiviert. Wird der Maischeprozess pausiert, kann der Maischeplan während des Paischeprozesses verändert werden.*
+_Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren des Maischeplans deaktiviert. Wird der Maischeprozess pausiert, kann der Maischeplan während des Paischeprozesses verändert werden._
 
 ### Der Play Button
 
 Der Play Button hat im Maischeprozess zwei Funktionen:
 
 * setze den Maischeprozess mit der nächsten Rast fort und starte den Rast-Timer. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" im Maischeplan erläutert. Der Play Button wird rot angezeigt.
-
 * Die zweite Funktion "starte sofort den Rast-Timer" startet unabhängig von der IST-Temperatur den Rast-Timer. Ein Anwendungsfall ist, wenn der Maischeprozess nicht nach Plan verläuft und der Brauer eingreifen muss. Beim Schritt Kochen der Würze kann der Rast-Timer gestartet werden, wenn augenscheinlich das wallend Kochen beginnt. Der Play Button wird blau angezeigt.
 
 ### Der Pause Button
@@ -189,18 +174,15 @@ Mit dem Backward Button wird zum vorherigem Schritt im Maischeplan gesprungen. W
 
 Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
 
----
+***
 
 ## Der AutoTune Prozess
 
 AutoTune hat die wichtige Aufgabe, passende Parameter für die Brauanlage zu ermitteln, damit der Maischeprozess so genau wie möglich durchgeführt wird. Im Fokus stehen die IST- und die zugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass ein Über- und Unterschwingen vermieden werden soll.
 
-![AutoTune4](img/IDS_AutoTune_Ziel.jpg)
+![AutoTune4](../docs/img/IDS\_AutoTune\_Ziel.jpg)
 
-Die folgende Beschreibung der PID-Werte ist lediglich eine Hilfe zur Verwendung der Firmware und kann auch übersprungen werden. Der AutoTune Prozess wird ab "Der AutoTune Prozess: Schritt für Schritt" beschrieben.
-Der PID-Controller steuert die Leistung der Induktonsplatte. Es ist wichtig, geeignete P, I und D Werte zu ermitteln. Dabei sind die PID Werte je Brauanlage und Umgebung individuell. AutoTune ist ein Prozess, der bei der Ermittlung geeigneter Werte unterstützt.
-Die benötigte Leistung der Induktionsplatte, um von der Ist-Temperatur zur Zieltemperatur zu gelangen, wird aus der Summe der drei Werte berechnet:
-Erforderliche Leistung = P + I + D
+Die folgende Beschreibung der PID-Werte ist lediglich eine Hilfe zur Verwendung der Firmware und kann auch übersprungen werden. Der AutoTune Prozess wird ab "Der AutoTune Prozess: Schritt für Schritt" beschrieben. Der PID-Controller steuert die Leistung der Induktonsplatte. Es ist wichtig, geeignete P, I und D Werte zu ermitteln. Dabei sind die PID Werte je Brauanlage und Umgebung individuell. AutoTune ist ein Prozess, der bei der Ermittlung geeigneter Werte unterstützt. Die benötigte Leistung der Induktionsplatte, um von der Ist-Temperatur zur Zieltemperatur zu gelangen, wird aus der Summe der drei Werte berechnet: Erforderliche Leistung = P + I + D
 
 ### Der P-Wert
 
@@ -208,8 +190,7 @@ Dieser Parameter wirkt auf der Basis Unterschied zwischen Ist und Soll. Je grö�
 
 ### Der I-Wert
 
-Der I-Wert wird, während die Induktionsplatte heizt, bei null beginnend fortlaufend größer. Je länger die Induktionsplatte von der Ist-Temperatur zur Zieltemperatur benötigt, desto größer wird der I-Wert. Zusammen mit dem P-Wert ergibt sich nun folgende Addition:
-Der P-Wert wird bei Annäherung an die Zieltemperatur kleiner und der I-Wert größer. Nur über den I-Wert wird die Zieltemperatur erreicht. Der I-Wert wird oberhalb der Zieltemperatur wieder kleiner. Der I-Wert erzeugt ein Überschwingen.
+Der I-Wert wird, während die Induktionsplatte heizt, bei null beginnend fortlaufend größer. Je länger die Induktionsplatte von der Ist-Temperatur zur Zieltemperatur benötigt, desto größer wird der I-Wert. Zusammen mit dem P-Wert ergibt sich nun folgende Addition: Der P-Wert wird bei Annäherung an die Zieltemperatur kleiner und der I-Wert größer. Nur über den I-Wert wird die Zieltemperatur erreicht. Der I-Wert wird oberhalb der Zieltemperatur wieder kleiner. Der I-Wert erzeugt ein Überschwingen.
 
 ### Der D-Wert
 
@@ -219,35 +200,34 @@ Der D-Wert ist ein Dämpfer, der die Schwingungen der ersten beiden Anteile mind
 
 Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
-![AutoTune](img/IDS_AutoTune.jpg)
+![AutoTune](../docs/img/IDS\_AutoTune.jpg)
 
-1. Befülle Deinen Kessel mit einer typischen Menge Wasser
+1.  Befülle Deinen Kessel mit einer typischen Menge Wasser
 
     a. Eine typische Menge entspricht dem Hauptguss + Schüttung
 
     Beispiel: 20l Hauptguss und 5kg Schüttung ergibt eine typische Menge von 25l
 
     b. Schalte das Rührwerk ein
-
 2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte 20°C oder mehr über der aktuellen Ist-Temperatur liegen.
 3. Aktiviere „PID AutoTune“
 4. Aktiviere „AutoTune debug“
 5. Speichere diese Einstellung ab (IDS speichern)
 6. Mit einem Klick auf den grünen Power Button wird "AutoTune IDS" gestartet.
 
-![AutoTune2](img/IDS_AutoTune_start.jpg)
+![AutoTune2](../docs/img/IDS\_AutoTune\_start.jpg)
 
 Der AutoTune Prozess dauert je nach Umgebung bis zu 90min. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel wärmegedämmt ist, desto länger dauert der AutoTune Prozess. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der AutoTune-Schritte. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt.
 
 Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
 
-![AutoTune3](img/IDS_AutoTune_erg.jpg)
+![AutoTune3](../docs/img/IDS\_AutoTune\_erg.jpg)
 
 Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch in CraftBeerPi PIDBoil eingestezt wird.
 
-*Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden.*
+_Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden._
 
-Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann über den Explorer das Protokoll "autotune_log.txt" eingesehen werden. Diese Datei sollte nach AutoTune kontrolliert werden. Entscheidend sind die letzten Zeilen in der Protokoll Datei:
+Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. Diese Datei sollte nach AutoTune kontrolliert werden. Entscheidend sind die letzten Zeilen in der Protokoll Datei:
 
 `0min0sec: convergence criterion ok: 0.05/0.05`
 
@@ -273,27 +253,27 @@ In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis
 
 * IDS
 * HLT
-* INTEGRAL_PID
-* SOME_OVERSHOOT_PID
-* NO_OVERSHOOT_PID
-* ZIEGLER_NICHOLS_PID
-* ZIEGLER_NICHOLS_PI
-* TYREUS_LUYBEN_PID
-* TYREUS_LUYBEN_PI
-* CIANCONE_MARLIN_PID
-* CIANCONE_MARLIN_PI
+* INTEGRAL\_PID
+* SOME\_OVERSHOOT\_PID
+* NO\_OVERSHOOT\_PID
+* ZIEGLER\_NICHOLS\_PID
+* ZIEGLER\_NICHOLS\_PI
+* TYREUS\_LUYBEN\_PID
+* TYREUS\_LUYBEN\_PI
+* CIANCONE\_MARLIN\_PID
+* CIANCONE\_MARLIN\_PI
 
-Die Werte sind lediglich eine Hilfe in Ausnahmefällen. Bspw. kann die Methode Integral_PID für Wasserkocher ggfs. ein besseres Ergebnis liefern, als die als die voreingestellte Nachguss Methode HLT. Die jeweiligen PID Werte sind als INDIVIDUAL_PID einzutragen.
+Die Werte sind lediglich eine Hilfe in Ausnahmefällen. Bspw. kann die Methode Integral\_PID für Wasserkocher ggfs. ein besseres Ergebnis liefern, als die als die voreingestellte Nachguss Methode HLT. Die jeweiligen PID Werte sind als INDIVIDUAL\_PID einzutragen.
 
----
+***
 
 ## Die Sensoren
 
 ### Kalibrierung Temperatursensor
 
-Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 [40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 [78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
+Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichung von der tatsächlichen Temperatur. Mithilfe einer 2-Punkte Kalibrierung kann diese Abweichung korrigiert werden. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 \[40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 \[78°C]" eiongetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
 
----
+***
 
 ## Der Nachguss
 
@@ -301,16 +281,15 @@ Der Brautomat bietet optional die Möglichkeit, einen "Kessel" für den Nachguss
 
 Ein neuer Konfigurationsparameter "GPIO invertieren" wird bei der Nachguss und auch bei der Konfigruation von Aktoren angeboten. GPIOs können beim Einschalten des Wemos per Standardeinstellung auf HIGH stehen. HIGH bedeteutet "es fließt Strom". Dementsprechend bedeutet LOW es fließt kein Strom. Die Werkseinstellung vom Wemos und das allgemeine Verständnis von einem Ein-Aus Schalter wäre demnach, dass mit der Stromzufuhr Wemos alle GPIOS (Schalter) auf Eingeschaltet stehen. GPIO invertieren dreht die Werkseinstellung um.
 
-*Tipp:*
-*Wenn Aktoren nach der Konfigruation und Stromzufuhr eingeschaltet starten, muss die Eigenschaft GPIO invertieren aktiviert werden*
+_Tipp:_ _Wenn Aktoren nach der Konfigruation und Stromzufuhr eingeschaltet starten, muss die Eigenschaft GPIO invertieren aktiviert werden_
 
----
+***
 
 ## Die Aktoren
 
 Aktoren wie bspw. Rührwerk, Pumpen oder Ringheizelemente werden mit einem Namen und einem GPIO (Schalter) konfiguriert. GPIO invertieren wurde im Abschnitt Nachguss erläutert. EIne neue Eigenschaft ist PWM oder Pulsweitenmodulation. PWM im Brautomat ist ein takten. Genauer beschreiben: das takten von Ein und Ausschalten oder Storm fließt und Strom fließt nicht. Die Eingabe ist in Prozent. Permanent eingeschaltet sind 100%. Bei einem Wasserkocher wäre dies sinngemäß dauerhaft maximale Leistung. Ein PWM von 50% wäre 50:50 Strom fließt und Strom fließt nicht. Bei einem Wasserkocher wäre dies sinngemäß halbe Leistung. Nicht alle Aktoren sind für PWM geeignet. Sehr gut geeignet ist ein Ringheizelement (220V AC) mit einer PWM Taktung über ein SSR. Gleichstrom Aktoren lassen sich besser und einfacher mit PWM Modulen regeln.
 
----
+***
 
 ## Alle GGM IDS Parameter im Überblick
 
@@ -320,15 +299,13 @@ Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Stand
 
 ### Temperatur delta zum Ziel
 
-Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur der Timer einer Rast starten soll. Der Standardwert ist 0.3°C.
-Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteuerung. Eine Rasttemperatur wird mit +-0.2°C genau erreicht, indem der PID Controller die Energiezufuhr kurz vor Erreichen der Rasttemperatur kontrolliert reduziert. Würde die Energiezufuhr erst mit Erreichen der Rasttemperatur reduziert werden, wäre ein deutliches Überschwingen um mehr als 1°C unvermeidlich. Die Reduzierung der Energiezufuhr hat als Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "delta zum Ziel" ins Spiel: soll bspw. eine Rasttemperatur von 63°C erreicht werden und ist die aktuelle Temperatur 62.7°C, dann würde mit einem Temperatur delta zum Ziel von 0.3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden. Zu beachten gilt auch, dass die IST-Temperatur mit einer Genauigkeit von 0.125°C ermittelt wird.
+Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur der Timer einer Rast starten soll. Der Standardwert ist 0.3°C. Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteuerung. Eine Rasttemperatur wird mit +-0.2°C genau erreicht, indem der PID Controller die Energiezufuhr kurz vor Erreichen der Rasttemperatur kontrolliert reduziert. Würde die Energiezufuhr erst mit Erreichen der Rasttemperatur reduziert werden, wäre ein deutliches Überschwingen um mehr als 1°C unvermeidlich. Die Reduzierung der Energiezufuhr hat als Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "delta zum Ziel" ins Spiel: soll bspw. eine Rasttemperatur von 63°C erreicht werden und ist die aktuelle Temperatur 62.7°C, dann würde mit einem Temperatur delta zum Ziel von 0.3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden. Zu beachten gilt auch, dass die IST-Temperatur mit einer Genauigkeit von 0.125°C ermittelt wird.
 
 ### Temperatur Kochen
 
-Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt NICHT, ab welcher Temperatur die Würze beginnt zu kochen. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung Kochen" das Induktionskochfeld steuert.
-Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer gleichbleibenden Leistng betrieben.  
+Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt NICHT, ab welcher Temperatur die Würze beginnt zu kochen. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung Kochen" das Induktionskochfeld steuert. Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer gleichbleibenden Leistng betrieben.
 
-*Tipp: Bei Ist-Temperaturen über dem Wert Temperatur Kochen und über der Rast-Temepratur wird der Parameter "Temperatur Delta zum Ziel" nicht beachtet.*
+_Tipp: Bei Ist-Temperaturen über dem Wert Temperatur Kochen und über der Rast-Temepratur wird der Parameter "Temperatur Delta zum Ziel" nicht beachtet._
 
 ### Leistung Kochen
 
@@ -348,7 +325,7 @@ Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der ben�
 
 Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwerten betrachtet werden sollen. Der Standardwert für eine GGM IDS beträgt 75 Messwerte, bei einem Nachguiss Kocher beträgt der Standardwert 50. Zu beachten gilt, dass maximal 100 Messwerte konfiguriert werden können. Bei sehr gut wärmeisolierten Braukesseln (bspw. mit Armaflex) kann eine Erhöhung auf 100 Messwerte in der Datenreihe die Erkennung von Extremalwerten in der Abkühlphase vom AutoTune Prozess verbessern.
 
----
+***
 
 ## Alle System Parameter im Überblick
 
@@ -362,20 +339,17 @@ Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel unten
 
 Toasts unterstützen eine Audio Ausgabe. So werden Toasts im Maischeprozess nicht nur zu einer visuelle, sondern auch einer akkustischen Erinnerung. Die Firmware beinhaltet die Audio Dateien info.mp3, success.mp3, warning.mp3 und error.mp3. Die Audio Dateien (mp3) können ausgetauscht werden. Lediglich die Benennung muss gleich bleiben. Im Browser sollte Autoplay Audio für die IP-Adresse des Brautomaten erlaubt sein.
 
-*Tipp: iOS Geräte -*
-*mp3 Audio benötigt auf iOS Geräten eine "user gesture", bspw. ein Klick oder Touch event. Einfach ein Element auf der Webseite anklicken und mp3 Audio wird ausgegeben. Ohne die user gesture wird die Audio Ausgabe vom iOS System blockiert*
+_Tipp: iOS Geräte -_ _mp3 Audio benötigt auf iOS Geräten eine "user gesture", bspw. ein Klick oder Touch event. Einfach ein Element auf der Webseite anklicken und mp3 Audio wird ausgegeben. Ohne die user gesture wird die Audio Ausgabe vom iOS System blockiert_
 
-*Tipp: automatische Medienwiedergabe -*
-*Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat mit dem mDNS Namen im Microsoft Edge Browser hinzugefügt worden. Alternativ kann auch die IP-Adresse eingetragen werden*
+_Tipp: automatische Medienwiedergabe -_ _Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat mit dem mDNS Namen im Microsoft Edge Browser hinzugefügt worden. Alternativ kann auch die IP-Adresse eingetragen werden_
 
-![media](img/autoplay_media.jpg)
+![media](../docs/img/autoplay\_media.jpg)
 
 Mit dieser Einstellung können mp3 Alarme einen Piezo Buzzer ersetzen. Treten beim Systemstart Fehler auf, werden mp3 Audio Signale auf iOS Geräte blockiert. Erst nach einem Klick oder Touch werden mp3 Audio Dateien wiedergegeben. Als workaround für iOS Geräte kann nach dem ersten Start direkt ein Neustart initiert werden. Der Neustart muss als Klick bzw. Touch über System -> Neustart durchgeführt werden. Durch diese "user gesture" werden mp3 Medien automatisch wiedergegeben.
 
 Toast Nachrichten und mp3 Alarme können systembedingt wenige Sekunden zeitverzögert zugestellt werden. Jeder Browser erhält seine eigenen Nachrichten. Zwei Geräte mit geöffnetem Browser auf den Brautomat erhalten (systembedingt) die gleiche Toast Nachricht bis zu 2 Sekunden zeitversetzt. Voreingestellt werden Toasts spätestens nach 60 Sekunden gelöscht. Innerhalb dieser 60 Sekunden überscheiben neue Toasts ältere Nachrichten (keine Stapelverarbeitung).
 
-*Toasts in der Praxis*
-*In der Brauküche wird meist ein Gerät und ein Browser mit dem Brautomat verwendet. Toasts mit mp3 Audio bieten eine einfache und laute akkustische Aufforderung zum Handeln. Deshalb ist es vorteilhaft, wenn die Enegerieoptionen beim Brauen deaktiviert werden und der Browser während des Brauens durchgehend aktiv ist. Wenn die Brauküche verlassen wird, sind Toasts auf einem Smartphone oder Tablet eine optischer und akkustischer Begleiter. Auch mobile Geräten müssen durchgehend aktiv sein. Toasts melden sich auf allen verbundenen Browsern. Anders gesagt: jeder Browser merkt sich, welche Toast ID bereits angezeigt wurde. Es ist richtig und gewollt, wenn ein PC Browser und ein Smartphone die gleiche Toast Nachricht minimal zeitversetzt anzeigen*
+_Toasts in der Praxis_ _In der Brauküche wird meist ein Gerät und ein Browser mit dem Brautomat verwendet. Toasts mit mp3 Audio bieten eine einfache und laute akkustische Aufforderung zum Handeln. Deshalb ist es vorteilhaft, wenn die Enegerieoptionen beim Brauen deaktiviert werden und der Browser während des Brauens durchgehend aktiv ist. Wenn die Brauküche verlassen wird, sind Toasts auf einem Smartphone oder Tablet eine optischer und akkustischer Begleiter. Auch mobile Geräten müssen durchgehend aktiv sein. Toasts melden sich auf allen verbundenen Browsern. Anders gesagt: jeder Browser merkt sich, welche Toast ID bereits angezeigt wurde. Es ist richtig und gewollt, wenn ein PC Browser und ein Smartphone die gleiche Toast Nachricht minimal zeitversetzt anzeigen_
 
 ### Aktviere Porterweiterung PCF8574
 
@@ -385,23 +359,29 @@ Mit diesem Parameter kann eine 8-Port GPIO Erweiterung am ESP8266 betrieben werd
 
 Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der Brautomat bietet drei Ansichten
 
-    - die Kessel Seite:     auf dieser Ansicht werden IDS und Nachguss mit Ist- und Zieltemperaturen dargestellt.
-                            Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
-                            Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
+```
+- die Kessel Seite:     auf dieser Ansicht werden IDS und Nachguss mit Ist- und Zieltemperaturen dargestellt.
+                        Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
+                        Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
+```
 
-![Display](img/kettlepage.jpg)
+![Display](../docs/img/kettlepage.jpg)
 
-    - die Brauen Seite:     auf dieser Ansicht wird das Induktionskochfeld dargestellt.
-                            Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt.
-                            Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
+```
+- die Brauen Seite:     auf dieser Ansicht wird das Induktionskochfeld dargestellt.
+                        Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt.
+                        Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
+```
 
-![Display](img/brewpage.jpg)
+![Display](../docs/img/brewpage.jpg)
 
-    - die Kochen Seite:     auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld
-                            Im manuellen Betrieb stehen 6 Powerstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung
-                            Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!) 
+```
+- die Kochen Seite:     auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld
+                        Im manuellen Betrieb stehen 6 Powerstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung
+                        Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!) 
+```
 
-![Display](img/induction_mode.jpg)
+![Display](../docs/img/induction\_mode.jpg)
 
 Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Touchdisplays (Basic und Discovery Series).
 
@@ -409,7 +389,7 @@ Das Display wird mit einer SD Karte konfiguriert. Die zum Display passende TFT D
 
 Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
----
+***
 
 ## Beschreibung aller Buttons
 
@@ -439,85 +419,86 @@ Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die
 
 Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bzw. ausgeblendet werden. Zusätzlich können einzelne Graphen durch Klick auf den Graphnamen ein- und ausgeblendet werden. Die Standardeinstellung auf sichtbar eingestellt.
 
-*Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert.*
+_Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert._
 
 ### Der Auge Button
 
 Mit dem Auge-Button können Teile der Webseite sichtbar bzw. unsichtbar geschaltet werden. Wen bspw. keine Aktoren eingesetzt werden, kann die Tabelle Aktoren ausgeblendet werden. Die Standardeinstellung ist auf nicht sichtbar vorbelegt.
 
-*Tipp: alle nicht benötigten Elemente auf der Webseite ausgeblenden und anschließend die Systemkonfiguration öffnen und auf Speichern klicken. Damit übernimmt der Brautomat die Einstellung und blendet beim nächsten Start alle markierten Elemente aus.*
+_Tipp: alle nicht benötigten Elemente auf der Webseite ausgeblenden und anschließend die Systemkonfiguration öffnen und auf Speichern klicken. Damit übernimmt der Brautomat die Einstellung und blendet beim nächsten Start alle markierten Elemente aus._
 
----
+***
 
 ## Die Platine
 
-![Platine](img/Platine.jpg)
+![Platine](../docs/img/Platine.jpg)
 
 Die Platine zum Projekt Brautomat macht den Aufbau und die Verwendung sehr einfach. Dabei ist die Platine völlig unabhängig vom Projekt Brautomat. Mit einem ESP8266 Wemos D1 mini kann die Platine universell eingesetzt werden. An die Schraubklemmblöcke werden beim Brautomat die GGM IDS, die Sensoren, die Aktoren und das Display angeschlossen.
 
 ### Jumperpositionen
 
-Die Platine hat 4 Jumper. Die Jumper J1, J2 und J3 müssen mindestens auf *2-3* gesetzt werden.
+Die Platine hat 4 Jumper. Die Jumper J1, J2 und J3 müssen mindestens auf _2-3_ gesetzt werden.
 
-    Jumpereinstellung Kurzform
-    - Wird ein Display eingesetzt, müssen J1 und J2 auf 1-2 gesteckt sein. 
-    - Wir kein Display eingesetzt, müssen J1 und J2 auf 2-3 gesteckt sein. 
-    - J3 wird immer auf 2-3 gesteckt.
+```
+Jumpereinstellung Kurzform
+- Wird ein Display eingesetzt, müssen J1 und J2 auf 1-2 gesteckt sein. 
+- Wir kein Display eingesetzt, müssen J1 und J2 auf 2-3 gesteckt sein. 
+- J3 wird immer auf 2-3 gesteckt.
 
-    1. Jumper J1: Pin D1 
-        - In der Position 1-2 wird Pin D1 (GPIO 5) auf den Displayanschluss umgeleitet (SDL)
-        - in der Position 2-3 wird kein Display verwendet (default)
-    2. Jumper J2: Pin D2
-        - In der Position 1-2 wird Pin D2 (GPIO 4) auf den Displayanschluss umgeleitet (SDA)
-        - in der Position 2-3 wird kein Display verwendet  (default)
-    3. Jumper J3: Pin D4
-        - In der Position 1-2 wird Pin D4 (GPIO 2) auf den Displayanschluss umgeleitet.
-        - in der Position 2-3 wird Pin D4 nicht umgeleitet (default)
+1. Jumper J1: Pin D1 
+    - In der Position 1-2 wird Pin D1 (GPIO 5) auf den Displayanschluss umgeleitet (SDL)
+    - in der Position 2-3 wird kein Display verwendet (default)
+2. Jumper J2: Pin D2
+    - In der Position 1-2 wird Pin D2 (GPIO 4) auf den Displayanschluss umgeleitet (SDA)
+    - in der Position 2-3 wird kein Display verwendet  (default)
+3. Jumper J3: Pin D4
+    - In der Position 1-2 wird Pin D4 (GPIO 2) auf den Displayanschluss umgeleitet.
+    - in der Position 2-3 wird Pin D4 nicht umgeleitet (default)
 
-    4. Jumper J4: Stromzufuhr über GGM IDS
-        - wenn der Jumper J4 gesetzt ist, wird die Stromzufuhr von der GGM IDS für den Brautomat genutzt.
-        - wenn der Jumper J4 nicht gesetzt ist, wird die Stromzufuhr an den Anschluss *5V* und *GND* angeklemmt.
+4. Jumper J4: Stromzufuhr über GGM IDS
+    - wenn der Jumper J4 gesetzt ist, wird die Stromzufuhr von der GGM IDS für den Brautomat genutzt.
+    - wenn der Jumper J4 nicht gesetzt ist, wird die Stromzufuhr an den Anschluss *5V* und *GND* angeklemmt.
+```
 
 ### Teileliste
 
-| Anzahl | Artikelname | Link zum Artikel |
-| ------ | ------- | --------- |
-| 1 | Schraubklemmblock 2pol 2,54 | (eg voelkner ) |
-| 3 | Schraubklemmblock 3pol 2,54 | (eg voelkner ) |
-| 2 | Schraubklemmblock 5pol 2,54 | (eg voelkner ) |
-| 2 | Schraubklemmblock 8pol 2,54 | (eg voelkner ) |
-| 1 | JST-HX Buchse 90° 2,54 | (eg voelkner ) |
-| 1 | Stiftleiste 2,54 | [amazon](<https://amzn.to/40Q8Nbv>) |
-| 4 | Jumper 2,54 | (eg voelkner ) |
-| 1 | Widerstand 4,7kOhm | [amazon](<https://amzn.to/40OLPBA>) |
-| 1 | D1 mini NodeMcu ESP8266 | [amazon](<https://amzn.to/3RWwyL5>) |
-| 1 | LevelShifter 8 Channel 5V 3.3V | [amazon](<https://amzn.to/3xjkN7S>) |
-*Links nach amazon Partner und Voelkner TradeTracker*
+| Anzahl                                                | Artikelname                    | Link zum Artikel                  |
+| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 1                                                     | Schraubklemmblock 2pol 2,54    | (eg voelkner )                    |
+| 3                                                     | Schraubklemmblock 3pol 2,54    | (eg voelkner )                    |
+| 2                                                     | Schraubklemmblock 5pol 2,54    | (eg voelkner )                    |
+| 2                                                     | Schraubklemmblock 8pol 2,54    | (eg voelkner )                    |
+| 1                                                     | JST-HX Buchse 90° 2,54         | (eg voelkner )                    |
+| 1                                                     | Stiftleiste 2,54               | [amazon](https://amzn.to/40Q8Nbv) |
+| 4                                                     | Jumper 2,54                    | (eg voelkner )                    |
+| 1                                                     | Widerstand 4,7kOhm             | [amazon](https://amzn.to/40OLPBA) |
+| 1                                                     | D1 mini NodeMcu ESP8266        | [amazon](https://amzn.to/3RWwyL5) |
+| 1                                                     | LevelShifter 8 Channel 5V 3.3V | [amazon](https://amzn.to/3xjkN7S) |
+| _Links nach amazon Partner und Voelkner TradeTracker_ |                                |                                   |
 
 Die Position JST-HX Buchse ist für das original Anschlusskabel vorgesehen. Wird ein Ersatzkabel (ohne JST-HX Stecker) verwendet, kann an gleicher Stelle auf der Platine ein Schraubklemmblock 5pol im Rastermaß 2,54mm eingesetzt werden. Der Schaubklemmblock 2pol kann wahlweise unten rechts oder mittig links neben dem Wemos D1 mini eingesetzt werden.
 
-*Tipp:*
-*der ESP8266 sollte gesockelt werden. Mit Sockel (im Link oben enthalten) ist ausreichend Platz für den Widerstand unter dem ESP8266. Falls eine Fehlersuche erforderlich ist, kann ein gesockelter ESP8266 von der Platine abgesteckt werden.*
+_Tipp:_ _der ESP8266 sollte gesockelt werden. Mit Sockel (im Link oben enthalten) ist ausreichend Platz für den Widerstand unter dem ESP8266. Falls eine Fehlersuche erforderlich ist, kann ein gesockelter ESP8266 von der Platine abgesteckt werden._
 
 Die Anschlüsse vom LevelShifter 8 Kanal müssen zur Anordnung auf der Platine identisch sein. Der Levelshifter aus dem Link hat diese Anordnung der Anschlüsse.
 
-![Levelshifter](img/Levelshifter.jpg)
+![Levelshifter](../docs/img/Levelshifter.jpg)
 
 ## Beispiele für Aktoren
 
 ### Pumpen
 
-![Aktoren](img/Pumpe1.jpg)
+![Aktoren](../docs/img/Pumpe1.jpg)
 
 Eine Pumpe ist beim Läutern oder beim Transport in den Gärbehälter eine große Hilfe. Die verwendete Pumpe muss lebensmittelecht sein und für Temperaturen bis 100°C geeignet sein. Die Minipumpen von Rotekt eignen sich sehr gut für den Einsatz in der Brauküche:
 
-![Aktoren](img/Pumpe2.jpg)
+![Aktoren](../docs/img/Pumpe2.jpg)
 
-| Artikelname | Link zum Artikel |
-| ------- | --------- |
-| Mini-Pumpe 12V DC | [amazon](<https://amzn.to/3E4iRUF>) |
-| Mini-Pumpe 12V DC | [amazon](<https://amzn.to/3E4iRUF>) |
-| Pneumatische Steckverbinder 8mm x 1/2 Zoll 90° drehbar | [amazon](<https://amzn.to/3XmH2nP>) |
+| Artikelname                                            | Link zum Artikel                  |
+| ------------------------------------------------------ | --------------------------------- |
+| Mini-Pumpe 12V DC                                      | [amazon](https://amzn.to/3E4iRUF) |
+| Mini-Pumpe 12V DC                                      | [amazon](https://amzn.to/3E4iRUF) |
+| Pneumatische Steckverbinder 8mm x 1/2 Zoll 90° drehbar | [amazon](https://amzn.to/3XmH2nP) |
 
 Ebenfalls sehr gut und schnell sind Verbdinungen mit [Camlocks von Braubebo](https://www.braubebo.de/camlock/) wie auf dem ersten Bild dargestellt.
 
@@ -525,11 +506,11 @@ Ebenfalls sehr gut und schnell sind Verbdinungen mit [Camlocks von Braubebo](htt
 
 Mit dem Brautomat können sehr einfach SSRs geschaltet werden. SSR oder Solid State Relais schalten mit 3-5V Gleichstrom vom Brautomat den 220V Wechselstromkreis ein- bzw. aus. Die Fotek SSRs sind ideal zur Temperaturregelung und Steuerung über den Brautomat.
 
-![fotek](img/fotek.jpg)
+![fotek](../docs/img/fotek.jpg)
 
-| Artikelname | Link zum Artikel |
-| ------- | --------- |
-| Fotek SSR 40DA | [amazon](<https://amzn.to/3RSzKav>) |
+| Artikelname    | Link zum Artikel                  |
+| -------------- | --------------------------------- |
+| Fotek SSR 40DA | [amazon](https://amzn.to/3RSzKav) |
 
 Anwenungsbeispiele für SSR: Wenn 220V an einem SSR Fotek über den Brautomat geschaltet wird, kann am "anderen Ende" der 220V Leitung eine Steckdose für einen beliebiges Gerät mit Stecker angebracht werden. Zum Beispiel für das Netzteil vom Rührwerk. Oder für einen Nachgusskocher. Oder für ein Ringheizlement. Auch das Netzteil der Rotek Pumpe kann über ein SSR ein- und ausgeschaltet werden.
 
@@ -537,11 +518,11 @@ Anwenungsbeispiele für SSR: Wenn 220V an einem SSR Fotek über den Brautomat ge
 
 Nicht alle Verbraucher benötigen ein leistungsstarkes SSR. Bspw. können Aktoren wie Rührwerk oder Pumpen mit günstigen Relaisboards geschaltet werden. Ein sehr gutes Relaisboard ist das Keenso 4 Kanal Optokoppler Reaisboard.
 
-![keenso](img/keenso.jpg)
+![keenso](../docs/img/keenso.jpg)
 
-| Artikelname | Link zum Artikel |
-| ------- | --------- |
-| Relaisboard Keenso | [amazon](<https://amzn.to/3K3gg11>) |
+| Artikelname        | Link zum Artikel                  |
+| ------------------ | --------------------------------- |
+| Relaisboard Keenso | [amazon](https://amzn.to/3K3gg11) |
 
 Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) und Low Trigger (es fließt kein Strom) eingestellt werden. Diese Möglichkeit macht das Relaisboard ideal für den Einsatz mit einem ESP8266 oder einer Port Erweiterung PCF8574.
 
@@ -549,19 +530,19 @@ Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) u
 
 Wenn mehr Aktoren betrieben werden sollen, als der ESP8266 (nutzbare) GPIOs anbietet, ist die PCF8674 Porterweiterung eine gute Lösung
 
-![pcf8574](img/pcf8574.jpg)
+![pcf8574](../docs/img/pcf8574.jpg)
 
-| Artikelname | Link zum Artikel |
-| ------- | --------- |
-| Port Erweiterung PCF8574 | [amazon](<https://amzn.to/3YrVi02>) |
+| Artikelname              | Link zum Artikel                  |
+| ------------------------ | --------------------------------- |
+| Port Erweiterung PCF8574 | [amazon](https://amzn.to/3YrVi02) |
 
 Die Porterweiterung muss an D6 und D7 vom ESP8266 angeschlossen werden. Mit dem Modul PCF8475 werden 6 zusätzliche Anschlüsse bereitgestellt. Der Brautomat unterstützt nur eine Porterweiterung!
 
 ### Ringheizelemente
 
-Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthareware](<https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel>).
+Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthareware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
 
----
+***
 
 ## Brautomat vs MQTTDevice
 
@@ -571,7 +552,7 @@ Das [MQTTDevice](https://github.com/InnuendoPi/MQTTDevice4) wird mit CraftBeerPi
 
 Identisch ist in beiden Projekten die Hardware (ESP8266, Temperatursensoren, Display, GGM IDS2) sowie die Platine. Ein Wechsel zwischen die Firmwares Brautomat und MQTTDevice4 ist jederzeit ohne Veränderung möglich.
 
----
+***
 
 ## kleinerBrauhelfer2 & Brautomat
 
@@ -579,13 +560,13 @@ Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://github.com/kleine
 
 ### Der kbh2 Tab Maischplan
 
-Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion ist aber nur mit halber automatik möglich (autonext).  
+Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion ist aber nur mit halber automatik möglich (autonext).
 
-![Kochen](img/kbh2_maischplan.jpg)
+![Kochen](../docs/img/kbh2\_maischplan.jpg)
 
-Einen Typ Abmaischen kennt der kbh2 nicht, weil er diesen Typ auch nicht benötigt. Der Brautomat benötigt diesen Maischeschritt, um das Ende vom Maischen  und den Übergang zum Läutern zu erkennen. Es sollte in jedem Maischplan ans Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
+Einen Typ Abmaischen kennt der kbh2 nicht, weil er diesen Typ auch nicht benötigt. Der Brautomat benötigt diesen Maischeschritt, um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in jedem Maischplan ans Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
 
-![Kochen](img/kbh2_maischplan2.jpg)
+![Kochen](../docs/img/kbh2\_maischplan2.jpg)
 
 ### Der kbh2 Tab Kochen
 
@@ -593,7 +574,7 @@ Der kbh2 denkt anders, als der Brautomat. Im folgenden wird erläutert, wie der 
 
 Spaß macht s trotzdem. Also ... Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich Bittere und Aroma. Siehe Formelsammlung im kbh2.
 
-![Kochen](img/hopfen.jpg)
+![Kochen](../docs/img/hopfen.jpg)
 
 Im Bild kbh2 ist die Hopfengabe dargestellt. Die erste Hopfengabe ist "Hallertauer Perle 7% 2020" mit einer Kochdauer von 65 Minuten. Ein zweiter Parameter ist in diesem Zusammenhang wichtig: auf der linken Seite ist die gesamte Kochdauer mit 80 Minuten grün markiert. Die Würze wird also 15 Minuten lang ohne Hopfen gekocht. Die zweite Hopfengabe ist der "Hallertauer Tradition 5.7% 2020" Hopfen mit einer Kochdauer von 15 Minuten. In den letzten 15 Minuten Kochen der Würze hat die Hallertauer Perle von ursprünglich 65 Minuten noch 15 Minuten Kochzeit übrig und die zweite Hopfengabe Hallertauer Tradition kocht 15 Minuten lang von den verbliebenen 15 Minuten Restkochzeit mit. Die letze Hopfengabe wird zum Ausschlagen gegeben, also nach dem Kochende.
 
@@ -601,6 +582,6 @@ Die Aufgabe vom Brautomat ist den Zeitpunkt der Hopfengabe beim Brauen genau anz
 
 Wir haben eine gesamte Kochedauer von 80 Minuten und eine erste Hopfengabe mit einer Kochdauer von 65 Minuten. Dann ergibt sich eine Differenz von 15 Minuten Kochedauer ohne Hopfengabe.
 
-![Kochen](img/hopfengaben.jpg)
+![Kochen](../docs/img/hopfengaben.jpg)
 
 IN gleicher Weise verhält sich die Hopfengabe Ausschlagen. Es ist eine Nachisomerisierungszeit von 10 Minuten gegeben. Die Hopfengabe "Hallertauer Tradition 5.7% 2020" zum Ausschlagen mit einer Kochdauer von -5 Minuten ist Teil der Nachisomerisierung.
