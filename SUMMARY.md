@@ -24,6 +24,4 @@
 * [Hardware](hardware.md)
 * [KleinerBrauhelfer2](kleinerbrauhelfer2.md)
 * [MQTTDevice](mqttdevice.md)
-* [Sonstiges](index-1.md)
 * [Changelog](CHANGELOG.md)
-* [docs](docs.md)
