@@ -1,6 +1,6 @@
 ---
 description: >-
-  Brausteuerung für das Induktionskochfeld GGM IDS auf der Baus ESP8266 Wemos D1
+  Brausteuerung für das Induktionskochfeld GGM IDS auf Basis ESP8266 Wemos D1
   mini.
 ---
 
