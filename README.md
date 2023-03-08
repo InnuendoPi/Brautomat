@@ -1,9 +1,3 @@
----
-description: >-
-  Brausteuerung für das Induktionskochfeld GGM IDS auf Basis ESP8266 Wemos D1
-  mini.
----
-
 # Der Brautomat
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. _Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden._
@@ -40,7 +34,7 @@ Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https:
 
 Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHANGELOG.md)
 
-## WebInterface
+## 📰 WebInterface
 
 Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5 und Javascript benötigt (Bootstrap 4.6) bspw:
 
@@ -55,7 +49,7 @@ Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unt
 
 ![Startseite](docs/img/brautomat-2.jpg)
 
-## Nextion HMI Touchdisplay
+## 💻 Nextion HMI Touchdisplay
 
 Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werden nur Nextion ITEAD HMI 3.5 Zoll Displays unterstützt.
 
