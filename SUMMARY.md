@@ -19,6 +19,7 @@
 * [Parameter im Überblick](parameter-im-ueberblick/README.md)
   * [Parameter GGM IDS](parameter-im-ueberblick/parameter-ggm-ids.md)
   * [Parameter System](parameter-im-ueberblick/parameter-system.md)
+  * [Funktionen der Buttons](parameter-im-ueberblick/funktionen-der-buttons.md)
 * [Sonstiges](index-1.md)
 * [Changelog](CHANGELOG.md)
 * [docs](docs.md)
