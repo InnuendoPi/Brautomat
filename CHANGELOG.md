@@ -6,7 +6,7 @@ Version 1.14  maintenance update
 * Update:     VSCode 1.76 Arduino 0.6
 * Update:     ArduinoJSON 6.21
 * Update:     SoftwareSerial 8.0.1
-* Optimze:    Framework
+* Optimize:   Framework
 
 Version 1.13
 
