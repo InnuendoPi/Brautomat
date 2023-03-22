@@ -1,5 +1,13 @@
 # Changelog
 
+Version 1.14  maintenance update
+
+* Update:     ESP8266 Arduino 3.1.2
+* Update:     VSCode 1.76 Arduino 0.6
+* Update:     ArduinoJSON 6.21
+* Update:     SoftwareSerial 8.0.1
+* Optimze:    Framework
+
 Version 1.13
 
 *Korrektur:   Fehler beim Speichern Einstelung Toast Nachrichten behoben (typo)
