@@ -1,5 +1,12 @@
 # Changelog
 
+Version 1.15
+
+* Optimize:   Framework Innuticker Display Update read SoftSerial
+* Optimize:   Web Interface Ladevorgang deutlich schneller (toasts lib)
+* Optimize:   TouchDisplay Reaktionszeit deutlich schneller
+* Replaced:   Toast Lib
+
 Version 1.14  maintenance update
 
 * Update:     ESP8266 Arduino 3.1.2
