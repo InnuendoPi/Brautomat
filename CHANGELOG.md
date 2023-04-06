@@ -1,13 +1,12 @@
 # Changelog
 
-Version 1.15
+Version 1.15   maintenance/Framework update
 
 * Optimize:    Framework Innuticker Display Update read SoftSerial (updateBack)
-* Optimize:    Web Interface Ladevorgang deutlich schneller (toasts lib)
-* Optimize:    TouchDisplay Reaktionszeit deutlich schneller
-* Geändert:    Framework Aktualisierung der Ticker Objekte
-
-* Replaced:   Toast Lib
+* Optimize:    Web Interface Ladevorgang verbessert (toasts lib)
+* Optimize:    TouchDisplay Reaktionszeit beschleunigt
+* Geändert:    Framework Aktualisierung der Ticker Objekte (updateBack)
+* Replaced:    Toast Lib
 
 Version 1.14  maintenance update
 
