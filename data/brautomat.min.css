@@ -1,9 +1,7 @@
 @font-face {
   font-family: 'brautomat';
-  src:  url('./brautomat.eot?v7u1py');
-    src:  url('./brautomat.eot?v7u1py#iefix') format('embedded-opentype'),
-    url('./brautomat.ttf?v7u1py') format('truetype');
-      
+  src:  url('./brautomat.ttf') format('truetype');
+    
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -122,94 +120,51 @@
 }
 .icon-chevron-up {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
 }
 .icon-chevron-down {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
 }
 .icon-pencil {
   color: var(--success);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
 }
 .icon-pencil2 {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
 }
 .icon-trash-o {
  color: var(--danger);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
 }
 .icon-sliders {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
-  /*background-size: 120%;*/
 }
 .icon-clock-o {
   color: var(--primary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-bullseye {
   color: var(--primary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-thermometer-three-quarters {
   color: var(--success);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-fire-red {
   color: var(--danger);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-fire {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-power-off {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-power-on {
   color: var(--success);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-cog {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-cogs {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.7em;*/
-  /*background-size: 120%;*/
 }
 .icon-loop {
   color: var(--secondary);
-  /*margin-right: 30px;*/
-  /*font-size: 1.5em;*/
-  /*background-size: 120%;*/
 }
 .top-right {
   top: 0;
@@ -243,7 +198,6 @@
 }
 .myMash-button-style {
   text-align: center;
-  /* border-style: none; */
   width: 80%;
 }
 .myMash-button-style-chart {
@@ -280,6 +234,9 @@
   z-index: 1;
   min-width: 400px;
   float: right;
+}
+.myRow-odd {
+  background-color:#F8F9FA;
 }
 /*!
  * Bootstrap v4.6.2 (https://getbootstrap.com/)

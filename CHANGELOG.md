@@ -2,27 +2,29 @@
 
 Version 1.15
 
-* Optimize:   Framework Innuticker Display Update read SoftSerial
-* Optimize:   Web Interface Ladevorgang deutlich schneller (toasts lib)
-* Optimize:   TouchDisplay Reaktionszeit deutlich schneller
+* Optimize:    Framework Innuticker Display Update read SoftSerial (updateBack)
+* Optimize:    Web Interface Ladevorgang deutlich schneller (toasts lib)
+* Optimize:    TouchDisplay Reaktionszeit deutlich schneller
+* Geändert:    Framework Aktualisierung der Ticker Objekte
+
 * Replaced:   Toast Lib
 
 Version 1.14  maintenance update
 
-* Update:     ESP8266 Arduino 3.1.2
-* Update:     VSCode 1.76 Arduino 0.6
-* Update:     ArduinoJSON 6.21
-* Update:     SoftwareSerial 8.0.1
-* Optimize:   Framework
+* Update:      ESP8266 Arduino 3.1.2
+* Update:      VSCode 1.76 Arduino 0.6
+* Update:      ArduinoJSON 6.21
+* Update:      SoftwareSerial 8.0.1
+* Optimize:    Framework
 
 Version 1.13
 
-*Korrektur:   Fehler beim Speichern Einstelung Toast Nachrichten behoben (typo)
-*Korrektur:   Toast Objekte
-*Korrektur:   Die Ladezeit für die toast.min.js verbessert (dauert trotzdem noch zu lange)
-*Geändert:    Toasts vom Typ Error bleiben stehen, bis sie angeklickt werden
-*Geändert:    Abfragen Toasttypen
-*Korrektur:   Fehler Toasts und Alarme mp3 Einstellung Nur Fehler
+* Korrektur:   Fehler beim Speichern Einstelung Toast Nachrichten behoben (typo)
+* Korrektur:   Toast Objekte
+* Korrektur:   Die Ladezeit für die toast.min.js verbessert (dauert trotzdem noch zu lange)
+* Geändert:    Toasts vom Typ Error bleiben stehen, bis sie angeklickt werden
+* Geändert:    Abfragen Toasttypen
+* Korrektur:   Fehler Toasts und Alarme mp3 Einstellung Nur Fehler
 
 Version 1.12
 
