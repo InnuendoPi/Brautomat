@@ -1,9 +1,9 @@
 # Auto detect text files and perform LF normalization
-* text=auto
-*.ino linguist-language=cpp
-*.cpp linguist-language=cpp
-*.hpp linguist-language=cpp
-*.h linguist-language=cpp
+# * text=auto
+*.ino text diff=cpp
+*.cpp text diff=cpp
+*.h text diff=cpp
 *.js linguist-detectable=false
 *.css linguist-detectable=false
-*.gcode = linguist-detectable=false
+*.md linguist-detectable=false
+*.txt linguist-detectable=false
