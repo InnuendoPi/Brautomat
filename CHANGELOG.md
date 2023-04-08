@@ -1,5 +1,11 @@
 # Changelog
 
+Version 1.16
+
+* Neu:         Tab Dashboard: Konfiguration der Elemente auf dem Dashboard
+* Geändert:    Ansicht Dashboard
+* Geändert:    Refresh Dashboard
+
 Version 1.15   maintenance/Framework update
 
 * Optimize:    Framework Innuticker Display Update read SoftSerial (updateBack)
@@ -11,7 +17,7 @@ Version 1.15   maintenance/Framework update
 Version 1.14  maintenance update
 
 * Update:     ESP8266 Arduino 3.1.2
-* Update:     VSCode 1.76 Arduino 0.6
+* Update:     VSCode 1.77 Arduino 0.6
 * Update:     ArduinoJSON 6.21
 * Update:     SoftwareSerial 8.0.1
 * Optimize:   Framework
