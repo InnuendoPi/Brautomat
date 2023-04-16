@@ -4,8 +4,7 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
 
 _**Schnelleinstieg in den Brautomaten: diese zwei Abschnitte lesen und dann Brauen**_
 
-```
-
+```text
 - Grundeinrichtung
 - Der Maischeplan
 

@@ -12,6 +12,18 @@ Einen Typ Abmaischen kennt der kbh2 nicht, weil er diesen Typ auch nicht benöti
 
 ![Kochen](../docs/img/kbh2\_maischplan2.jpg)
 
+### Beispiel 1: kbh2 Earl Scheidt Kochmaischverfahren
+
+[Earl Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
+
+### Beispiel 2: kbh2 Dekoktion Zweimaischverfahren
+
+[Zweimaischverfahren](https://hobbybrauer.de/forum/wiki/doku.php/maischen)
+
+### Beispiel 3: Dekoktion Dreimaischverfahren
+
+[Dreimaischverfahren](https://hobbybrauer.de/forum/wiki/doku.php/maischen)
+
 ## Der kbh2 Tab Kochen
 
 Der kbh2 denkt anders, als der Brautomat. Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe Formelsammlung im kbh2.

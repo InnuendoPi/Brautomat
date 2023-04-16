@@ -30,7 +30,7 @@ Mit diesem Parameter kann eine 8-Port GPIO Erweiterung am ESP8266 betrieben werd
 
 Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der Brautomat bietet drei Ansichten
 
-```
+```text
 - die Kessel Seite:     auf dieser Ansicht werden IDS und Nachguss mit Ist- und Zieltemperaturen dargestellt.
                         Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
                         Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
@@ -38,7 +38,7 @@ Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der
 
 ![Display](../docs/img/kettlepage.jpg)
 
-```
+```text
 - die Brauen Seite:     auf dieser Ansicht wird das Induktionskochfeld dargestellt.
                         Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt.
                         Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
@@ -46,7 +46,7 @@ Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der
 
 ![Display](../docs/img/brewpage.jpg)
 
-```
+```text
 - die Kochen Seite:     auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld
                         Im manuellen Betrieb stehen 6 Powerstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung
                         Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!) 

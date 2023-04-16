@@ -1,5 +1,12 @@
 # Changelog
 
+ESP8266 Arduino 3.1.2\
+VSCode 1.77 Arduino 0.6\
+VSCode plugin EPS8266fs (modified: added native mklittlefs support)\
+AutoTune PID InnuAPID (based on PID lib [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library) and CraftbeerPi Plugin)\
+Scheduler InnuTicker (based on ESP8266 ticker)\
+CSS/JS/HTML5 Framework (bootstrap 4.6.2)\
+
 Version 1.16a
 
 * Korrektur:   JS Toasts (Typo)

@@ -6,7 +6,7 @@ Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" d
 
 Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
 
-```
+```bash
 1: @ECHO OFF
 2: CLS
 3: SET SCRIPT_LOCATION=%~dp0

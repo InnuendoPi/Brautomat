@@ -4,7 +4,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
 ![AutoTune](../docs/img/IDS\_AutoTune.jpg)
 
-1.  Befülle Deinen Kessel mit einer typischen Menge Wasser
+1. Befülle Deinen Kessel mit einer typischen Menge Wasser
 
     a. Eine typische Menge entspricht dem Hauptguss + Schüttung
 
@@ -29,19 +29,15 @@ _Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesiche
 
 Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. Diese Datei sollte nach AutoTune kontrolliert werden. Entscheidend sind die letzten Zeilen in der Protokoll Datei:
 
-`0min0sec: convergence criterion ok: 0.05/0.05`
-
-`0min0sec: Peaks: 1: 61.250 2: 59.750 3: 61.500 4: 59.750`
-
-`0min0sec: Time: 1: 3520743 2: 3385743 3: 2805697 4: 2705697`
-
-`0min0sec: Ultimate gain Ku: xxx`
-
-`0min0sec: Ultimate period Pu: xxx`
-
-`0min0sec: k/min rate Mu: xxx`
-
-`14:12:38 PID AutoTune finished`
+```text
+0min0sec: convergence criterion ok: 0.05/0.05
+0min0sec: Peaks: 1: 61.250 2: 59.750 3: 61.500 4: 59.750
+0min0sec: Time: 1: 3520743 2: 3385743 3: 2805697 4: 2705697
+0min0sec: Ultimate gain Ku: xxx
+0min0sec: Ultimate period Pu: xxx
+0min0sec: k/min rate Mu: xxx
+14:12:38 PID AutoTune finished
+```
 
 1. "convergence criterion ok:" (alle Zahlen hinter diesem Text sind rein informativ)
 2. Peaks: 1: (61.250) und 3: (61.500) müssen über der Zieltemperatur (60.0) sein
@@ -50,7 +46,8 @@ Wenn der AutoTune Prozess beendet ist und wurde "AutoTune debug" aktiviert, kann
 Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind PID-Werte über verschiedene Berechnungsmethoden aufgeführt.
 
 * IDS
-* HLT
+* NACHGUSS
+* INDIVIDUAL\_PID
 * INTEGRAL\_PID
 * SOME\_OVERSHOOT\_PID
 * NO\_OVERSHOOT\_PID
@@ -61,4 +58,4 @@ Wenn diese drei Bedingungen erfüllt sind, war der AutoTune Prozess erfolgreich.
 * CIANCONE\_MARLIN\_PID
 * CIANCONE\_MARLIN\_PI
 
-Die Werte sind lediglich eine Hilfe in Ausnahmefällen. Bspw. kann die Methode Integral\_PID für Wasserkocher ggfs. ein besseres Ergebnis liefern, als die als die voreingestellte Nachguss Methode HLT. Die jeweiligen PID Werte sind als INDIVIDUAL\_PID einzutragen.
+Die Werte sind lediglich eine Hilfe in Ausnahmefällen. Bspw. kann die Methode Integral\_PID für Wasserkocher ggfs. ein besseres Ergebnis liefern, als die als die voreingestellte Methode NACHGUSS. Die jeweiligen PID Werte sind als INDIVIDUAL\_PID einzutragen.
