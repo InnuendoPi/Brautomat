@@ -1,17 +1,14 @@
 # Die Platine
 
-## Die Platine
-
 ![Platine](../docs/img/Platine.jpg)
 
 Die Platine zum Projekt Brautomat macht den Aufbau und die Verwendung sehr einfach. Dabei ist die Platine völlig unabhängig vom Projekt Brautomat. Mit einem ESP8266 Wemos D1 mini kann die Platine universell eingesetzt werden. An die Schraubklemmblöcke werden beim Brautomat die GGM IDS, die Sensoren, die Aktoren und das Display angeschlossen.
 
-### Jumperpositionen
+## Jumperpositionen
 
 Die Platine hat 4 Jumper. Die Jumper J1, J2 und J3 müssen mindestens auf _2-3_ gesetzt werden.
 
-```
-Jumpereinstellung Kurzform
+```Jumpereinstellung Kurzform
 - Wird ein Display eingesetzt, müssen J1 und J2 auf 1-2 gesteckt sein. 
 - Wir kein Display eingesetzt, müssen J1 und J2 auf 2-3 gesteckt sein. 
 - J3 wird immer auf 2-3 gesteckt.
@@ -31,7 +28,7 @@ Jumpereinstellung Kurzform
     - wenn der Jumper J4 nicht gesetzt ist, wird die Stromzufuhr an den Anschluss *5V* und *GND* angeklemmt.
 ```
 
-### Teileliste
+## Teileliste
 
 | Anzahl                                                | Artikelname                    | Link zum Artikel                  |
 | ----------------------------------------------------- | ------------------------------ | --------------------------------- |

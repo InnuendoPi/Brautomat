@@ -65,7 +65,9 @@ data/chart.umd.min.js
 data/jquery.min.js
 data/jquery.tabletojson.min.js
 data/toast.min.js
-Display/
+display2/
+display/mqttdevice4-320x240fix/
+display/HMI/
 Backup/
 *.ino
 *.h

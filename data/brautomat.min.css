@@ -238,6 +238,15 @@
 .myRow-odd {
   background-color:#F8F9FA;
 }
+<<<<<<< HEAD
+=======
+.dispNone {
+  display: none;
+}
+.dispBlock {
+  display: block;
+}
+>>>>>>> main
 /*!
  * Bootstrap v4.6.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
