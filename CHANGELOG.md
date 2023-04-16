@@ -1,6 +1,9 @@
 # Changelog
 
-Version 1.16
+Version 1.16a
+
+* Korrektur:   JS Toasts (Typo)
+* Korrektur:   WebUpdate Toasty entfernt (alte JS)
 
 * Neu:         Tab Dashboard: Konfiguration der Elemente auf dem Dashboard
 * Geändert:    Ansicht Dashboard
