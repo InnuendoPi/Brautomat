@@ -11,7 +11,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
     Beispiel: 20l Hauptguss und 5kg Schüttung ergibt eine typische Menge von 25l
 
     b. Schalte das Rührwerk ein
-2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte 20°C oder mehr über der aktuellen Ist-Temperatur liegen.
+2. Setze eine AutoTune Zieltemperatur. Die Zieltemperatur sollte 50°C oder mehr, aber min. 20°C über der aktuellen Ist-Temperatur liegen.
 3. Aktiviere „PID AutoTune“
 4. Aktiviere „AutoTune debug“
 5. Speichere diese Einstellung ab (IDS speichern)
@@ -19,7 +19,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
 ![AutoTune2](../docs/img/IDS\_AutoTune\_start.jpg)
 
-Der AutoTune Prozess dauert je nach Umgebung bis zu 90min. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel wärmegedämmt ist, desto länger dauert der AutoTune Prozess. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der AutoTune-Schritte. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt.Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
+Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel wärmegedämmt ist, desto länger dauert der AutoTune Prozess. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der AutoTune-Schritte. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
 
 ![AutoTune3](../docs/img/IDS\_AutoTune\_erg.jpg)
 

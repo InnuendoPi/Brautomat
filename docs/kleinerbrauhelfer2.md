@@ -20,7 +20,7 @@ Einen Typ Abmaischen kennt der kbh2 nicht, weil er diesen Typ auch nicht benöti
 
 [Zweimaischverfahren](https://hobbybrauer.de/forum/wiki/doku.php/maischen)
 
-### Beispiel 3: Dekoktion Dreimaischverfahren
+### Beispiel 3: kbh2 Dekoktion Dreimaischverfahren
 
 [Dreimaischverfahren](https://hobbybrauer.de/forum/wiki/doku.php/maischen)
 
