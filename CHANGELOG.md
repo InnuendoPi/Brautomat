@@ -7,7 +7,7 @@ InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.16
+Version 1.17
 
 * Update:      SoftSerial 8.0.2 (Kommunikation Nextion Display)
 * Optimiert:   Geschwindigkeit Nextion Display
