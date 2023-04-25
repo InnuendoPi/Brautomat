@@ -7,12 +7,10 @@ InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.16h
+Version 1.16
 
 * Update:      SoftSerial 8.0.2 (Kommunikation Nextion Display)
-
-Version 1.16g
-
+* Optimiert:   Geschwindigkeit Nextion Display
 * Korrektur:   Während AutoTune wird die erste Zeile Maischeplan nicht mehr markiert
 * Geändert:    Beim Start vom Brautomat wird die GGM IDS auf null Prozenzt Leistung gesetzt
 * Geändert:    Erkennen von Min/Max AutoTune
@@ -24,12 +22,8 @@ Version 1.16g
 * Optimiert:   Reihenfolge web requests optimiert
 * Geändert:    AutoTune debug Log komprimiert
 * Erweitert:   Dashboard Status (not yet ready)
-
-Version 1.16a
-
 * Korrektur:   JS Toasts (Typo)
 * Korrektur:   WebUpdate Toasty entfernt (alte JS)
-
 * Neu:         Tab Dashboard: Konfiguration der Elemente auf dem Dashboard
 * Geändert:    Ansicht Dashboard
 * Geändert:    Refresh Dashboard
