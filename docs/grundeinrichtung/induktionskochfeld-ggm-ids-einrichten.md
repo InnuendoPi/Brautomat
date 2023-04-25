@@ -14,7 +14,7 @@ Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft
 
 Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (mit Anschluss an einer JST-HX Buchse). Als nächste Eigenschaft muss ein Temepratursensor angegeben werden, welcher dem Induktionskochfeld zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
 
-_Tipp_:\* _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen._
+_Tipp_: _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (auch Zieltemperatur) verglichen._
 
 Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte werden übernommen.
 
@@ -28,14 +28,14 @@ Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind
 
 _Tipp:_ _Bei einerm Kesselvolumen von 36l und einem Maischevolumen von ca. 20l sind folgende Startparameter gut geeignet:_
 
-```
+```text
 Ultimate gain Ku:     182
 Ultimate period Pu:   2245
 ```
 
 _Bei einerm Kesselvolumen von 70l und einem Maischevolumen von über 40l sind folgende Startparameter gut geeignet:_
 
-```
+```text
 Ultimate gain Ku:     225
 Ultimate period Pu:   1500
 ```

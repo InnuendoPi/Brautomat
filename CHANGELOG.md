@@ -1,12 +1,55 @@
 # Changelog
 
+ESP8266 Arduino 3.1.2\
+VSCode 1.77 Arduino 0.6\
+VSCode plugin EPS8266Littlefs based on VSCode plugin ESP8266fs\
+InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
+InnuTicker task scheduler lib\
+InnuFramework CSS/JS bootstrap 4.6.2
+
+Version 1.16h
+
+* Update:      SoftSerial 8.0.2 (Kommunikation Nextion Display)
+
+Version 1.16g
+
+* Korrektur:   Während AutoTune wird die erste Zeile Maischeplan nicht mehr markiert
+* Geändert:    Beim Start vom Brautomat wird die GGM IDS auf null Prozenzt Leistung gesetzt
+* Geändert:    Erkennen von Min/Max AutoTune
+* Geändert:    Überprüfung ob AutoTune Peaks stabil sind
+* Optimiert:   Während AutoTune GGM IDS wird die Auflösung Temperstursensor auf 12bit gesetzt (max. Auflösung, 0.0625°C)
+* Geändert:    Prüfung auf isConnected der Temperatursensoren entfernt (fehlerhafter Rückgabe bei manchen DS18B20 Sensoren)
+* Geändert:    Sensor Fehler Code Auswertung entfernt (-254, -253, -252, -127). Sensorwerte ab -127.0 werden als Sensorfehler behandelt
+* Optimiert:   MP3 Dateien komprimiert
+* Optimiert:   Reihenfolge web requests optimiert
+* Geändert:    AutoTune debug Log komprimiert
+* Erweitert:   Dashboard Status (not yet ready)
+
+Version 1.16a
+
+* Korrektur:   JS Toasts (Typo)
+* Korrektur:   WebUpdate Toasty entfernt (alte JS)
+
+* Neu:         Tab Dashboard: Konfiguration der Elemente auf dem Dashboard
+* Geändert:    Ansicht Dashboard
+* Geändert:    Refresh Dashboard
+
+Version 1.15   maintenance/Framework update
+
+* Optimiert:   Framework Innuticker Display Update read SoftSerial (updateBack)
+* Optimiert:   Web Interface Ladevorgang verbessert (toasts lib)
+* Optimiert:   TouchDisplay Reaktionszeit beschleunigt
+* Geändert:    Framework Aktualisierung der Ticker Objekte (updateBack)
+* Ersetzt:     Toast Lib
+
+>>>>>>> main
 Version 1.14  maintenance update
 
 * Update:     ESP8266 Arduino 3.1.2
 * Update:     VSCode 1.76 Arduino 0.6
 * Update:     ArduinoJSON 6.21
 * Update:     SoftwareSerial 8.0.1
-* Optimize:   Framework
+* Optimiert:  Framework
 
 Version 1.13
 
