@@ -3,9 +3,13 @@
 ESP8266 Arduino 3.1.2\
 VSCode 1.77 Arduino 0.6\
 VSCode plugin EPS8266Littlefs based on VSCode plugin ESP8266fs\
-InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library\
+InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
-InnuFramework CSS/JS bootstrap 4.6.2\
+InnuFramework CSS/JS bootstrap 4.6.2
+
+Version 1.16h
+
+* Update:      SoftSerial 8.0.2 (Kommunikation Nextion Display)
 
 Version 1.16g
 
