@@ -9,6 +9,11 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.17
 
+* Korrektur:   Tippfehler
+* Optimiert:   Geschwindigkeit Web Interface
+
+Version 1.17
+
 * Update:      SoftSerial 8.0.2 (Kommunikation Nextion Display)
 * Optimiert:   Geschwindigkeit Nextion Display
 * Korrektur:   Während AutoTune wird die erste Zeile Maischeplan nicht mehr markiert
