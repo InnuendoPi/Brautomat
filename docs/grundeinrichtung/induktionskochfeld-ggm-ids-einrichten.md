@@ -4,7 +4,7 @@ Schritt: das Induktionskochfeld GGM IDS einrichten
 
 Im ersten Abschnitt "Maischeplan" wird das Induktionskochfeld über das Zahnrad angelegt
 
-![IDS](../docs/img/IDS_einrichten.jpg)
+![IDS](/docs/img/IDS-einrichten.jpg)
 
 Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
 
@@ -18,11 +18,11 @@ _Tipp_: _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden
 
 Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden später erläutert. Die Standardwerte werden übernommen.
 
-![IDS](../docs/img/IDS_konfigurieren.jpg)
+![IDS](/docs/img/IDS-konfigurieren.jpg)
 
 Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird später der Prozess AutoTune im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für Ku und Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
 
-![IDS](../docs/img/IDS_pid-einrichten.jpg)
+![IDS](/docs/img/IDS-pid-einrichten.jpg)
 
 Wenn die Werte für "Ultimate gain Ku" und "Ultimate period Pu" eingetragen sind, ermittelt die Auswahl "PID tuning Regel" die drei Werte P, I und D automatisch. Eine Erläuterung aller Parameter erfolgt später.
 

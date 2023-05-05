@@ -2,7 +2,7 @@
 
 Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
 
-![Maischeplan](../docs/img/Buttons.jpg)
+![Maischeplan](/docs/img/Buttons.jpg)
 
 ## Der Power Button
 
