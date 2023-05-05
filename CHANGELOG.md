@@ -1,14 +1,20 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.77 Arduino 0.6\
+VSCode 1.78 Arduino 0.6\
 VSCode plugin EPS8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.17
+Version 1.18
 
+* Neu:         Zeitsteuerung Brauen eingefügt
+* Neu:         DateTimePicker im Menü Sud (Zeitsteuerung)
+* Neu:         Manueller Modus im Web Interface eingefügt
+* Geändert:    Sichtbarkeit der Dashboard Elemente (Systemeinstellungen - Dashboard)
+* Optimiert:   Icons (icomoon free)
+* Geändert:    Option Manueller Modus im Dashboard aktiviert
 * Korrektur:   Tippfehler
 * Optimiert:   Geschwindigkeit Web Interface
 
