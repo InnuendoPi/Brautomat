@@ -2,7 +2,7 @@
 
 Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
-![AutoTune](../docs/img/IDS_AutoTune.jpg)
+![AutoTune](../docs/img/IDS-AutoTune.jpg)
 
 1. Befülle Deinen Kessel mit einer typischen Menge Wasser
 
@@ -17,11 +17,11 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 5. Speichere diese Einstellung ab (IDS speichern)
 6. Mit einem Klick auf den grünen Power Button wird "AutoTune IDS" gestartet.
 
-![AutoTune2](../docs/img/IDS_AutoTune_start.jpg)
+![AutoTune2](../docs/img/IDS-AutoTune-start.jpg)
 
 Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel wärmegedämmt ist, desto länger dauert der AutoTune Prozess. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der AutoTune-Schritte. Treten Fehler auf, erscheint an dieser Stelle „in progress 6/5“ und höher. Der AutoTune Prozess prüft die gefundenen Messerte. Ist ein Messwert fehlerhaft, wird die Messung wiederholt. Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
 
-![AutoTune3](../docs/img/IDS_AutoTune_erg.jpg)
+![AutoTune3](../docs/img/IDS-AutoTune-erg.jpg)
 
 Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch in CraftBeerPi PIDBoil eingestezt wird.
 

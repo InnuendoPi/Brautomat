@@ -23,7 +23,7 @@ der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast
 
 Die Eigenschaft _autonext_ im fünften Schritt _Abmaischen 78°C_ ist nicht aktiviert. Wenn der Brautomat auf ein deaktivertes autonext trifft, beendet der Brautomat die aktuelle Rast nach Ablauf der Rast-Dauer und setzt die Leistung vom Induktionskochfeld auf 0% (aus). In diesem Status wird der "Play Button" rot angezeigt. Zum Fortsetzen des Brauvorgangs muss auf den Play Button geklickt werden:
 
-![Maischeplan](../docs/img/Maischeplan\_pause.jpg)
+![Maischeplan](../docs/img/Maischeplan_pause.jpg)
 
 Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn die Rast _Abmaischen 78°C_ beendet ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet. Der Masicheprozess verläuft bei deaktiviertem autonext manuell.
 
