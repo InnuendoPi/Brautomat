@@ -4,11 +4,11 @@
 
 ### Pumpen
 
-![Aktoren](../docs/img/Pumpe1.jpg)
+![Aktoren](/docs/img/Pumpe1.jpg)
 
 Eine Pumpe ist beim Läutern oder beim Transport in den Gärbehälter eine große Hilfe. Die verwendete Pumpe muss lebensmittelecht sein und für Temperaturen bis 100°C geeignet sein. Die Minipumpen von Rotekt eignen sich sehr gut für den Einsatz in der Brauküche:
 
-![Aktoren](../docs/img/Pumpe2.jpg)
+![Aktoren](/docs/img/Pumpe2.jpg)
 
 | Artikelname                                            | Link zum Artikel                  |
 | ------------------------------------------------------ | --------------------------------- |
@@ -22,7 +22,7 @@ Ebenfalls sehr gut und schnell sind Verbdinungen mit [Camlocks von Braubebo](htt
 
 Mit dem Brautomat können sehr einfach SSRs geschaltet werden. SSR oder Solid State Relais schalten mit 3-5V Gleichstrom vom Brautomat den 220V Wechselstromkreis ein- bzw. aus. Die Fotek SSRs sind ideal zur Temperaturregelung und Steuerung über den Brautomat.
 
-![fotek](../docs/img/fotek.jpg)
+![fotek](/docs/img/fotek.jpg)
 
 | Artikelname    | Link zum Artikel                  |
 | -------------- | --------------------------------- |
@@ -34,7 +34,7 @@ Anwenungsbeispiele für SSR: Wenn 220V an einem SSR Fotek über den Brautomat ge
 
 Nicht alle Verbraucher benötigen ein leistungsstarkes SSR. Bspw. können Aktoren wie Rührwerk oder Pumpen mit günstigen Relaisboards geschaltet werden. Ein sehr gutes Relaisboard ist das Keenso 4 Kanal Optokoppler Reaisboard.
 
-![keenso](../docs/img/keenso.jpg)
+![keenso](/docs/img/keenso.jpg)
 
 | Artikelname        | Link zum Artikel                  |
 | ------------------ | --------------------------------- |
@@ -46,7 +46,7 @@ Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) u
 
 Wenn mehr Aktoren betrieben werden sollen, als der ESP8266 (nutzbare) GPIOs anbietet, ist die PCF8674 Porterweiterung eine gute Lösung
 
-![pcf8574](../docs/img/pcf8574.jpg)
+![pcf8574](/docs/img/pcf8574.jpg)
 
 | Artikelname              | Link zum Artikel                  |
 | ------------------------ | --------------------------------- |
