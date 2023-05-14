@@ -35,12 +35,9 @@ Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHAN
 
 ## 📰 WebInterface
 
-Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5 und Javascript benötigt (Bootstrap 4.6) bspw:
+Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5; Javascript und Server Sent Events (SSE) benötigt.\
 
-* MS Edge ab Version 12 (getestet auf Win10, Win11 und iOS 16)
-* Chrome oder Firefox Browser
-* iOS ab Version 9 mit Safari
-* Android mit Chrome, Bromite und DuckDuck
+Übersicht kompatibler [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility)
 
 ![Startseite](/docs/img/brautomat.jpg)
 

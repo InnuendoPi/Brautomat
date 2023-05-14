@@ -2,10 +2,30 @@
 
 ESP8266 Arduino 3.1.2\
 VSCode 1.78 Arduino 0.6\
-VSCode plugin EPS8266Littlefs based on VSCode plugin ESP8266fs\
+VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
-InnuFramework CSS/JS bootstrap 4.6.2
+InnuFramework CSS/JS bootstrap 4.6.2\
+Server Sent Events (8 channels)
+
+Version 1.20
+
+* Optimiert:    Web Interface Geschwindigkeit  
+* Neu           Synchronisierung ESP8266 und Web Browser (SSE)
+* Neu           Server Sent Events (SSE) ersetzen Ajax/JQuery requests (http polling)
+* Neu           8 SSE Kanäle (channels) stehen zur Verfügung
+* Neu           für curl o.ä.: channel subscription: `http://brautomat/channel` \
+                return code: `http://brautomat/rest/events/<channel number>`
+* Neu           Favicon
+* Geändert:     Anleitung
+
+Version 1.19
+
+* Neu:          SSE
+* Korrektur:    CSS/JS load files unknown length
+* Korrektur:    Konvertierungsfehler Datum Uhrzeit nach epochtime (Berechnung Startzeit Brauen)
+* Neu:          Schaltjahr Epochtime
+* Korrektur:    Rezept Import
 
 Version 1.18
 

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'brautomat';
-  src:  url('./brautomat.ttf') format('truetype');
+  src:  url('/brautomat.ttf') format('truetype');
     
   font-weight: normal;
   font-style: normal;
@@ -20,6 +20,9 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-feed:before {
+  content: "\e91d";
 }
 .icon-switch:before {
   content: "\e909";
