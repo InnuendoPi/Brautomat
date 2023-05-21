@@ -35,18 +35,15 @@ Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHAN
 
 ## 📰 WebInterface
 
-Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5 und Javascript benötigt (Bootstrap 4.6) bspw:
+Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5; Javascript und Server Sent Events (SSE) benötigt.\
 
-* MS Edge ab Version 12 (getestet auf Win10, Win11 und iOS 16)
-* Chrome oder Firefox Browser
-* iOS ab Version 9 mit Safari
-* Android mit Chrome, Bromite und DuckDuck
+Übersicht kompatibler [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility)
 
-![Startseite](docs/img/brautomat.jpg)
+![Startseite](/docs/img/brautomat.jpg)
 
-![Startseite](docs/img/IDS\_AutoTune\_Ziel.jpg)
+![Startseite](/docs/img/IDS-AutoTune-Ziel.jpg)
 
-![Startseite](docs/img/brautomat-2.jpg)
+![Startseite](/docs/img/brautomat-2.jpg)
 
 ## 💻 Nextion HMI Touchdisplay
 
@@ -56,6 +53,6 @@ Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werde
 * MaischeSud Info (Infoscreen, keine Steuerung)
 * Manuelle Steuerung Kochen (manuelle Steuerung GGM IDS2)
 
-![Startseite](docs/img/kettlepage\_sm.jpg) ![Startseite](docs/img/brewpage\_sm.jpg) ![Startseite](docs/img/induction\_mode\_sm.jpg)
+![Startseite](/docs/img/kettlepage-sm.jpg) ![Startseite](/docs/img/brewpage-sm.jpg) ![Startseite](/docs/img/induction-mode-sm.jpg)
 
 _"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [_http://www.freesoundslibrary.com_](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._

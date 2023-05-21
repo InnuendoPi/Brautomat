@@ -14,7 +14,7 @@ _Tipp: iOS Geräte -_ _mp3 Audio benötigt auf iOS Geräten eine "user gesture",
 
 _Tipp: automatische Medienwiedergabe -_ _Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat mit dem mDNS Namen im Microsoft Edge Browser hinzugefügt worden. Alternativ kann auch die IP-Adresse eingetragen werden_
 
-![media](../docs/img/autoplay\_media.jpg)
+![media](/docs/img/autoplay-media.jpg)
 
 Mit dieser Einstellung können mp3 Alarme einen Piezo Buzzer ersetzen. Treten beim Systemstart Fehler auf, werden mp3 Audio Signale auf iOS Geräte blockiert. Erst nach einem Klick oder Touch werden mp3 Audio Dateien wiedergegeben. Als workaround für iOS Geräte kann nach dem ersten Start direkt ein Neustart initiert werden. Der Neustart muss als Klick bzw. Touch über System -> Neustart durchgeführt werden. Durch diese "user gesture" werden mp3 Medien automatisch wiedergegeben.
 
@@ -40,7 +40,7 @@ Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der
                         Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
 ```
 
-![Display](../docs/img/kettlepage.jpg)
+![Display](/docs/img/kettlepage.jpg)
 
 <<<<<<< HEAD
 ```- die Brauen Seite:     auf dieser Ansicht wird das Induktionskochfeld dargestellt.
@@ -52,7 +52,7 @@ Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der
                         Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
 ```
 
-![Display](../docs/img/brewpage.jpg)
+![Display](/docs/img/brewpage.jpg)
 
 <<<<<<< HEAD
 ```- die Kochen Seite:     auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld
@@ -64,7 +64,7 @@ Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der
                         Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!) 
 ```
 
-![Display](../docs/img/induction\_mode.jpg)
+![Display](/docs/img/induction-mode.jpg)
 
 Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Touchdisplays (Basic und Discovery Series).
 

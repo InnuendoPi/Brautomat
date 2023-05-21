@@ -2,21 +2,24 @@
 
 Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
 
-![Maischeplan](../docs/img/Buttons.jpg)
+![Maischeplan](/docs/img/Buttons.jpg)
 
 ## Der Power Button
 
 Über den Power Button wird der Maischeprozess ein- bzw. ausgeschaltet. Sobald AutoTune in den Einstellungen der GGM IDS oder im Nachguss aktiviert ist, wird der AutoTune Prozess über den Power Button gestartet bzw. gestoppt.
 
-_Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren des Maischeplans deaktiviert. Wird der Maischeprozess pausiert, kann der Maischeplan während des Paischeprozesses verändert werden._
+_Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren des Maischeplans deaktiviert. Wird der Maischeprozess pausiert, kann der Maischeplan während des Maischeprozesses verändert werden._
 
 ## Der Play Button
 
 Der Play Button hat im Maischeprozess zwei Funktionen:
 
-1. setze den Maischeprozess mit der nächsten Rast fort und starte den Rast-Timer. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" im Maischeplan erläutert. Der Play Button wird rot angezeigt.\
+1. Die erste Funktion lautet "starte den Rast-Timer für die aktuelle Rast". Der Play Button startet unabhängig von der IST-Temperatur den Rast-Timer.\
+Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet. Ein weiterer Anwendungsfall wäre, wenn der Maischeprozess nicht nach Plan verläuft.\
+Der Play Button wird blau angezeigt.
 
-2. Die zweite Funktion "starte sofort den Rast-Timer" startet unabhängig von der IST-Temperatur den Rast-Timer. Ein Anwendungsfall ist, wenn der Maischeprozess nicht nach Plan verläuft und der Brauer eingreifen muss. Im Schritt Kochen der Würze kann der Rast-Timer gestartet werden, wenn augenscheinlich das wallend Kochen beginnt. Der Play Button wird blau angezeigt.
+2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft autonext zusammen: setze den Maischeprozess mit der nächsten Rast fort. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" im Maischeplan erläutert.\
+Ein Anwendungsfall ist das Einmaischen. Wird der Schritt Einmaischen mit deaktiviertem autonext konfiguriert, verbleibt der Maischeprozess im einem Wartestatus bis der Play Button angeklickt wird. Der Play Button wird rot angezeigt.\
 
 ## Der Pause Button
 

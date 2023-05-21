@@ -1,6 +1,6 @@
 # Die Platine
 
-![Platine](../docs/img/Platine.jpg)
+![Platine](/docs/img/Platine.jpg)
 
 Die Platine zum Projekt Brautomat macht den Aufbau und die Verwendung sehr einfach. Dabei ist die Platine völlig unabhängig vom Projekt Brautomat. Mit einem ESP8266 Wemos D1 mini kann die Platine universell eingesetzt werden. An die Schraubklemmblöcke werden beim Brautomat die GGM IDS, die Sensoren, die Aktoren und das Display angeschlossen.
 
@@ -50,4 +50,4 @@ _Tipp:_ _der ESP8266 sollte gesockelt werden. Mit Sockel (im Link oben enthalten
 
 Die Anschlüsse vom LevelShifter 8 Kanal müssen zur Anordnung auf der Platine identisch sein. Der Levelshifter aus dem Link hat diese Anordnung der Anschlüsse.
 
-![Levelshifter](../docs/img/Levelshifter.jpg)
+![Levelshifter](/docs/img/Levelshifter.jpg)
