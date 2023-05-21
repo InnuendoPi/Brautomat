@@ -8,7 +8,14 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
-Version 1.20b
+Version 1.21
+
+* Optimiert:    Quellcode überarbeitet
+* Neu:          Hinweis (Toasts) neue Version
+* Geändert:     Anleitung
+* Update:       JQuery 3.7.0
+
+Version 1.20
 
 * Optimiert:    Web Interface Geschwindigkeit  
 * Neu           Synchronisierung ESP8266 und Web Browser (SSE)
