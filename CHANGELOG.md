@@ -8,6 +8,15 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.22
+
+* Neu:          Import Brewfather Rezepte
+* Neu:          Import MaischeMalzundMehr Rezepte: Import Hopfengaben hinzugefügt
+* Geändert:     Import MaischeMalzundMehr Rezepte: JSON Import Filter eingefügt (Anmerkungen werden nicht mehr eingelesen)
+* Geändert:     Import MaischeMalzundMehr Rezepte: Überprüfung auf Maischeform Infusion eingefügt
+* Korrektur:    Import MaischeMalzundMehr Rezepte: Import Rezept Name u. Kochdauer
+* ToDo:         Import MaischeMalzundMehr Rezepte: Maischeform Dekoktion
+
 Version 1.21
 
 * Optimiert:    Quellcode überarbeitet
