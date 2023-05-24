@@ -10,14 +10,16 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Korrektur:    Rezept Import KBH2: Hopfengaben zum gleichen Zeitpunkt
+* Korrektur:    Rezept Import KBH2: Vorderwürzenhopfung vor Step Kochen
+* Korrektur:    Step Dauer 0 Minuten
 * Deaktiviert:  Hinweis (Toasts) neue Version
 * Neu:          Import Brewfather Rezepte
 * Korrektur:    Import Brewfather: Hopfengabe Zeitpunkt
-* Neu:          Import MaischeMalzundMehr Rezepte: Import Hopfengaben hinzugefügt
 * Geändert:     Import MaischeMalzundMehr Rezepte: JSON Import Filter eingefügt (Anmerkungen werden nicht mehr eingelesen)
 * Geändert:     Import MaischeMalzundMehr Rezepte: Überprüfung auf Maischeform Infusion eingefügt
 * Korrektur:    Import MaischeMalzundMehr Rezepte: Import Rezept Name u. Kochdauer
-* ToDo:         Import MaischeMalzundMehr Rezepte: Maischeform Dekoktion
+* Neu:          Import MaischeMalzundMehr Rezepte: Import Hopfengaben hinzugefügt
 
 Version 1.21
 
