@@ -10,6 +10,12 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* ZF:           Alle Importfilter sollten nun komplett sein. Empfehlung: kleinerBrauhelfer2!
+* Korrektur:    Rezept Import MMuM: Hopfengaben zum gleichen Zeitpunkt
+* Korrektur:    Rezept Import MMuM: Typ Hopfen_VWH_1_Sorte eingefügt
+* Neu:          Optionen für den Import: Einmaischen 50°C für 1min mit deaktiviertem autonext, falls nicht vorhanden (oder gefunden)
+* Neu:          Optionen für den Import: Abmaischen 78°C für 1min mit deaktiviertem autonext, falls nicht vorhanden (oder gefunden)
+* Neu:          Import MaischeMalzundMehr Rezepte: Dekoktion
 * Korrektur:    Rezept Import KBH2: Hopfengaben zum gleichen Zeitpunkt
 * Korrektur:    Rezept Import KBH2: Vorderwürzenhopfung vor Step Kochen
 * Korrektur:    Step Dauer 0 Minuten
