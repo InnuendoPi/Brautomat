@@ -10,6 +10,9 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Neu:          IDS Parameter Temperatur kochen: Temperatur bei der die Würze wallend kocht
+* Korrektur:    Parameter Temperatur kochen umbenannt in Übergang zum Kochen
+* Korrektur:    Rezept Import kbh2: autonext wurde falsch gesetzt
 * ZF:           Alle Importfilter sollten nun komplett sein. Empfehlung: kleinerBrauhelfer2!
 * Korrektur:    Rezept Import MMuM: Hopfengaben zum gleichen Zeitpunkt
 * Korrektur:    Rezept Import MMuM: Typ Hopfen_VWH_1_Sorte eingefügt

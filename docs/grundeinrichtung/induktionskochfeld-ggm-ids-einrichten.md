@@ -16,7 +16,7 @@ Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (m
 
 _Tipp_: _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (Zieltemperatur) verglichen._
 
-Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Temperatur Kochen" und "Leistung Kochen" werden im Abschnitt "alle Parameter" erläutert. Die Standardwerte werden übernommen.
+Die vier Parameter "Max. Leistung IDS", "Temperatur delta zum Ziel", "Übergang zum Kochen", "Leistung ab Übergang" und "Temperatur Kochen" werden im Abschnitt "alle Parameter" erläutert. Die Standardwerte werden übernommen.
 
 ![IDS](/docs/img/IDS-konfigurieren.jpg)
 
