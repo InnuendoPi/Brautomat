@@ -10,6 +10,8 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Korrektur:    Import sehr großer Rezepte
+* Korrektur:    Import Filter optimiert
 * Neu:          IDS Parameter Temperatur kochen: Temperatur bei der die Würze wallend kocht
 * Korrektur:    Parameter Temperatur kochen umbenannt in Übergang zum Kochen
 * Korrektur:    Rezept Import kbh2: autonext wurde falsch gesetzt
