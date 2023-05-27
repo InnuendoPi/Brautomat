@@ -10,8 +10,10 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Korrektur:    Import MMuM Filtergröße
+* Korrektur:    Import type mismatch JSON as int to var long
 * Korrektur:    Import sehr großer Rezepte
-* Korrektur:    Import Filter optimiert
+* Korrektur:    Import Filter Speicherverbrauch optimiert
 * Neu:          IDS Parameter Temperatur kochen: Temperatur bei der die Würze wallend kocht
 * Korrektur:    Parameter Temperatur kochen umbenannt in Übergang zum Kochen
 * Korrektur:    Rezept Import kbh2: autonext wurde falsch gesetzt
