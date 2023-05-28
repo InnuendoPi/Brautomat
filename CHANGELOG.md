@@ -10,8 +10,9 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Korrektur:    Refresh Maischeplan nach editieren nicht korrekt geladen
 * Korrektur:    Import MMuM Filtergröße
-* Korrektur:    Import type mismatch JSON as int to var long
+* Korrektur:    Import type mismatch JSON as int to var unsigend long
 * Korrektur:    Import sehr großer Rezepte
 * Korrektur:    Import Filter Speicherverbrauch optimiert
 * Neu:          IDS Parameter Temperatur kochen: Temperatur bei der die Würze wallend kocht
