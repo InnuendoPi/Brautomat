@@ -10,6 +10,13 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Korrektur:    Rezept Import BrewFather: Rastennamen und Hopfengaben auf 50 Zeichen begrenzt
+* Korrektur:    Rezept Import BrewFather: Berechnung Kochdauer Hopfengabe
+* Korrektur:    Rezept Import BrewFather: Rastdauer 0 Minuten, wenn Rezept mit Fließkommazahlen erstellt wurde
+* Korrektur:    Start Chart Ticker (Graph Temperaturen) bei Braustart über Timer
+* Korrektur:    Bei Braustart über Timer wurden die Buttons zum Editieren nicht ausgeblendet
+* Korrektur:    Aktualisieren der Buttons bei Braustart über Timer (Power Button war nicht aktiv grün gesetzt)
+* Korrektur:    Speichern der Konfiguration HLT
 * Korrektur:    Refresh Maischeplan nach editieren nicht korrekt geladen
 * Korrektur:    Import MMuM Filtergröße
 * Korrektur:    Import type mismatch JSON as int to var unsigend long
