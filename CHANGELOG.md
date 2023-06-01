@@ -10,6 +10,8 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Neu:          Eigenschaften Temperatur Vorderwürzenhopfung und Whirpoolhopfung für Rezeptimport eingefügt
+* Geändert:     Rezept Import BrewFather: Daten (Zeit, Temp) werden vor verarbeiten überprüft
 * Korrektur:    Rezept Import BrewFather: Rastennamen und Hopfengaben auf 50 Zeichen begrenzt
 * Korrektur:    Rezept Import BrewFather: Berechnung Kochdauer Hopfengabe
 * Korrektur:    Rezept Import BrewFather: Rastdauer 0 Minuten, wenn Rezept mit Fließkommazahlen erstellt wurde
