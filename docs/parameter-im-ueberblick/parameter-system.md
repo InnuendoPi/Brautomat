@@ -59,3 +59,11 @@ Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI
 Das Display wird mit einer SD Karte konfiguriert. Die zum Display passende TFT Datei aus dem Ordner Info wird auf eine SD Karte kopiert und in das Display eingesteckt. Sobald das Display eingeschaltet wird, startet die Konfiguration. Der Vorgang dauert etwa eine Minute. Im Display steht der Fortschritt. Sobald die Konfiguration aufgespielt ist, wird das Display abgeschaltet und die SD Karte entfernt. Das Display ist nun einsatzbereit.
 
 Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
+
+## Aktiviere mDNS
+
+Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwerken verwendet. mDNS ermöglicht einen "sprechenden" Namen für den Brautomaten zu verwenden. Voreingestellt ist brautomat. Das Web Interface ist über <http://brautomat> erreichbar. Der Hostname ist auf maximal 15 Zeichen beschränkt
+
+## Dashboard
+
+Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Ist bspw. kein Nachguss im Einsatz, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente verringern den Datenverkehr.

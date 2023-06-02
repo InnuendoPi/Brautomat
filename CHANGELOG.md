@@ -110,7 +110,6 @@ Version 1.15   maintenance/Framework update
 * Geändert:    Framework Aktualisierung der Ticker Objekte (updateBack)
 * Ersetzt:     Toast Lib
 
->>>>>>> main
 Version 1.14  maintenance update
 
 * Update:     ESP8266 Arduino 3.1.2
