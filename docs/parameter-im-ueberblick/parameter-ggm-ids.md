@@ -20,6 +20,14 @@ Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Koche
 
 Dieser Parameter beschreibt die Temperatur, ab der die Würze wallend kocht. Der Standardwert ist 98°C und entspricht etwa einem Standort in 500m Höhe über NN. Mit diesem Parameter wird der Start einer Rast Kochen beeinflusst. Für den Rezeptimport wird dieser Parameter als Temperatur Kochen verwendet.
 
+## Temperatur Einmaischen [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Einmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Einmaisch-Temperatur angegeben ist.
+
+## Temperatur Abmaischen [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Abmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Abmaisch-Temperatur angegeben ist.
+
 ## Temperatur VWH [°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
