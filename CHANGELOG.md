@@ -10,6 +10,7 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
+* Geändert:     Rezept Import kbh2: Hopfenname enthält nun Alpha [%]
 * Korrektur:    Rezepttyp Erkennung korrigiert (Zahlendreher nach Optimierung).
 * Neu:          Rezeptimport KBH2 Hopfengaben und Zutaten um Mengenangaben erweitert
 * Neu:          Rezeptimport KBH2 Zubrühen um Mengen- und Temperaturangaben erweitert

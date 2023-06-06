@@ -6,9 +6,13 @@ Der Brautomat kann Braurezepte aus folgenden Quellen importieren:
 * MaischeMalzundMehr
 * BrewFather
 
-Empfohlen wird die Rezeptverwaltung mit dem kbh2. Empfohlen wird der Import von MMuM Rezepten zunächst in kbh2 und dann ein Export im Format brautomat.
+Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten, die zum Brauen benötigt werden. Nur mit dem kbh2 sind Mengenangaben wie bspw. bei Hopfengaben in Gramm oder beim Zubrühen in Liter mit Temperatur möglich.
 
-_Hinweis: der ESP8266 hat nur einen kleinen RAM Speicher. Rezepte mit sehr lange Texte, Bilder oder anderen Anhängen können ggfs. nicht eingelesen werden._
+Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2 importiert und auf die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden.
+
+Rezepte aus BrewFather müssen die Eigenschaft boilTime (Kochdauer) mit einem ganzzahligen Wert belegt haben. Empfohlen wird auch ein Wert für den Parameter Equipment -> whirlpoolTime. Rastnamen können bei BrewFather einen (nahezu beliebig) langen Fließtext enthalten. Der Text wird ab Zeichen 50 abgeschnitten. Brewfather erlaubt Fließkommazahlen und Text als Rastdauer. Die Parameter werden in ganzzahlige Werte gewandelt oder auf 0 gesetzt.
+
+_Hinweis: der ESP8266 hat nur einen kleinen RAM Speicher. Rezepte mit sehr lange Texten, Bildern oder anderen Anhängen können ggfs. nicht eingelesen werden._
 
 ## Optionen für den Import
 
