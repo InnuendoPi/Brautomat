@@ -10,7 +10,10 @@ Server Sent Events (8 channels)
 
 Version 1.22
 
-* Neu:          Rezeptimport KBH2 um Mengenangaben erweitert
+* Korrektur:    Rezepttyp Erkennung korrigiert (Zahlendreher nach Optimierung).
+* Neu:          Rezeptimport KBH2 Hopfengaben und Zutaten um Mengenangaben erweitert
+* Neu:          Rezeptimport KBH2 Zubrühen um Mengen- und Temperaturangaben erweitert
+* Neu:          Rezeptimport KBH2 Dekoktion um Mengenangaben erweitert
 * Neu:          Rezeptimport KBH2 um Zutaten aus den Tabs Maischen und Kochen erweitert
 * Neu:          Eigenschaften Temperatur Einmaischen und Abmaischen für Rezeptimport eingefügt
 * Neu:          Eigenschaften Temperatur Vorderwürzenhopfung und Whirpoolhopfung für Rezeptimport eingefügt
