@@ -1,6 +1,7 @@
 # Der Brautomat
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren. _Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden._
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren.
+_Hinweis: Induktionskochfelder anderer Hersteller können nicht im Maischeprozess eingesetzt werden._
 
 _**Schnelleinstieg in den Brautomaten: diese zwei Abschnitte lesen und dann Brauen**_
 
@@ -19,9 +20,10 @@ Die Hauptfunktionen vom Brautomat sind:
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * einfaches PWM für Aktoren
 * Temperaturverlauf im Sudhaus als Grafik (line chart)
-* Maischeplan Import aus dem kleinen Brauhelfer2
-* Maischeplan Import aus Maische Malz und mehr
-* Maischeplan Export zur Rezept Archivierung
+* Rezept Import aus dem kleinen Brauhelfer2
+* Rezept Import aus Maische Malz und Mehr
+* Rezept Import aus BrewFather
+* Rezept Export zur Rezept Archivierung
 * Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
 * Optionale Unterstützung für eine GPIO Erweiterung PCF8574
 
@@ -35,7 +37,7 @@ Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHAN
 
 ## 📰 WebInterface
 
-Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5; Javascript und Server Sent Events (SSE) benötigt.\
+Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unterstützung für CSS3, HTML5; Javascript und Server Sent Events (SSE) benötigt.
 
 Übersicht kompatibler [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility)
 
