@@ -15,7 +15,7 @@ Die Hauptfunktionen vom Brautomat sind:
 
 * Steuerung der Induktionskochfelder GGM IDS1 und IDS2 über einen PID-Controller
 * PID AutoTune zur Ermittlung der benötigten Einstellungen
-* ein Maischeplan mit bis zu 15 Teilschritten
+* ein Maischeplan mit bis zu 20 Teilschritten
 * Steuerung für einen Nachguss Kessel (HLT) über einen PID-Controller
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * einfaches PWM für Aktoren
