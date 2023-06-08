@@ -8,10 +8,22 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.22a
+
+* Korrektur:    Rezeptimport KBH2 Zusätze: falscher Parameter ausgewertet (menge statt erg_menge)
+* Korrektur:    Step Aktualisierung wurde u.U. doppelt in einem loop aufgerufen
+* Fix:          Fehler beim Laden WebIf bzw. unvollständiges Laden (streamfile header response #8873)
+* Fix:          JSON parse Sensoren Daten: unexpected non-whitespace character (array)
+* Geändert:     InnuFramework mimeTypes und mimeTables
+* Geändert:     Start Server Sent Event optimiert
+* Geändert:     Laden vom WebIf beschleunigt
+* Geändert:     Der Button Status Server Sent Events führt nur bei disconnect einen reload aus (rot)\
+                Wenn SSE verbunden ist, hat der Button außer tooltip keine Funktion (grün)
+
 Version 1.22
 
-* Geändert:     Rezept Import kbh2: Hopfenname enthält nun Alpha [%]
-* Korrektur:    Rezepttyp Erkennung korrigiert (Zahlendreher nach Optimierung).
+* Geändert:     Rezept Import kbh2: Hopfengabe wird zusammengesetzt aus Name, Alpha [%] und Menge [gr]
+* Korrektur:    Rezepttyp Erkennung korrigiert (type mismatch, Zahlendreher nach Optimierung).
 * Neu:          Rezeptimport KBH2 Hopfengaben und Zutaten um Mengenangaben erweitert
 * Neu:          Rezeptimport KBH2 Zubrühen um Mengen- und Temperaturangaben erweitert
 * Neu:          Rezeptimport KBH2 Dekoktion um Mengenangaben erweitert
