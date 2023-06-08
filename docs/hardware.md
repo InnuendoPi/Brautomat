@@ -1,5 +1,7 @@
 # Hardware
 
+Die hier gezeigten Beispiele sind nur eine kleine Auswahl an Ideen. Die Links zeigen auf externe Inhalte, für die die jeweiligen Anbieter verantwortlich sind. Die Links sind mit keinem Affiliate Programm, Trading o. ä. verknüpft. Gerne können hier weitere Ideen und Bilder hinzugefügt werden.
+
 ## Beispiele für Aktoren
 
 ### Pumpen
@@ -56,4 +58,4 @@ Die Porterweiterung muss an D6 und D7 vom ESP8266 angeschlossen werden. Mit dem 
 
 ### Ringheizelemente
 
-Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthareware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
+Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
