@@ -1,5 +1,7 @@
 # Installation
 
+Die Erstinstallation unterteilt sich in Firmware flashen und WLAN Konfiguration.
+
 ## Firmware flashen
 
 Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.ZIP in einem beliebigen ordner entpackt. Der Wemos wird mit einem USB Kabel am PC/Notebook angeschlossen. Ein Doppelklick auf das Script Flashen.cmd startet die Installation.
