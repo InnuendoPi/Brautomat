@@ -2,7 +2,7 @@
 
 Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. In diesem Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "Nachisomerisierung" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
 
-![Maischeplan](/docs/img/Maischeplan-autonext.jpg)
+![Maischeplan](/docs/img/Maischeplan.jpg)
 
 Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Jede Zeile der Tabelle hat diese Spalten:
 
@@ -19,7 +19,10 @@ Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons zum Editiere
 * lösche diese Zeile
 * speichere die Zeile in die Tabelle
 
-Zusammen mit den Steuerelementen Power, Play, Pause, Forward und Backward ergibt sich eine einfache intuitiv zu bedienende Brausteuerung.\
+Die Symbole zum Editieren der Maischeschritte werden ausgeblendet, sobald der Brauprozess gestartet wird.\
+Zusammen mit den Steuerelementen Power, Play, Pause, Forward und Backward ergibt sich eine einfache intuitiv zu bedienende Brausteuerung.
+
+![Maischeplan](/docs/img/Maischeplan-autonext.jpg)
 
 Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautmoat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Zwischenrast_. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen. Der Masicheprozess verläuft bei aktiviertem autonext automatisch.
 
@@ -31,7 +34,7 @@ Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung w
 
 In dem Bild ist ebenfalls die Toast Nachricht "Klicke Play Button" dargestellt. Toasts können optional aktiviert werden und erscheinen mit Ton, sobald ein Schritt beendet oder eine manuelle Aktivität erforderlich ist.
 
-Im Bild Maischeplan sind das Einmaischen und das Abmaischen mit deaktiviertem autonext dargestellt. Das Einmaischen hat eigentlich keine Rast-Dauer und ist beendet, wenn das Schrot im Hauptgusswasser ist. Der Brauprozess wird dann mit Klick auf Play fortgesetzt.
+Im ersten Bild Maischeplan sind das Einmaischen und das Abmaischen mit deaktiviertem autonext dargestellt. Das Einmaischen hat eigentlich keine Rast-Dauer und ist beendet, wenn das Schrot im Hauptgusswasser ist. Der Brauprozess wird dann mit Klick auf den roten Play Button fortgesetzt.
 Das Abmaischen ist meist nach sehr kurzer Zeit (im Bild 1 Minute) beendet. Es folgt die Läuterruhe und das Läutern. Auch hier wird der Brauprozess erst forgesetzt, wenn der Play Button geklickt wird.
 
 _Tipp: bei deaktiviertem autonext am Rastende wird die GGM IDS abgeschaltet. Mit dem Pause Button wird die Rast-Zeit angehalten (Timer). Die GGM IDS bleibt eingeschaltet und hält die aktuelle Temperatur._
