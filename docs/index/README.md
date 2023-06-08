@@ -20,6 +20,18 @@ Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen s
 11: exit
 ```
 
+## WLAN Konfiguration
+
+Nach dem Flashen startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen Brautomat wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Portal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> eingegeben werden.
+
+![IDS](/docs/img/wlan1.jpg)
+
+Über den Button "Configure WiFi" wird die Konfiguration WLAN angezeigt
+
+![IDS](/docs/img/wlan2.jpg)
+
+Hier muss das WLAN (SSID) und das Password konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat> erreichbar.
+
 ## Updates
 
 Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden. Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
