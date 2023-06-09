@@ -8,6 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.22b
+
+* Geändert:     html cache control handling
+
 Version 1.22a
 
 * Korrektur:    Rezeptimport KBH2 Zusätze: falscher Parameter ausgewertet (menge statt erg_menge)
