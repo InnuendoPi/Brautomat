@@ -11,6 +11,7 @@ Server Sent Events (8 channels)
 Version 1.22b
 
 * Geändert:     html cache control handling
+* Korrektur     Fehler beim Einlesen der Konfiguration (Temperaturvorgaben IDS, zugewiesener Sensor)
 
 Version 1.22a
 
