@@ -8,9 +8,16 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.22c
+
+* Geändert:     Datentranfer Optimierung (push)
+* Geändert:     Flash Speicher Optimierung
+* Korrektur:    WiFi Client core fix #8941
+* Korrektur:    Start HLT AutoTune
+* Geändert:     Web cache control
+
 Version 1.22b
 
-* Geändert:     html cache control handling
 * Korrektur     Fehler beim Einlesen der Konfiguration (Temperaturvorgaben IDS, zugewiesener Sensor)
 
 Version 1.22a
