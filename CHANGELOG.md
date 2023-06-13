@@ -1,19 +1,20 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.78 Arduino 0.6\
+VSCode 1.79 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
-ersion 1.22d
+Version 1.22d
 
-* Geändert:     PID Tuning Regel IDS: Individuell oder IDS
-* Geändert:     PID Tuning Regel HLT: Individuell oder Nachguss
-* Geändert:     PID Tuning Regel: Button löschen entfernt
+* Geändert:     PID Algorithmus IDS: Individuell oder IDS
+* Geändert:     PID Algorithmus HLT: Individuell oder Nachguss
+* Geändert:     PID Algorithmus: Button löschen entfernt
 * Geändert:     Datenmenge unr requests PID Manger IDS/HLT minimiert
+* Geändert:     Web Interface Reihenfolge
 
 Version 1.22c
 
