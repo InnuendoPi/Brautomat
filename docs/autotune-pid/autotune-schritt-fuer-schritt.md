@@ -13,7 +13,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
     b. Schalte das Rührwerk ein
 2. Setze eine AutoTune Zieltemperatur
 
-    a. die Zieltemperatur sollte 50°C oder mehr betragen
+    a. die Zieltemperatur sollte 50°C oder mehr betragen.
 
     b. die Zieltemperatur soll min. 20°C über der aktuellen Ist-Temperatur liegen.
 
@@ -29,7 +29,7 @@ Der AutoTune Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf Ziel
 ![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
 
 Der AutoTune Prozess ist abgeschlossen und die ermittelten Anlagenparameter werden automatisch gespeichert.\
-Das Ergebnis von AutoTune sind die Werte von "Ultimate gain Ku" und "Ultimate period Pu". Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Regeln zur Verfügung. Der Brautomat verwendet eine Tuning-Regel, die für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch im Addon CraftBeerPi PIDBoil eingestezt wird.
+Das Ergebnis von AutoTune sind die Werte Verstärkungsfaktor Ku (ultimate gain) und die Periodendauer (ultimate period). Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Algorithmen zur Verfügung. Der Brautomat verwendet einen PID-Algorithmus, der für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch im Addon PIDBoil von CraftBeerPi eingestezt wird.
 
 _Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden._
 

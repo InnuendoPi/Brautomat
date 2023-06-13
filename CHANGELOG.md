@@ -8,6 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+ersion 1.22d
+
+* Geändert:     PID Tuning Regel IDS: Individuell oder IDS
+* Geändert:     PID Tuning Regel HLT: Individuell oder Nachguss
+* Geändert:     PID Tuning Regel: Button löschen entfernt
+* Geändert:     Datenmenge unr requests PID Manger IDS/HLT minimiert
+
 Version 1.22c
 
 * Geändert:     Datentranfer Optimierung (push)
