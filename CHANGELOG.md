@@ -8,19 +8,25 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.22e
+
+Geändert:       Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
+
 Version 1.22d
 
+* Korrektur:    Arduino ESP8266 core: Fix for occasional timeout issues #8944 (net error timeout - WebIf Fehler)
 * Geändert:     PID Algorithmus IDS: Individuell oder IDS
 * Geändert:     PID Algorithmus HLT: Individuell oder Nachguss
 * Geändert:     PID Algorithmus: Button löschen entfernt
 * Geändert:     Datenmenge unr requests PID Manger IDS/HLT minimiert
 * Geändert:     Web Interface Reihenfolge
+* Korrektur:    Sudname nach Deaktivierung geplanter Braustart nicht korrekt angezeigt
 
 Version 1.22c
 
 * Geändert:     Datentranfer Optimierung (push)
 * Geändert:     Flash Speicher Optimierung
-* Korrektur:    WiFi Client core fix #8941
+* Korrektur:    Arduino ESP8266 core: WiFi Client core fix #8941
 * Korrektur:    Start HLT AutoTune
 * Geändert:     Web cache control
 

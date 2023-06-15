@@ -35,3 +35,15 @@ _Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesiche
 
 Wenn der AutoTune Prozess beendet ist und "AutoTune debug" aktiviert wurde, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. In dieser Protokolldatei werden alle Informationen mitgeschrieben.\
 In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind PID-Werte über verschiedene Berechnungsmethoden aufgeführt.
+
+Im Log sind folgende Berechnungsmethoden aufgeführt:
+
+INTEGRAL PID\
+SOME OVERSHOOT PID\
+NO OVERSHOOT PID\
+ZIEGLER NICHOLS PID\
+ZIEGLER NICHOLS PI\
+TYREUS LUYBEN PID\
+TYREUS LUYBEN PI\
+CIANCONE MARLIN PID\
+CIANCONE MARLIN PI
