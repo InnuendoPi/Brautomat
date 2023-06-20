@@ -8,11 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
-Version 1.22e - 1.22g
+Version 1.22e - 1.22h
 
 * Korrektur:    Arduino ESP8266 core: Fix for occasional timeout issues #8944 (net error timeout - WebIf Fehler)
 * Geändert:     WebIf laden der select box Parameter (empty rsponse)
-* Geändert:     Ticker Intervalle und handling PID Berechnung Aktoren und HLT
+* Geändert:     Ticker Intervalle IDS und HLT
+* Geändert:     Ticker Intervalle PID Berechnung
+* Geändert:     Ticker Intervalle und durycylcles Aktoren (PWM)
 * Korrektur:    Arduino ESP8266 core: Fix for dangerous relocation: j: cannot encode #8925
 * Geändert:     Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
 * Geändert:     Intervalle (SampleTime) können im laufendem Betrieb geändert werden
@@ -20,6 +22,9 @@ Version 1.22e - 1.22g
 * Geändert:     Nachguss PID Temperatur und GPIO Taktung erweitert
 * Geändert:     Sensorzuweisung Nachguss
 * Korrektur:    PID Debug Ausgaben
+* Korrektur:    SetPoint und Target Nachguss
+* Neu:          Ändern der Leistung zur Laufzeit in der Aktoren-Tabelle über zwei Buttons (Schritte +/- 10%)
+* Neu:          Aktoren PWM Schalter (zum Ausblenden der Buttons Änderung der Leistung in der Tabelle Aktoren)
 
 Version 1.22d
 
