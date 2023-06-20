@@ -12,7 +12,7 @@ Nach einem Firmware Update sollte der Brautomat immer ausgeschaltet und der Brow
 
 ## Browser
 
-Getestet wird der Brautomat auf Win11 mit MS Edge und Firefox in der jeweils aktuellen Version, sowie auf iOS Geräten mit MS Edge und Safari. Bevorzugt verwendet wird während der Entwicklung MS Edge. Unabhängig vom Browser muss die automatische Audiowiedergabe für die Toasts Nachrichten (Audio) für die Adresse des Brautomat aktiviert werden. Die Adresse vom Brautomat sollte ebenfalls in blockierenden Browser Plugins in den Ausnahmen aufgenommen werden.
+Getestet wird der Brautomat auf Win11 mit MS Edge und Firefox in der jeweils aktuellen Version, sowie auf iOS Geräten mit MS Edge und Safari. Bevorzugt verwendet wird während der Entwicklung MS Edge. Unabhängig vom Browser muss die automatische Audiowiedergabe für die Toasts Nachrichten (Audio) für die Adresse des Brautomat aktiviert werden. Die Adresse vom Brautomat sollte ebenfalls in blockierenden Browser Plugins in den Ausnahmen aufgenommen werden. Beim Browser Firefox (Win) kann eine Verzögerung beim Öffnen vom WebIf (Start der Server Sent Events) von ca. 15s auftreten. Die Inhalte im WebIf werden nach der Verzögerung befüllt. Die Verzögerung tritt bei anderen Browsern nicht auf.
 
 ## Server Sent Events & Energiesparpläne und automatisches Sperren von Clients
 

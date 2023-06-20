@@ -8,9 +8,14 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
-Version 1.22e
+Version 1.22e - 1.22g
 
-Geändert:       Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
+* Geändert:       WebIf laden der select box Parameter (empty rsponse)
+* Geändert:       Ticker Intervalle und handling PID Berechnung Aktoren und HLT
+* Korrektur:      Arduino ESP8266 core: Fix for dangerous relocation: j: cannot encode #8925
+* Geändert:       Sensorzuweisung Nachguss
+* Geändert:       Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
+* Geändert:       Intervalle (SampleTime) können im laufendem Betrieb geändert werden
 
 Version 1.22d
 
