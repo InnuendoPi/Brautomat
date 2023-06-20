@@ -16,6 +16,7 @@ Version 1.22e - 1.22g
 * Korrektur:    Arduino ESP8266 core: Fix for dangerous relocation: j: cannot encode #8925
 * Geändert:     Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
 * Geändert:     Intervalle (SampleTime) können im laufendem Betrieb geändert werden
+* Geändert:     Intervalle (SampleTime) Bereich vergrößert 3000 - 7000
 * Geändert:     Nachguss PID Temperatur und GPIO Taktung erweitert
 * Geändert:     Sensorzuweisung Nachguss
 * Korrektur:    PID Debug Ausgaben
