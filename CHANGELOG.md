@@ -8,6 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.23
+
+* Geändert:     Anleitung angepasst
+* Geändert:     Abschlusstest AutoTune IDS, AutoTune HLT
+* Geändert:     Abschlusstest Brauen
+
 Version 1.22e - 1.22j
 
 * Neu:          Maischeplan ein/ausklappbar (Button collapse)

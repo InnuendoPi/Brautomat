@@ -37,3 +37,7 @@ Das Kalender Icon wird grün dargestellt, wenn ein automatischer Braustart aktiv
 ### Der Server Sent Events Button
 
 Ab Brautomat Version 1.20 versendet der Brautomat alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen. Bis Version 1.18 wurden alle Daten vom Browser per http polling abgefragt. Gängige Browser können automatisch Server Sent Events abonnieren. Das SSE Icon in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde und ein SSE Kanal abonniert wurde (automatisch beim Aufruf der Web Interface). Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Ein Klick auf das Icon führt ein reload durch.
+
+### Der Maischeplan anzeigen Button
+
+Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen verbraucht der Maischeplan unnötig viel Bildschirmfläche. Mit collapse lässt sich die Tabelle Maischeplan ein- und ausklappen.
