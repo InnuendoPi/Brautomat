@@ -21,6 +21,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-map2:before {
+  content: "\e94c";
+}
+.icon-shrink:before {
+  content: "\e90a";
+}
 .icon-feed:before {
   content: "\e91d";
 }

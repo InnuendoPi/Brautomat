@@ -8,10 +8,16 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
-Version 1.22e - 1.22h
+Version 1.22e - 1.22j
 
+* Neu:          Maischeplan ein/ausklappbar (Button collapse)
+* Neu:          Ändern der Leistung zur Laufzeit in der Aktoren-Tabelle über zwei Buttons (Schritte +/- 10%)
+* Neu:          Aktoren PWM Schalter (zum Ausblenden der Buttons Änderung der Leistung in der Tabelle Aktoren)
+* Geändert:     Maischeplan SSE optimiert
+* Korrektur:    Maischeplan Änderung über SSE (Aktualisierung aller verbundenen Clients)
 * Korrektur:    Arduino ESP8266 core: Fix for occasional timeout issues #8944 (net error timeout - WebIf Fehler)
-* Geändert:     WebIf laden der select box Parameter (empty rsponse)
+* Geändert:     PID Nachguss Vorgaben angepasst
+* Korrektur:    WebIf laden der select box Parameter (empty rsponse)
 * Geändert:     Ticker Intervalle IDS und HLT
 * Geändert:     Ticker Intervalle PID Berechnung
 * Geändert:     Ticker Intervalle und durycylcles Aktoren (PWM)
@@ -23,8 +29,9 @@ Version 1.22e - 1.22h
 * Geändert:     Sensorzuweisung Nachguss
 * Korrektur:    PID Debug Ausgaben
 * Korrektur:    SetPoint und Target Nachguss
-* Neu:          Ändern der Leistung zur Laufzeit in der Aktoren-Tabelle über zwei Buttons (Schritte +/- 10%)
-* Neu:          Aktoren PWM Schalter (zum Ausblenden der Buttons Änderung der Leistung in der Tabelle Aktoren)
+* Geändert:     InnuFramework
+* Korrektur:    Anzahl Verbindungen (request) WebIf verringert
+* Korrektur:    Verzögerung beim Start SSE mit Firefox behoben
 
 Version 1.22d
 
