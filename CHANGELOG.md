@@ -38,6 +38,7 @@ Version 1.22e - 1.22j
 * Geändert:     InnuFramework
 * Korrektur:    Anzahl Verbindungen (request) WebIf verringert
 * Korrektur:    Verzögerung beim Start SSE mit Firefox behoben
+* Neu:          Überprüfung SSE checkAlive für Tablets/Smartphones
 
 Version 1.22d
 
