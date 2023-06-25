@@ -8,6 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 channels)
 
+Version 1.23a
+
+* Geändert:     Manuelles Kochen in den Voreinstellungen auf deaktiviert geändert
+* Geändert:     Grafik Chart in den Voreinstellungen auf deaktiviert geändert
+* Korrektur:    "Grundkonfiguration ausführen" als Schrittname wurden nicht angezeigt, wenn keine Konfiguration vorhanden ist
+* Neu:          Chart ein/ausklappbar (Button collapse) - Grafik wird eingeklappt im Hintergrund aktualisiert
+
 Version 1.23
 
 * Geändert:     Anleitung angepasst
