@@ -4,7 +4,7 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
 ![AutoTune](/docs/img/IDS-AutoTune.jpg)
 
-1. Befülle Deinen Kessel mit einer typischen Menge Wasser
+1. Befülle Deinen MaischeSud Kessel mit einer typischen Menge Wasser
 
     a. Eine typische Menge entspricht dem Hauptguss + Schüttung
 
@@ -15,16 +15,16 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
     a. die Zieltemperatur sollte 50°C oder mehr betragen.
 
-    b. die Zieltemperatur soll min. 20°C über der aktuellen Ist-Temperatur liegen.
+    b. die Zieltemperatur soll min. 10°C über der aktuellen Ist-Temperatur liegen.
 
 3. Aktiviere „PID AutoTune“
 4. Aktiviere „AutoTune debug“
-5. Speichere diese Einstellung ab (IDS speichern)
+5. Speichere diese Einstellung
 6. Mit einem Klick auf den Power Button wird "AutoTune IDS" gestartet.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
-Der AutoTune Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf Zieltemperatur. Mit Erreichen der Zieltemperatur wird das Induktionskochfeld abgeschaltet. Die Zieltemperatur wird dabei teils deutlich um 2-3°C überschritten. Es folgt eine Abkühlphase unter die Zieltemperatur. Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Diese zwei Phase werden 5x wiederholt. Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel isoliert ist, desto länger dauert der AutoTune Prozess bzw. die Abkühlphase. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „in progress 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der voraussichtlich benötigten AutoTune-Schritte. Im AutoTune Prozessverlauf werden Messwerte ermittelt. Die Messwerte werden fortlaufend überprüft. Hat ein Messwert eine Abweichung, wird die Messung wiederholt. Bei einer Wiederholung erscheint "in progress 6/5". Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS (Zahnrad) im Tab PID-Manager dargestellt:
+Der AutoTune Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf Zieltemperatur. Mit Erreichen der Zieltemperatur wird das Induktionskochfeld abgeschaltet. Die Zieltemperatur wird dabei teils deutlich um 2-3°C überschritten. Das deutliche Überschreiten der Zieltemperatur ist im AutoTune Prozess notwendig. Es folgt eine Abkühlphase unter die Zieltemperatur. Diese zwei Phase werden 5x wiederholt. Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel isoliert ist, desto länger dauert der AutoTune Prozess bzw. die Abkühlphase. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „AutoTune Prozess 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der voraussichtlich benötigten AutoTune-Schritte. Im AutoTune Prozessverlauf werden Messwerte ermittelt. Die Messwerte werden fortlaufend überprüft. Hat ein Messwert eine Abweichung, wird die Messung wiederholt. Bei einer Wiederholung erscheint "AutoTune Prozess 6/5". Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS im Tab PID-Manager dargestellt:
 
 ![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
 
@@ -47,3 +47,5 @@ TYREUS LUYBEN PID\
 TYREUS LUYBEN PI\
 CIANCONE MARLIN PID\
 CIANCONE MARLIN PI
+
+Die berechneten Werte der unterschiedlichen Algorithmen können in den EInstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingetragen werden. Dies sollte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.

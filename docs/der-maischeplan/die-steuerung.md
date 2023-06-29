@@ -15,11 +15,11 @@ _Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren 
 Der Play Button hat im Maischeprozess zwei Funktionen:
 
 1. Die erste Funktion lautet "starte den Rast-Timer für die aktuelle Rast". Der Play Button startet unabhängig von der IST-Temperatur den Rast-Timer.\
-Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet. Ein weiterer Anwendungsfall wäre, wenn der Maischeprozess nicht nach Plan verläuft.\
-Der Play Button wird blau angezeigt.
+Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet.\
+Der Play Button wird rot angezeigt.
 
-2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft autonext zusammen: setze den Maischeprozess mit der nächsten Rast fort. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung "autonext" im Maischeplan erläutert.\
-Ein Anwendungsfall ist das Einmaischen. Wird der Schritt Einmaischen mit deaktiviertem autonext konfiguriert, verbleibt der Maischeprozess im einem Wartestatus bis der Play Button angeklickt wird. Der Play Button wird rot angezeigt.\
+2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft _autonext_ zusammen: setze den Maischeprozess mit der nächsten Rast fort. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung _autonext_ im Maischeplan erläutert.\
+Ein Anwendungsfall ist das Einmaischen. Wird der Schritt Einmaischen mit deaktiviertem autonext konfiguriert, verbleibt der Maischeprozess im einem Wartestatus bis der Play Button angeklickt wird. Der Play Button wird rot angezeigt.
 
 ## Der Pause Button
 

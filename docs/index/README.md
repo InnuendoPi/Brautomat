@@ -1,12 +1,12 @@
 # Installation
 
-Die Erstinstallation unterteilt sich in Firmware flashen und WLAN Konfiguration.
+Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
 
 ## Firmware flashen
 
-Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.ZIP in einem beliebigen Ordner entpackt. Der Wemos wird mit einem USB Kabel am PC/Notebook angeschlossen. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
+Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.ZIP in einem beliebigen Ordner entpackt. Der Wemos D1 mini wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
-Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
+Das Betriebssystem MS Windows erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
 
 ```bash
 1: @ECHO OFF
@@ -22,9 +22,22 @@ Das Betriebssystem erstellt beim Anschluss vom Wemos D1 mini automatisch einen s
 11: exit
 ```
 
+Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/igrr/esptool-ck/releases>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme.\
+ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
+
+## Manuelles Flashen
+
+Falls das Script nicht genutzt werden kann, muss die Firmware manuell auf den Wemos D1 mini übertragen werden.
+
+Step 1 Flash löschen: esptool.exe -cp COM3 -cd nodemcu -ce\
+Step 2 Firmware flashen: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin\
+COM3 ist durch den tatsächlichen seriellen Anschluss zu ersetzen. Die Befehlszeilen Step 1 und 2 setzen voraus, dass die Dateien esptool, brautomat.ino.bin und Brautomat.mklittlefs.bin im gleichen Verzeichnis liegen.
+
+In seltenen Fällen wird unter MS Windows kein USB Port automatisch bereitgestellt. EIn USB Treiber ist hier verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
+
 ## WLAN Konfiguration
 
-Nach dem Flashen startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen Brautomat wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Portal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> eingegeben werden.
+Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen Brautomat wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> manuell eingegeben werden.
 
 ![IDS](/docs/img/wlan1.jpg)
 

@@ -41,3 +41,7 @@ Ab Brautomat Version 1.20 versendet der Brautomat alle Daten als Server Sent Eve
 ### Der Maischeplan anzeigen Button
 
 Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen verbraucht der Maischeplan unnötig viel Bildschirmfläche. Mit collapse lässt sich die Tabelle Maischeplan ein- und ausklappen.
+
+### Der Chart anzeigen Button
+
+Der Button Chart anzeigen hat eine collapse Funktion: während des Brauen verbraucht die Grafik unnötig viel Bildschirmfläche. Mit collapse lässt sich die Grafik ein- und ausklappen. Die Grafik wird im eingeklappten Zustand ebenfalls weiter aktualisiert.

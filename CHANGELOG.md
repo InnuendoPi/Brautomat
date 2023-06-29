@@ -14,6 +14,8 @@ Version 1.23a
 * Geändert:     Grafik Chart in den Voreinstellungen auf deaktiviert geändert
 * Korrektur:    "Grundkonfiguration ausführen" als Schrittname wurden nicht angezeigt, wenn keine Konfiguration vorhanden ist
 * Neu:          Chart ein/ausklappbar (Button collapse) - Grafik wird eingeklappt im Hintergrund aktualisiert
+* Geändert:     Anleitung überarbeitet
+* Geändert:     InnuFramework
 
 Version 1.23
 
