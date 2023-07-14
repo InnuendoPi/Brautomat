@@ -20,7 +20,7 @@ Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaisc
 
 ## Kochdauer und Nachisomerisierung
 
-Diese beiden Daten werden beim Rezeptimport ausgelesen. Die Datenfelder können nicht editiert werden.
+Die Daten Kochdauer und Nachisomerisierung werden beim Rezeptimport ausgelesen. Mit diesen zwei Parametern werden die Zeitpunkte Hopfen- und Zutatengabe beim Import ermittelt. Kochdauer und Nachisomerisierung können daher nach dem Import im Brautomat nicht verändert werden.
 
 ## Rezeptexport
 
