@@ -1,12 +1,19 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.79 Arduino 0.6\
+VSCode 1.80 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
-Server Sent Events (8 channels)
+Server Sent Events (8 SSE channels)
+
+Version 1.24a
+
+* Fix:          Arduino ESP8266 core: No poison after block with current git version (Issue #8952)
+* Neu:          SSE auto reconnect onerror
+* Neu:          SSE checkAlive für Mobile Browser (nur auf iOS getestet)
+* Geändert:     InnuFramework
 
 Version 1.23a
 
@@ -19,7 +26,7 @@ Version 1.23a
 
 Version 1.23
 
-* Geändert:     Anleitung angepasst
+* Geändert:     Anleitung überarbeitet
 * Geändert:     Abschlusstest AutoTune IDS, AutoTune HLT
 * Geändert:     Abschlusstest Brauen
 

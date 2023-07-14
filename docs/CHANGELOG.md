@@ -1,12 +1,81 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.78 Arduino 0.6\
+VSCode 1.80 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
-Server Sent Events (8 channels)
+Server Sent Events (8 SSE channels)
+
+Version 1.24a
+
+* Fix:          Arduino ESP8266 core: No poison after block with current git version (Issue #8952)
+* Neu:          SSE auto reconnect onerror
+* Neu:          SSE checkAlive für Mobile Browser (nur auf iOS getestet)
+* Geändert:     InnuFramework
+
+Version 1.23a
+
+* Geändert:     Manuelles Kochen in den Voreinstellungen auf deaktiviert geändert
+* Geändert:     Grafik Chart in den Voreinstellungen auf deaktiviert geändert
+* Korrektur:    "Grundkonfiguration ausführen" als Schrittname wurden nicht angezeigt, wenn keine Konfiguration vorhanden ist
+* Neu:          Chart ein/ausklappbar (Button collapse) - Grafik wird eingeklappt im Hintergrund aktualisiert
+* Geändert:     Anleitung überarbeitet
+* Geändert:     InnuFramework
+
+Version 1.23
+
+* Geändert:     Anleitung überarbeitet
+* Geändert:     Abschlusstest AutoTune IDS, AutoTune HLT
+* Geändert:     Abschlusstest Brauen
+
+Version 1.22e - 1.22j
+
+* Neu:          Maischeplan ein/ausklappbar (Button collapse)
+* Neu:          Ändern der Leistung zur Laufzeit in der Aktoren-Tabelle über zwei Buttons (Schritte +/- 10%)
+* Neu:          Aktoren PWM Schalter (zum Ausblenden der Buttons Änderung der Leistung in der Tabelle Aktoren)
+* Geändert:     Maischeplan SSE optimiert
+* Korrektur:    Maischeplan Änderung über SSE (Aktualisierung aller verbundenen Clients)
+* Korrektur:    Arduino ESP8266 core: Fix for occasional timeout issues #8944 (net error timeout - WebIf Fehler)
+* Geändert:     PID Nachguss Vorgaben angepasst
+* Korrektur:    WebIf laden der select box Parameter (empty rsponse)
+* Geändert:     Ticker Intervalle IDS und HLT
+* Geändert:     Ticker Intervalle PID Berechnung
+* Geändert:     Ticker Intervalle und durycylcles Aktoren (PWM)
+* Korrektur:    Arduino ESP8266 core: Fix for dangerous relocation: j: cannot encode #8925
+* Geändert:     Arduino ESP8266 core: Add support WiFiClientSecure TCP KeepAlive #8940
+* Geändert:     Intervalle (SampleTime) können im laufendem Betrieb geändert werden
+* Geändert:     Intervalle (SampleTime) Bereich vergrößert 3000 - 7000
+* Geändert:     Nachguss PID Temperatur und GPIO Taktung erweitert
+* Geändert:     Sensorzuweisung Nachguss
+* Korrektur:    PID Debug Ausgaben
+* Korrektur:    SetPoint und Target Nachguss
+* Geändert:     InnuFramework
+* Korrektur:    Anzahl Verbindungen (request) WebIf verringert
+* Korrektur:    Verzögerung beim Start SSE mit Firefox behoben
+* Neu:          Überprüfung SSE checkAlive für Tablets/Smartphones
+
+Version 1.22d
+
+* Geändert:     PID Algorithmus IDS: Individuell oder IDS
+* Geändert:     PID Algorithmus HLT: Individuell oder Nachguss
+* Geändert:     PID Algorithmus: Button löschen entfernt
+* Geändert:     Datenmenge unr requests PID Manger IDS/HLT minimiert
+* Geändert:     Web Interface Reihenfolge
+* Korrektur:    Sudname nach Deaktivierung geplanter Braustart nicht korrekt angezeigt
+
+Version 1.22c
+
+* Geändert:     Datentranfer Optimierung (push)
+* Geändert:     Flash Speicher Optimierung
+* Korrektur:    Arduino ESP8266 core: WiFi Client core fix #8941
+* Korrektur:    Start HLT AutoTune
+* Geändert:     Web cache control
+
+Version 1.22b
+
+* Korrektur     Fehler beim Einlesen der Konfiguration (Temperaturvorgaben IDS, zugewiesener Sensor)
 
 Version 1.22a
 
