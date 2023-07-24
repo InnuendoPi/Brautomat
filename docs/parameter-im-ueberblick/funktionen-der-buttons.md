@@ -30,13 +30,13 @@ Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bz
 
 _Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert._
 
-### Der Kalender Button
+### Der Einstellungen Maischeplan Button
 
-Das Kalender Icon wird grün dargestellt, wenn ein automatischer Braustart aktivert wurde. Standarddarstellung ist grau und entspricht keinem automatischen Braustart. Ein Klick auf das Icon deaktiviert einen konfigurierten Autostart.
+In den Einstellungen zum Maischeplan sind neben dem Maischplan Namen und der Zeitsteuerung auch der Maischeplan Wechsel, der Import, der Export sowie das Löschen von Maischplänen verfügbar.
 
 ### Der Server Sent Events Button
 
-Ab Brautomat Version 1.20 versendet der Brautomat alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen. Bis Version 1.18 wurden alle Daten vom Browser per http polling abgefragt. Gängige Browser können automatisch Server Sent Events abonnieren. Das SSE Icon in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde und ein SSE Kanal abonniert wurde (automatisch beim Aufruf der Web Interface). Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Ein Klick auf das Icon führt ein reload durch.
+Ab Brautomat Version 1.20 versendet der Brautomat alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen. Bis Version 1.18 wurden alle Daten vom Browser per http polling abgefragt. Gängige Browser können automatisch Server Sent Events abonnieren. Das SSE Icon in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde und ein SSE Kanal abonniert wurde (automatisch beim Aufruf der Web Interface). Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Die SSE Verbindung wird automatisch wiederhergestellt.
 
 ### Der Maischeplan anzeigen Button
 
