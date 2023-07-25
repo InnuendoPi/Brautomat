@@ -107,6 +107,9 @@
 .icon-trash-o:before {
   content: "\f014";
 }
+.icon-trash2:before {
+  content: "\f014";
+}
 .icon-clock-o:before {
   content: "\f017";
 }
@@ -172,6 +175,9 @@
 }
 .icon-thermometer {
   color: var(--success);
+}
+.icon-trash2 {
+  color: var(--danger);
 }
 .icon-fire-red {
   color: var(--danger);
