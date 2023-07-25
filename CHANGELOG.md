@@ -10,7 +10,7 @@ Server Sent Events (8 SSE channels)
 
 ToDo:          Sudname bei dtp Braustart
 
-Version 1.24c
+Version 1.24e
 
 * Neu:          Maischeplan Verwaltung
 * Info:         Der Maischeplan Name ist auf 26 Zeichen beschränkt (maximale Dateinamenlänge Arduino LittleFS 31 (Sudname plus Endung .json)
