@@ -31,8 +31,14 @@ ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This co
 
 Falls das Script nicht genutzt werden kann, muss die Firmware manuell auf den Wemos D1 mini übertragen werden.
 
-Step 1 Flash löschen: esptool.exe -cp COM3 -cd nodemcu -ce\
-Step 2 Firmware flashen: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin\
+Step 1 Flash löschen:
+
+- `esptool.exe -cp COM3 -cd nodemcu -ce\`
+
+Step 2 Firmware flashen:
+
+- `esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin\`
+
 COM3 ist durch den tatsächlichen seriellen Anschluss zu ersetzen. Die Befehlszeilen Step 1 und 2 setzen voraus, dass die Dateien esptool, brautomat.ino.bin und Brautomat.mklittlefs.bin im gleichen Verzeichnis liegen.
 
 In seltenen Fällen wird unter MS Windows kein USB Port automatisch bereitgestellt. EIn USB Treiber ist hier verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>

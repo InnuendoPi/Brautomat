@@ -152,12 +152,6 @@
 .icon-thermometer:before {
   content: "\f2c8";
 }
-.icon-loop-button {
-  color: var(--primary);
-}
-.icon-pencil2 {
-  color: var(--primary);
-}
 .icon-chevron-up {
   color: var(--secondary);
 }
@@ -166,12 +160,6 @@
 }
 .icon-pencil {
   color: var(--success);
-}
-.icon-eraser {
- color: var(--danger);
-}
-.icon-trash-o {
- color: var(--danger);
 }
 .icon-sliders {
   color: var(--secondary);
@@ -196,9 +184,6 @@
 }
 .icon-power-on {
   color: var(--success);
-}
-.icon-loop {
-  color: var(--secondary);
 }
 .top-right {
   top: 0;

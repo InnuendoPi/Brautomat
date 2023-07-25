@@ -2,7 +2,7 @@
 
 Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Deshalb zeigen die Maischeplan Bilder in dieser Erläuterung verschiedene Maischepläne. Der Maischeplan Ablauf ist jedoch bei allen identisch: der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
 
-![Maischeplan](/docs/img/Maischeplan.jpg)
+![Maischeplan](/docs/img/brautomat.jpg)
 
 Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Jede Zeile der Tabelle hat diese Spalten:
 

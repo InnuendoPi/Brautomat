@@ -17,7 +17,6 @@
 * [Nachguss](nachguss.md)
 * [Aktoren](aktoren.md)
 * [Rezept](rezeptimport.md)
-  * [Zeitsteuerung](Zeitsteuerung.md)
 * [Parameter im Überblick](parameter-im-ueberblick/README.md)
   * [Parameter GGM IDS](parameter-im-ueberblick/parameter-ggm-ids.md)
   * [Parameter System](parameter-im-ueberblick/parameter-system.md)

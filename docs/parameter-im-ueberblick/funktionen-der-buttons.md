@@ -4,21 +4,21 @@
 
 Der Maischeplan verfügt über Buttons zum Editieren, erweitern oder Löschen der Tabelle. Diese sind eher selbsterklärend.
 
-### Der grüne Speichern Button
+### Der grüne Speichern Button Maischeplan
 
 Mit dem günen Button Tabelle speichern in der Kopfzeile der Tabelle Maischeplan wird der Inhalt der Tabelle in eine Datei (JSON) abgespeichert.
 
-### Der blaue Speichern Button
+### Der blaue Speichern Button Maischeplan
 
-Mit dem blauen Button Zeile speichern wird die Ändeurng der aktuellen Zeile in die Tabelle übernommen.
+Mit dem blauen Button in jeder Maischeplan Zeile werden Ändeurngen in der aktuellen Zeile in die Maischeplan Tabelle übernommen. Zu beachten ist, dass der blaue Button in die Maischeplan Tabelle *übernimmt* und der grüne Speichern Button den Maischeplan im Flash Speicher *abspeichert*. Wird eine Zeilenänderung (blauer Button) nicht gespeichert (grüner Button), wird die Änderung nicht übernommen.
 
 ### Der Aktualisiere Maischeplan Button
 
-Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen ohne Rückfrage verworfen werden.
+Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen (grüner Button) ohne Rückfrage verworfen werden.
 
 ### Der Löschen Button
 
-Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern die Änderung übernommen wird.
+Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern (grüner Button) die Änderung übernommen wird.
 
 ### Der + Button
 
@@ -28,7 +28,7 @@ Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die
 
 Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bzw. ausgeblendet werden. Zusätzlich können einzelne Graphen durch Klick auf den Graphnamen ein- und ausgeblendet werden. Die Standardeinstellung auf sichtbar eingestellt.
 
-_Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert._
+*Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert.*
 
 ### Der Einstellungen Maischeplan Button
 
@@ -36,7 +36,7 @@ In den Einstellungen zum Maischeplan sind neben dem Maischplan Namen und der Zei
 
 ### Der Server Sent Events Button
 
-Ab Brautomat Version 1.20 versendet der Brautomat alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen. Bis Version 1.18 wurden alle Daten vom Browser per http polling abgefragt. Gängige Browser können automatisch Server Sent Events abonnieren. Das SSE Icon in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde und ein SSE Kanal abonniert wurde (automatisch beim Aufruf der Web Interface). Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Die SSE Verbindung wird automatisch wiederhergestellt.
+Der Brautomat versendet alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen an verbundene WebBrowser. Der Server Sent Event Button (SSE) in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde. Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Die SSE Verbindung wird automatisch wiederhergestellt.
 
 ### Der Maischeplan anzeigen Button
 

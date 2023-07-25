@@ -8,9 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-ToDo:          Sudname bei dtp Braustart
-
-Version 1.24e
+Version 1.24
 
 * Neu:          Maischeplan Verwaltung
 * Info:         Der Maischeplan Name ist auf 26 Zeichen beschränkt (maximale Dateinamenlänge Arduino LittleFS 31 (Sudname plus Endung .json)
@@ -21,16 +19,13 @@ Version 1.24e
 * Neu:          Maischeplan Wechseln
 * Neu:          Maischeplan löschen
 * Geändert:     Systemmenü Rezepte entfernt. Maischeplan Import/Export nach Maischeplan editieren verschoben
-
-Version 1.24b
-
+* Geändert:     Icons, Tooltips
+* Geändert:     SSE reconnect und CheckAlive timing
+* Geändert:     Anleitung überarbeitet
 * Geändert:     Datei Explorer erweitert
 * Fix:          Auswahl Sensor Einrichtung MaischeSud Kessel
-
-Version 1.24a
-
 * Fix:          Arduino ESP8266 core: No poison after block with current git version (Issue #8952)
-* Neu:          SSE auto reconnect onerror
+* Neu:          SSE auto reconnect
 * Neu:          SSE checkAlive für Mobile Browser (nur auf iOS getestet)
 * Geändert:     InnuFramework
 

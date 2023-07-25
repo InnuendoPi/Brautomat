@@ -32,3 +32,11 @@ Mit dem Backward Button wird zum vorherigem Schritt im Maischeplan gesprungen. W
 ## Der Forward Button
 
 Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
+
+## Der Maischeplan anzeigen Button
+
+Der Masicheplan anzeigen Button klappt die Tabelle Maischeplan ein und aus.
+
+![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+
+Der Masicheplan anzeigen Button bleibt nach Braustart sichtbar. Alle anderen Buttom zum Verändern des Maischeplans werden bei Braustart ausgeblendet.
