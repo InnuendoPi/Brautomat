@@ -8,26 +8,26 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.24
+Version 1.24 dev
 
-* Neu:          Maischeplan Verwaltung
+* Neu:          Maischeplan Verwaltung (Maischeplan wechsel)
 * Info:         Der Maischeplan Name ist auf 26 Zeichen beschränkt (maximale Dateinamenlänge Arduino LittleFS 31 (Sudname plus Endung .json)
 * Info:         der Maischeplan Name wird als Dateiname verwendet (Leerzeichen und Umlaute werden ersetzt)
 * Info:         Speicherort der Maischepläne im Flash unter /Rezepte/
 * Info:         der vorhandene (alte) Maischeplan (mashplan.json) wird automatisch konvertiert und nach /Rezepte verschoben
-* Info:         ein vorhandener (neuer) Maischeplan wird bei einem Import mit identischem Maischeplan Namen ohne Nachfrage überschrieben
+* Info:         ein vorhandener (neuer) Maischeplan wird bei einem Import mit identischem Maischeplan Namen überschrieben
 * Neu:          Maischeplan Wechseln
 * Neu:          Maischeplan löschen
-* Geändert:     Systemmenü Rezepte entfernt. Maischeplan Import/Export nach Maischeplan editieren verschoben
-* Geändert:     Icons, Tooltips
-* Geändert:     SSE reconnect und CheckAlive timing
-* Geändert:     Anleitung überarbeitet
-* Geändert:     Datei Explorer erweitert
-* Fix:          Auswahl Sensor Einrichtung MaischeSud Kessel
-* Fix:          Arduino ESP8266 core: No poison after block with current git version (Issue #8952)
 * Neu:          SSE auto reconnect
 * Neu:          SSE checkAlive für Mobile Browser (nur auf iOS getestet)
-* Geändert:     InnuFramework
+* Geändert:     Funktion Pause Button während der Aufheizphase. Siehe [Anleitung - Die Steuerung](https://innuendopi.gitbook.io/brautomat_de/der-maischeplan/die-steuerung)
+* Geändert:     Systemmenü Rezepte entfernt. Maischeplan Import/Export nach Maischeplan editieren verschoben
+* Geändert:     SSE reconnect und CheckAlive timing
+* Geändert:     Anleitung überarbeitet
+* Geändert:     Datei Explorer erweitert (Dateiordner)
+* Geändert:     InnuFramework (CSS, Icons, Tooltips)
+* Fix:          Auswahl Sensor Einrichtung MaischeSud Kessel
+* Fix:          Arduino ESP8266 core: No poison after block with current git version (Issue #8952)
 
 Version 1.23a
 

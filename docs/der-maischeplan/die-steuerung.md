@@ -23,7 +23,17 @@ Ein Anwendungsfall ist das Einmaischen. Wird der Schritt Einmaischen mit deaktiv
 
 ## Der Pause Button
 
-Mit dem Pause Button wird der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Der Maischeprozess wird mit einem Klick auf den Pause Button fortgesetzt. Wichtig: Während einer Pause wird die aktuelle Ist-Temperatur gehalten, d. h. das Induktionskochfeld bleibt eingeschaltet. Hier unterscheiden sich "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.
+Die Funktion vom Pause Button ist während der Aufheizphase auf eine Rasttemperatur und während einer Rast zu unterscheiden.
+
+- Pause während der Aufheizphase
+
+In der Aufheizphase werden lediglich die Icons zum Maischeplan editieren ein- bzw. ausgeblendet. Der PID Controller berechnet während einer aktivierten Pause weiter die benötigte Leistung, um die Zieltemperatur zu erreichen. Der Pause Button wird dann rot angezeigt. Mithilfe einer Pause kann der Maischeplan während des Brauprozesses angepasst werden. Wird während einer Pause die Rast-Zieltemperatur erreicht, wird der Rast-Timer gestartet und die Pause beendet. Änderungen am Maiswcheplan werden nicht automatisch gespeichert.
+
+- Pause während einer Rast
+
+Während einer Rast wird mit dem Pause Button zusätzlich der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Bei einer Pause wird die  Ist-Temperatur gegenüber der Rast-Zieltemperatur gehalten, d. h. der PID-Controller und somit das Induktionskochfeld bleiben aktiv. Mithilfe einer Pause während einer Rast kann der Maischeplan angepasst werden. Die Dauer der Pause verlängert die bisherige Rastdauer.
+
+*Der Unterschied zwischen "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.*
 
 ## Der Backward Button
 
