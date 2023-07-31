@@ -8,7 +8,19 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.24 dev
+Version 1.26 dev
+
+* Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
+* Neu:          Sensorkalibrierung über das WebIf
+* Neu:          Sensor Offset Berechnung erstellt ein Logfile
+* Neu:          Sensor Offset Berechnung über Mittelwert aus 60 Messproben
+* Fix:          Fehler in Dateisystem behoben
+* Fix:          Löschen letzter Sensor, letzter Aktor oder HLT hat den Eintrag im Dashboard nicht entfernt (erst nach reload)
+* Fix:          Wenn der Maischeprozess gestartet und ein reload auf das WebIf durchgeführt wurde, waren alle Icons zuum Editieren der Tabelle eingeblendet
+* Fix:          eine Veränderung der Zieltemperatur in einem pausierten Maischeprozess wurde nicht korrekt übernommen (Anzeige ok, aber Zieltemperatur falsch)
+* Geändert:     Icon Kalender (geplanter Braustart) entfernt -> im Menü Maischeplan editieren enthalten
+
+Version 1.25 dev
 
 * Neu:          Maischeplan Verwaltung (Maischeplan wechsel)
 * Info:         Der Maischeplan Name ist auf 26 Zeichen beschränkt (maximale Dateinamenlänge Arduino LittleFS 31 (Sudname plus Endung .json)
