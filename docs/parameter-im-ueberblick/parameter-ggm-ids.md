@@ -58,4 +58,6 @@ Der Brautomat kann Hardware Profile verwalten. Ein Hardware Profil beinhaltet al
 
 Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen MaischeSud Kesseln. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
 
+Das Standardprofil beim Start des brautomaten ist immer das zuletzt ausgewählte Profil.
+
 _Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter können während eines Maischeprozesses geändert werden. Mit einem Testlauf mit einer typischen Menge Wasser können die Paramter vor einem Brautag leicht ermittelt werden._
