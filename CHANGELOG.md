@@ -8,14 +8,15 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.26a
+Version 1.26
 
-* Fix:          doppelter server.send OK entfernt
-* Fix:          in der Ansicht Tabelle Maischeplan beim Brauen (kleine Lücke auf der re Seite)
 * Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
 * Neu:          Sensorkalibrierung über das WebIf
 * Neu:          Sensor Offset Berechnung erstellt ein Logfile
 * Neu:          Sensor Offset Berechnung über Mittelwert aus 60 Messproben
+* Fix:          eine Veränderung der Zieltemperatur in einem pausierten Maischeprozess wurde nicht im Display angezeigt (WebIf ok)
+* Fix:          doppelter server.send OK entfernt
+* Fix:          in der Ansicht Tabelle Maischeplan beim Brauen (kleine Lücke auf der re Seite)
 * Fix:          Fehler in Dateisystem behoben
 * Fix:          Löschen letzter Sensor, letzter Aktor oder HLT hat den Eintrag im Dashboard nicht entfernt (erst nach reload)
 * Fix:          Wenn der Maischeprozess gestartet und ein reload auf das WebIf durchgeführt wurde, waren alle Icons zuum Editieren der Tabelle eingeblendet
