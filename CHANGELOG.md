@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.26
+Version 1.26a
 
 * Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
 * Neu:          Sensorkalibrierung über das WebIf
@@ -22,6 +22,7 @@ Version 1.26
 * Fix:          Wenn der Maischeprozess gestartet und ein reload auf das WebIf durchgeführt wurde, waren alle Icons zuum Editieren der Tabelle eingeblendet
 * Fix:          eine Veränderung der Zieltemperatur in einem pausierten Maischeprozess wurde nicht korrekt übernommen (Anzeige ok, aber Zieltemperatur falsch)
 * Geändert:     Icon Kalender (geplanter Braustart) entfernt -> im Menü Maischeplan editieren enthalten
+* Geändert:     Korrekturen WebIf
 
 Version 1.25 dev
 
