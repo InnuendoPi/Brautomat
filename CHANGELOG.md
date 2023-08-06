@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.26a
+Version 1.26b
 
+* Geändert:     Import kleinerBrauhlfer2 Version 2.6
 * Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
 * Neu:          Sensorkalibrierung über das WebIf
 * Neu:          Sensor Offset Berechnung erstellt ein Logfile
