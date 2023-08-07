@@ -1,16 +1,19 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.80 Arduino 0.6\
+VSCode 1.81 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.26b
+Version 1.26c:  Update kleinerBrauhelfer2 Version 2.6
 
-* Geändert:     Import kleinerBrauhlfer2 Version 2.6
+* Fix:          Import KBH2 Rundungsfehler behoben
+* Fix:          Importfilter kbh2 wurde nach Abschluss Import nicht gelöscht
+* Geändert:     Import kleinerBrauhlfer2 Version 2.6 Dekoktion
+* Geändert:     Import kleinerBrauhlfer2 Version 2.6 Einmaischen, Aufheizen, Zubrühen und Zuschütten
 * Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
 * Neu:          Sensorkalibrierung über das WebIf
 * Neu:          Sensor Offset Berechnung erstellt ein Logfile
