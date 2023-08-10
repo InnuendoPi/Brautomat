@@ -63,3 +63,7 @@ Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwe
 ## Dashboard
 
 Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Ist bspw. kein Nachguss im Einsatz, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente verringern den Datenverkehr.
+
+## Der Server Sent Events Button
+
+Der Brautomat versendet alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen an verbundene WebBrowser. Der Server Sent Event Button (SSE) in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde. Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Die SSE Verbindung wird automatisch wiederhergestellt. Der Button zeigt nur den Status an und hat keine Funktion.

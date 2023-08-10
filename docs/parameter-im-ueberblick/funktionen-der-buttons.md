@@ -34,10 +34,6 @@ Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bz
 
 In den Einstellungen zum Maischeplan sind neben dem Maischplan Namen und der Zeitsteuerung auch der Maischeplan Wechsel, der Import, der Export sowie das Löschen von Maischplänen verfügbar.
 
-### Der Server Sent Events Button
-
-Der Brautomat versendet alle Daten als Server Sent Events (SSE) Broadcasts in Kanälen an verbundene WebBrowser. Der Server Sent Event Button (SSE) in der Kopfzeile wird grün dargestellt, wenn eine Verbindung hergestellt wurde. Sollte die Verbindung verloren gehen, wird das SSE Icon rot dargestellt. Die SSE Verbindung wird automatisch wiederhergestellt.
-
 ### Der Maischeplan anzeigen Button
 
 Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen verbraucht der Maischeplan unnötig viel Bildschirmfläche. Mit collapse lässt sich die Tabelle Maischeplan ein- und ausklappen.

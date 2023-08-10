@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.26d:  Update kleinerBrauhelfer2 Version 2.6
+Version 1.27
 
+* Fix:          WebUpdate fehlerhaft nach Update VSCode
+* Fix:          reload Maischetabelle ohne server send ok beendet
 * Fix:          memory usage Import Filter, wenn sehr große Rezepte (Dateigröße) importiert werden
 * Fix:          Anzeige Display bei langen (zusammengesetzten) Namen im Maischeplan
 * Fix:          Anzeige Mengenangaben linksbündig (Schüttung, Wasser, Hopfen, Zugaben)
@@ -18,6 +20,10 @@ Version 1.26d:  Update kleinerBrauhelfer2 Version 2.6
 * Fix:          Importfilter BrewFather Berechnung Dauer Kochen Hopfen
 * Geändert:     Importfilter MMum VWH
 * Geändert:     Import kleinerBrauhlfer2 Version 2.6 Dekoktion
+* Geändert:     Status SSE readonly in die Systemzeile verschoben
+
+Version 1.26:   Update kleinerBrauhelfer2 Version 2.6
+
 * Geändert:     Import kleinerBrauhlfer2 Version 2.6 Einmaischen, Aufheizen, Zubrühen und Zuschütten
 * Neu:          Verwaltung von Hardware profilen (MaischeSud Kessel: erstellen, löschen, wechseln)
 * Neu:          Sensorkalibrierung über das WebIf
