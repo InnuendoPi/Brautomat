@@ -10,6 +10,10 @@ Server Sent Events (8 SSE channels)
 
 Version 1.27
 
+* Fix:         github MFLN Verbrobung WebUpdate
+
+Version 1.27
+
 * Fix:          WebUpdate fehlerhaft nach Update VSCode
 * Fix:          reload Maischetabelle ohne server send ok beendet
 * Fix:          memory usage Import Filter, wenn sehr große Rezepte (Dateigröße) importiert werden
