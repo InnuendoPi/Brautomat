@@ -8,12 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.27b
-
-* Fix:         github MFLN Verprobung WebUpdate.
-
 Version 1.27
 
+* Fix:          github MFLN Verprobung WebUpdate
+* Fix:          WebUpdate
+* Erneuert:     Zertifikate SSL
 * Fix:          reload Maischetabelle ohne server send ok beendet
 * Fix:          memory usage Import Filter, wenn sehr große Rezepte (Dateigröße) importiert werden
 * Fix:          Anzeige Display bei langen (zusammengesetzten) Namen im Maischeplan
