@@ -11,7 +11,7 @@ Server Sent Events (8 SSE channels)
 Version 1.27a
 
 * Geändert:     WebUpdate Standardverbindung SSL
-* Geändert:     WebUpdate Überprüfung der empfangenen Dateigröße, bevor vorh. Datei überschrieben wird
+* Geändert:     WebUpdate check received file size before overwriting previous file
 * Geändert:     Speicherverbrauch WebUpdate optimiert
 * Neu:          Log Datei WebUpdate (webUpdateLog.txt)
 * Fix:          github MFLN Verprobung WebUpdate
