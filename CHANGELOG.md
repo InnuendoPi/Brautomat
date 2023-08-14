@@ -8,8 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.27
+Version 1.27a
 
+* Geändert:     WebUpdate Standardverbindung SSL
+* Geändert:     WebUpdate Überprüfung der empfangenen Dateigröße, bevor vorh. Datei überschrieben wird
+* Geändert:     Speicherverbrauch WebUpdate optimiert
+* Neu:          Log Datei WebUpdate (webUpdateLog.txt)
 * Fix:          github MFLN Verprobung WebUpdate
 * Fix:          WebUpdate
 * Erneuert:     Zertifikate SSL
