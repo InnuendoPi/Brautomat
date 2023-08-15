@@ -2,7 +2,6 @@
 
 * [Der Brautomat](README.md)
 * [Installation](index/README.md)
-  * [Updates](index/updates.md)
 * [Grundeinrichtung](grundeinrichtung/README.md)
   * [Temperatursensor einrichten](grundeinrichtung/temperatursensor-einrichten.md)
   * [Induktionskochfeld GGM IDS einrichten](grundeinrichtung/induktionskochfeld-ggm-ids-einrichten.md)

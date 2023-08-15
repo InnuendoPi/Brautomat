@@ -8,8 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.27a
+Version 1.27b
 
+* Geändert:     Zeichenanzahl für Namen Sensoren und Aktoren auf maximal 15 Zeichen beschränkt
+* Korrektur:    Bei maximaler Anzahl Aktoren wurde zu wenig RAM für das SSE JSON reserviert
+* Korrektur:    Web Interface Speichern Profil wurde mit zweifach server.send ok beendet
+* Geändert:     Uhrzeit NTP Ticker ersetzt (erforderlich für SSL Verbindung)
 * Geändert:     WebUpdate Standardverbindung SSL
 * Geändert:     Speicherverbrauch WebUpdate optimiert
 * Neu:          Log Datei WebUpdate (webUpdateLog.txt)

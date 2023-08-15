@@ -1,6 +1,6 @@
 # Aufbau der Platine
 
-Diese kurze Anleitung beschreibt den Aufbau der Platine. Die Anleitung richtet sich an den üngeübten Hobbybrauer/Bastler und nicht an versierte Hobby-Elektrotechniker. Es werden einfache Lötkenntnisse vorausgesetzt, andernfalls bitte zunächst auf youtube oder anderen Kanälen Informationen einholen.
+Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
 Die Stückliste der Platine:
 
@@ -8,9 +8,9 @@ Die Stückliste der Platine:
 
 ## Überlegungen vor dem Aufbau
 
-Die Platine kan an zwei Stellen abhängig von der späteren Nutzung unterschiedlich bestückt werden:
+Die Platine kann an zwei Stellen, abhängig von der späteren Nutzung, unterschiedlich bestückt werden:
 
-1.1 der direkten Anschluss vom Originalkabel
+1.1 der direkten Anschluss vom Originalkabel GGM IDS
 
 In diesem Fall wird die weiße JST-HX Buchse benötigt (im Bild Nummer 1). Der 5er Schraubklemmblock auf dem Bild direkt neben der JST-HX Buchse wird dann nicht verwendet.
 
@@ -18,7 +18,7 @@ In diesem Fall wird die weiße JST-HX Buchse benötigt (im Bild Nummer 1). Der 5
 
 In diesem Fall wird die weiße JST-HX Buchse nicht verwendet, sondern der 5er Schraubklemmblock.
 
-Entweder wird die JST-HX Buchse oder der 5er Schraubklemmblock auf der Platine an der Position Nummer 1 eingesetzt.
+Es wird also entweder die JST-HX Buchse oder der 5er Schraubklemmblock auf der Platine an der Position Nummer 1 eingesetzt.
 
 2.1 Der Stromanschluss auf der linken Seite der Platine
 
@@ -26,18 +26,22 @@ Der Stromanschluss auf der linken Seite ist optional und wird verwendet, wenn di
 
 2.2 Der Stromanschluss auf der unteren Seite der Platine
 
-Der Stromanschluss auf der linken Seite ist optional und wird verwendet, wenn die Platine nicht über die GGM IDS mit Strom versorgt wird.
+Der Stromanschluss auf der unteren Seite ist optional und wird verwendet, wenn die Platine nicht über die GGM IDS mit Strom versorgt wird.
 
-Die Stromanschlüssen auf der linken und auf der unteren Seite sind gleichwertig. Je nach Einbau der PLatine bietet sich auf der linken oder auf der unteren Seite mehr Platz zum verkabeln an. Wird die Platine mit Strom von der GGM IDS betrieben, können beide Stromanschlüsse weggelassen werden.
+Die Stromanschlüsse auf der linken und auf der unteren Seite haben eine identische Funktion. Je nach Einbau der Platine bietet sich auf der linken oder auf der unteren Seite mehr Platz zum Verkabeln an. Wird die Platine mit Strom von der GGM IDS betrieben, können beide Stromanschlüsse weggelassen werden.
+
+Die Platine bietet zus. einen Anschluss A0. Auch dieser Anschluss ist optional und wird im Projekt Brautomat nicht verwendet. Der Anschluss A0 vom ESP8266 wird bspw. für einen Drucksensor benötigt (Spundomat). Wird die Platine in einem anderen Projekt eingesetzt, kann dieser Lötpunkt mit einem 1er Schraubklemmblock bestückt werden.
+
+Nicht empfohlen, aber möglich ist die Bestückung mit nur einem oder zwei statt der drei vorgesehenen 3er Schraubklemmblock für die Temperatursensoren. Wird kein Display angeschlossen, kann auch der 4er Schraubklemmblock auf der rechten Seite mit der Beschriftung "VCC - GND - SDA - SDL - D4" weggelassen werden.
 
 ## Die Schraubklemmblöcke einsetzen
 
 Zwei Hinweise zum Einsetzen der Schraubklemmblöcke:
 
 1. Die Öffnung der Schraubklemmblöcke zeigt immer nach außen (von der Platine weg).
-2. Jeder Schraubklemmblock wird erst mit einem Lötpunkt fixiert, um dann den korrekten Sitz kontrollieren zu können.
+2. Jeder Schraubklemmblock wird mit einem Lötpunkt fixiert, um dann den korrekten Sitz kontrollieren zu können.
 
-Zuerst werden die zwei 8er Schraubklemmblöcke an der oberen Seite eingesteckt. Anschließend wird der 5er Schraubklemmblock auf der rechten Seite mit der Beschriftung "VCC - GND - SDA - SDL - D4" eingesteckt. Zuletzt wird der 2er Schraubklemmblock auf der linken Seite mit der Beschriftung "GND - 5V" eingesteckt (wenn dieser verwendet wird).
+Zuerst werden die zwei 8er Schraubklemmblöcke an der oberen Seite eingesteckt. Anschließend wird der 5er Schraubklemmblock auf der rechten Seite mit der Beschriftung "VCC - GND - SDA - SDL - D4" eingesteckt. Zuletzt wird der 2er Schraubklemmblock auf der linken (alternativ auf der unteren) Seite mit der Beschriftung "GND - 5V" eingesteckt (wenn dieser verwendet wird).
 
 ![Schraubklemmblock](/docs/img/Schraubklemm_1.jpeg) ![Schraubklemmblock](/docs/img/Schraubklemm_2.jpeg)
 
@@ -51,11 +55,15 @@ In gleicher Weise werden die 3er Schraubklemmblöcke sowie die JST-HX Buchse bzw
 
 ## Den Widerstand einsetzen
 
-Der Widerstand ist für die Temperatursensoren zwingend erforderlich.
+Der Widerstand 4.7kOhm ist für die Temperatursensoren zwingend erforderlich.
 
 ![Widerstand](/docs/img/Widerstand_1.jpeg)
 
-Die Beinchen am Widerstand werden um 90° gebogen (bspw. um einen Schlitzschraubendreher). Anschließend wird der Widerstand an der Position mit der Beschriftung "4k7" eingesetzt. Die Richtung muss nicht beachtet werden. Wenn der Widerstand ein klein wenig hoch oder schräg steht, ist das auch ok. Nur geknickt oder mit Kraft auf die Platine gedrückt soll der Widerstand nicht. Die Grundfarbe von Widerständen (nicht die Farbringe!) hängt neben dem Hersteller auch oft von seinen Eigenschaften ab. Widerstände haben häufig eine blaue oder sandfarbene Grundfarbe hat.
+Die Beinchen am Widerstand werden um 90° gebogen (bspw. um einen Schlitzschraubendreher). Anschließend wird der Widerstand an der Position mit der Beschriftung "4k7" eingesetzt. Die Richtung muss nicht beachtet werden. Die Grundfarbe von Widerständen ist häufig blau oder sandfarben. Die Farbringe zeigen den elektrischen Widerstand:
+
+4.7kOhm Widerstand mit 4 Ringen: gelb - violett - rot - [Toleranz]
+
+4.7kOhm Widerstand mit 5 Ringen: gelb - violett - schwarz - braun - [Toleranz]
 
 ![Widerstand](/docs/img/Widerstand_2.jpeg) ![Widerstand](/docs/img/Widerstand_3.jpeg)
 
@@ -71,14 +79,12 @@ Anschließend wird die kleine Level Shifter Platine auf die Stifte aufgesetzt
 
 ![Level_Shifter](/docs/img/Level_Shifter_2.jpeg)
 
-Die Ausrichtung ist beim Level Shifter zu beachten: eine Seite ist mit LV (für low volt) beschriftet und die gegenüberliegende Seite mit HV (für high volt). LV zeigt immer zur unteren Seite der Brautomat Platine und LV1 ist immer auf der linken Seiten.
-HV zeigt immer zu den 8er Schraubklemmblöcken und HV1 ist ebenfalls links.
+Die Ausrichtung ist beim Level Shifter zu beachten: eine Seite ist mit LV (für low volt) beschriftet und die gegenüberliegende Seite mit HV (für high volt). LV zeigt zum ESP8266 und LV1 ist immer auf der linken Seiten.
+HV zeigt zu den 8er Schraubklemmblöcken und HV1 ist ebenfalls links.
 
 Die zwei Stiftleisten werden wieder mit einem Lötpunkt fixiert, um anschließend den korrekten Sitz aller Stifte in den Lötpunkten kontrollieren zu können. Anschließend werden alle Löstpunkte der Stiftleiste verlötet.
 
 ## Die Stiftleisten für die Jumper einsetzen
-
-Nun wird es klein und etwas schwieriger.
 
 ![Stiftleiste](/docs/img/Stiftleiste_1.jpeg)
 
@@ -104,11 +110,3 @@ Auch hier wieder mit einem Lötpunkt fixieren und den Sitz der Stiftleisten kont
 ![ESP8266](/docs/img/ESP8266_4.jpeg)
 
 Abschließend sollten alle Lötpunkte mit einer Lupe oder dem Smartphone begutachtet werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
-
-## Display HMI anschließen
-
-... not yet ready
-
-## GPIO Erweiterung PCF8574
-
-... yet another task to do
