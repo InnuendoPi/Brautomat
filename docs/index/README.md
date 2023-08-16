@@ -62,3 +62,20 @@ Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine n
 Das WebUpdate startet den Brautomat mehrfach neu. Als erstes wird die Firmware aktualisiert. Nach einem weiteren Neustart wird das Framework aktualisiert. Dass WebUpdate wird in der Datei webUpdateLog.txt protokolliert.
 
 Wenn die Option _WebUpdate mit Testversion_ aktiviert ist, wird das WebUpdate mit der aktuellen Entwicklerversion durchgeführt. Hierbei handelt es sich um Testversionen. Neue Funktionen in der Firmware werden (meistens) zunächst als Testversion im Repository abgelegt. Für den produktiven Einsatz sind Testversionen nicht empfohlen.
+
+## DateiUpdate
+
+Ein Update der Firmware über die Auswahl DateiUpdate erfolgt über wenige Schritte:
+
+Zunächst muss die aktuelle Firmware [hier](https://github.com/InnuendoPi/Brautomat/blob/main/tools/Firmware.zip) heruntergeladen werden. Das ZIP Archiv wird anschließend entpacken.\
+Im WebInterface Brautomat den Menüpunkt Update und anschließend DateiUpdate auswählen. Es wird eine einfache Update Webseite (im Bild 1) angezeigt:
+
+![DateiUpdate](/docs/img/dateiupdate2.jpg)
+
+Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem Archiv Firmware.ZIP die Datei _Brautomat.ino.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
+
+Auch das Dateisystem vom Brautomat kann aktualisiert werden.
+
+_Bitte unbedingt beachten:_
+
+Update FileSystem löscht alle Einstellungen und Konfigurationen. Das beinhaltet neben der Konfiguration auch MaischeSud Kessel Profile und Rezepte. Die Funktion Update FileSystem ist eher für den Notfall gedacht. In nahezu allen Fällen ist ein DateiUpdate Firmware gefolgt von einem WebUpdate die richtige Auswahl, weil das WebUpdate nach dem Update Firmware einzelene Dateien im Dateisystem aktualisiert. Die Funktion Update FileSystem erstellt das Dateisystem neu.
