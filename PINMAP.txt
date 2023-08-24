@@ -20,9 +20,6 @@ PINMAP          Info          Input           Output    Brautomat
   15  D8        SPI CS        -               (ok)      Piezo Buzzer oder Aktoren
   16  D0        HIGH at boot  No interrupt    No PWM    Aktoren
 
-  Aktoren: Rührwerk, Nachguss, Pumpen
-  Display: ITEAD Nextion HMI 3.5 Zoll Touchdisplay (Discovery F035, Enhanced K035 und Basic T035)
-
 *** PCF Pins Shield PCF8574 I2C port expander 
 
   17  P0*
@@ -34,3 +31,5 @@ PINMAP          Info          Input           Output    Brautomat
   23  P6*
   24  P7*
   
+pins[ALLPINS] = {D0, D1, D2, D3, D4, D5, D6, D7, D8, P0, P1, P2, P3, P4, P5, P6, P7};
+pin_names[ALLPINS] = {"D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7"};

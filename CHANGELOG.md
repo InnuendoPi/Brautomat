@@ -8,7 +8,20 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.27c
+Version 1.28a
+
+* Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde nicht korrekt eingelesen
+* Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde bei der Restzeit Kochen nicht eingerechnet
+* Geändert:     PWM Aktoren (duty cycle 5000ms, Intervall 500ms), Todo: Intervall ohne PWM vergrößern
+* Cleanup:      Identifizieren Pin und Typ Aktoren
+* Cleanup:      alle WebServer Antworten auf minimal response reduziert
+* Cleanup:      sämltiche String concat Manipulationen in den Falsh Speicher verschoben
+* Cleanup:      Aufruf Klassenkonstruktoren Sensoren und Aktoren durch Referenzen in der Parameterliste
+* Cleanup:      sämtliche Klassenvariablen (Sensoren, Aktiren und Induktion) sind nun private und durch getter/setter verfügbar
+* Cleanup:      Variablentyp String in allen ArduinoJSON (serialize, deserialize) durch char arrays ersetzt
+* Cleanup:      Quellcode strukturiert u. optimiert Teil2
+
+Version 1.27
 
 * Cleanup:      Quellcode strukturiert u. optimiert
 * Geändert:     DateiUpdate
