@@ -12,12 +12,15 @@ Version 1.28a
 
 * Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde nicht korrekt eingelesen
 * Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde bei der Restzeit Kochen nicht eingerechnet
-* Geändert:     PWM Aktoren (duty cycle 5000ms, Intervall 500ms), Todo: Intervall ohne PWM vergrößern
+* Fix:          Größe JSON für MaischeSud Kessel angepasst
+* Geändert:     PWM Aktoren duty cycle
+* Geändert:     DS18B20 Sensorabfrage (requestTemperatures) und Ausgabe der berechneten Temperaturen unterteilt
+* Geändert:     minimale Zeitdifferenz zwischen Sensorabfrage und Ausgabe Temperatur auf Resolution Timeout gesetzt (bspw. bei 11bit 375ms)
+* Cleanup:      Typ und Scope diverser Variablen
 * Cleanup:      Identifizieren Pin und Typ Aktoren
 * Cleanup:      alle WebServer Antworten auf minimal response reduziert
-* Cleanup:      sämltiche String concat Manipulationen in den Falsh Speicher verschoben
-* Cleanup:      Aufruf Klassenkonstruktoren Sensoren und Aktoren durch Referenzen in der Parameterliste
-* Cleanup:      sämtliche Klassenvariablen (Sensoren, Aktiren und Induktion) sind nun private und durch getter/setter verfügbar
+* Cleanup:      sämltiche String concat Manipulationen in den Flash Speicher verschoben
+* Cleanup:      sämtliche Klassenvariablen (Sensoren, Aktoren und Induktion) überarbeitet
 * Cleanup:      Variablentyp String in allen ArduinoJSON (serialize, deserialize) durch char arrays ersetzt
 * Cleanup:      Quellcode strukturiert u. optimiert Teil2
 
