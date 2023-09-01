@@ -40,6 +40,8 @@
 *.old
 *.stl
 *.ori
+*.cache
+.last-used
 core
 preproc
 sketch
@@ -47,6 +49,7 @@ libraries
 ld_h
 arduino.ar
 build.options.json
+compile_commands.json
 Brautomat.ino.elf
 Brautomat.ino.map
 includes.cache

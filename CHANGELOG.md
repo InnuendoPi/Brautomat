@@ -1,15 +1,18 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.81 Arduino 0.6\
+VSCode 1.81 Arduino-CLI 0.34.0\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.28a
+Version 1.28b
 
+* Fix:          Debug output File browser entfernt
+* Neu:          Tab Sysinfo
+* Geändert:     Umstellung auf Arduino-CLI
 * Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde nicht korrekt eingelesen
 * Fix:          kbh2 Import Hopfengabe Type Vorderwuerze 0 (Kochen alt) wurde bei der Restzeit Kochen nicht eingerechnet
 * Fix:          Größe JSON für MaischeSud Kessel angepasst
