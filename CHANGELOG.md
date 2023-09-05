@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.28b
+Version 1.28c
 
+* Cleanup:      WebServer response, var
 * Fix:          Debug output File browser entfernt
 * Neu:          Tab Sysinfo
 * Geändert:     Umstellung auf Arduino-CLI
