@@ -1,15 +1,25 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.81 Arduino-CLI 0.34.0\
+VSCode 1.82 Arduino-CLI 0.34.2\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.28c
+Version 1.28e
 
+* Geändert:     Update Intervall Sensoren, IDS2, HLT und SYS sind abhängig (Minimum)
+* Geändert:     Standard Updateintervall Sensoren, IDS und HLT auf 2000ms geändert
+* Fix:          Fehler bei Änderung SampleTime behoben
+* Geändert:     Standardauflösung Sensoren auf 12bit gesetzt (+- 0.0625°C)
+* Geändert:     IDS2 Interrupt (blaues Kabel) deaktiviert (alpha)
+* Fix:          Ticker Anpassungen IDS2, HLT und Sensoren
+* Geändert:     WLAN reconnect auf WiFi Events umgestellt (builtin)
+* Geändert:     WLAN Ticker entfernt
+* Cleanup:      Quellcode strukturiert u. optimiert Teil 3
+* Geändert:     Server requests SSE & keepAlive handling
 * Cleanup:      WebServer response, var
 * Fix:          Debug output File browser entfernt
 * Neu:          Tab Sysinfo
