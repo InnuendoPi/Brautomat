@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.28e
 
+* Fix:          WebUpdate (connection lost)
 * Geändert:     Update Intervall Sensoren, IDS2, HLT und SYS sind abhängig (Minimum)
 * Geändert:     Standard Updateintervall Sensoren, IDS und HLT auf 2000ms geändert
 * Fix:          Fehler bei Änderung SampleTime behoben
