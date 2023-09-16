@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.28f
 
+* Cleanup:      Debug Ausgaben entfernt
 * Cleanup:      Quellcode strukturiert u. optimiert Teil 4
 * Fix:          WebUpdate (connection lost)
 * Geändert:     Update Intervall Sensoren, IDS2, HLT und SYS sind abhängig (Minimum)
