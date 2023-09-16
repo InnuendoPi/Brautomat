@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.28e
+Version 1.28f
 
+* Cleanup:      Quellcode strukturiert u. optimiert Teil 4
 * Fix:          WebUpdate (connection lost)
 * Geändert:     Update Intervall Sensoren, IDS2, HLT und SYS sind abhängig (Minimum)
 * Geändert:     Standard Updateintervall Sensoren, IDS und HLT auf 2000ms geändert
