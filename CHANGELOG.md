@@ -10,6 +10,10 @@ Server Sent Events (8 SSE channels)
 
 Version 1.28f
 
+* Geändert:     WebIf Sensorkalibrierung
+* Geändert:     Anzahl Sensorwerte Kalibrierung von 60 auf 30 reduziert
+* Fix:          Startpage Display
+* Fix:          PCF8574 Initialisierung (Fehler 0x82)
 * Cleanup:      Debug Ausgaben entfernt
 * Cleanup:      Quellcode strukturiert u. optimiert Teil 4
 * Fix:          WebUpdate (connection lost)
