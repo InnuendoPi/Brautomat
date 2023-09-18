@@ -10,7 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.28
 
-* Fix:          Maischeprozess beendet: nur ein Singnal "Prozess beendet" (satt sehr sehr viele)
+* Fix:          Maischeprozess beendet: nur eine Toastnachricht/Signal "Prozess beendet"
 * Geändert:     WebIf Sensorkalibrierung
 * Geändert:     Anzahl Sensorwerte Kalibrierung von 60 auf 30 reduziert
 * Fix:          Startpage Display
