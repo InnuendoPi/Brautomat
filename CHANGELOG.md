@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.28f
+Version 1.28
 
 * Geändert:     WebIf Sensorkalibrierung
 * Geändert:     Anzahl Sensorwerte Kalibrierung von 60 auf 30 reduziert
