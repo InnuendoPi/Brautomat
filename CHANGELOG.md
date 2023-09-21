@@ -8,6 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.29
+
+* Neu:          Schalten von Aktoren und Nachguss im Maischeplan
+* Neu:          Fehlerbehandlung IDS (Interrupt)
+
 Version 1.28
 
 * Fix:          Maischeprozess beendet: nur eine Toastnachricht/Signal "Prozess beendet"
