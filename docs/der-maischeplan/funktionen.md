@@ -50,8 +50,7 @@ Wenn die Funktion _autonext_ aktiviert ist, überprüft der Brautomat forlaufend
 
 _Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird._
 
-**Sonderfunktionen**
-
+**Sonderfunktionen**\
 Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Diese Sonderfunktion kann bspw. nach dem Kochen der Würze nützlich sein, wenn einer Timer für die Nachisomerisierung gestartet und die GGM IDS ausgeschaltet werden soll. Wäre die Rasttemperatur vom Schritt Nachisomerisierung nicht auf 0°C sondern bspw. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von Kochen 100°C auf 95°C abgekühlt ist.
 
 Eine Zweite Sonderfunktion ist das Ein- und Ausschalten von Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Aktorstatus. Dabei kann der Aktorstatus entweder ON oder OFF sein. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Nachguss hat als festen Aktornamen Nachguss.
