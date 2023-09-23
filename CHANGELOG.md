@@ -11,7 +11,6 @@ Server Sent Events (8 SSE channels)
 Version 1.29
 
 * Neu:          Schalten von Aktoren und Nachguss im Maischeplan
-* Neu:          Fehlerbehandlung IDS (Interrupt)
 
 Version 1.28
 
