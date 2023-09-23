@@ -26,7 +26,6 @@ Version 1.28
 * Geändert:     Standard Updateintervall Sensoren, IDS und HLT auf 2000ms geändert
 * Fix:          Fehler bei Änderung SampleTime behoben
 * Geändert:     Standardauflösung Sensoren auf 12bit gesetzt (+- 0.0625°C)
-* Geändert:     IDS2 Interrupt (blaues Kabel) deaktiviert (alpha)
 * Fix:          Ticker Anpassungen IDS2, HLT und Sensoren
 * Geändert:     WLAN reconnect auf WiFi Events umgestellt (builtin)
 * Geändert:     WLAN Ticker entfernt

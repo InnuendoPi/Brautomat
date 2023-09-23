@@ -45,7 +45,7 @@ Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder
 
 ## Der Maischeplan anzeigen Button
 
-Der Masicheplan anzeigen Button klappt die Tabelle Maischeplan ein und aus.
+Der Maischeplan anzeigen Button klappt die Tabelle Maischeplan ein und aus.
 
 ![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
 
