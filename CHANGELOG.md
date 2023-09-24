@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.29
+Version 1.29a
 
+* Fix:          Fehler bei der Erkennung Aktor ein/ausschalten im Maischeplan behoben
 * Neu:          Schalten von Aktoren und Nachguss im Maischeplan
 
 Version 1.28
