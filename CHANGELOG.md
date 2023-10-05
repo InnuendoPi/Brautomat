@@ -8,6 +8,14 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.29b
+
+* Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
+* Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Maischeschritt mit deaktiviertem autonext
+* Fix:          Anzeigefehler Timer nach Button Prev/Next auf Maischeschritt Aktor schalten behoben
+* Fix:          Zeitgesteuerter Braustart: Aktor einschalten als erster Schritt wurde nicht erkannt
+* Geändert:     Sensorkalibrierung auf 15 Messwerte reduziert
+
 Version 1.29a
 
 * Fix:          Fehler bei der Erkennung Aktor ein/ausschalten im Maischeplan behoben

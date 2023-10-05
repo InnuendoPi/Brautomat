@@ -24,6 +24,12 @@ Das Betriebssystem MS Windows erstellt beim Anschluss vom Wemos D1 mini automati
 11: exit
 ```
 
+Der COM Port kann auf Windows Systemen über den Geräte-Manager herausgefunden werden:
+
+![COM Port](/docs/img/com.jpg)
+
+In diesem Beispiel wurde ein ESP Device auf COM7 gefunden. In den Zeilen 6 und 8 muss also COM3 durch COM7 ersetzt werden.
+
 Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/igrr/esptool-ck/releases>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme.\
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
 

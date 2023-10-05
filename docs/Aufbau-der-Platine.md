@@ -88,8 +88,7 @@ Die zwei Stiftleisten werden wieder mit einem Lötpunkt fixiert, um anschließen
 
 ![Stiftleiste](/docs/img/Stiftleiste_1.jpeg)
 
-Aus der langen Stiftleiste werden drei 3er und eine 2er Stiftleiste benötigt. Einfach mit einem Seitenschneider abknipsen.
-Die kleinen Stiftleisten werden nacheinander in die Positionen J1, J2, J3 und J4 eingesteckt und mit jeweils einem Lötpunkt fixiert. Weil die Stiftleisten sehr klein sind und beim Löten sehr schnell sehr heiß werden, gestaltet sich das Fixieren meist etwas schwierig. Ein Hilfsmittel ist bspw. eine Krokodilklemme
+Aus der langen Stiftleiste werden drei 3er und eine 2er Stiftleiste benötigt. Stiftleisten haben Sollbruchstellen und können nach der benötigen Anzahl an Stiften abgeknickt werden. Die kleinen Stiftleisten werden nacheinander in die Positionen J1, J2, J3 und J4 eingesteckt und mit jeweils einem Lötpunkt fixiert. Weil die Stiftleisten sehr klein sind und beim Löten sehr schnell sehr heiß werden, gestaltet sich das Fixieren meist etwas schwierig. Ein Hilfsmittel ist bspw. eine Krokodilklemme
 
 ![Stiftleiste](/docs/img/Stiftleiste_2.jpeg) ![Stiftleiste](/docs/img/Stiftleiste_3.jpeg) ![Stiftleiste](/docs/img/Stiftleiste_4.jpeg)
 
