@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29b
 
+* Fix:          WebUpdate max fragmention length github
 * Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
 * Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Maischeschritt mit deaktiviertem autonext
 * Fix:          Anzeigefehler Timer nach Button Prev/Next auf Maischeschritt Aktor schalten behoben
