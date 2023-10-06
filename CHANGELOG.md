@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29b
 
+* Fix:          KBH2 Datei wurde nach Rezeptimport nicht gelöscht (debug)
 * Fix:          WebUpdate max fragmention length github
 * Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
 * Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Maischeschritt mit deaktiviertem autonext
