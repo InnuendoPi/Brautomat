@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.30
+Version 1.30a
 
+* Fix:          Absturz bei Displayaktivierung behoben
 * Fix:          KBH2 Datei wurde nach Rezeptimport nicht gelöscht (debug)
 * Fix:          WebUpdate OOM/MFLN github
 * Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
