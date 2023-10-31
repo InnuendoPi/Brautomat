@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.30a
+Version 1.30b
 
+* Fix:          Bootreihenfolge Treiber Display
+* Fix:          Bootreihenfolge Treiber DS18B20
 * Fix:          Absturz bei Displayaktivierung behoben
 * Fix:          KBH2 Datei wurde nach Rezeptimport nicht gelöscht (debug)
 * Fix:          WebUpdate OOM/MFLN github
