@@ -8,6 +8,14 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.31
+
+* Update:       jQuery 3.7.1
+* Update:       Howler 2.2.4 (play audio files)
+* Optimiert:    InnuFramework CSS (purge)
+* Neu:          NTP Server konfigurierbar
+* Geändert:     Display MaischeSud angepasst
+
 Version 1.30b
 
 * Fix:          Bootreihenfolge Treiber Display

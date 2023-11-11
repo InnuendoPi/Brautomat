@@ -60,6 +60,10 @@ Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
 Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwerken verwendet. mDNS ermöglicht einen "sprechenden" Namen für den Brautomaten zu verwenden. Voreingestellt ist brautomat. Das Web Interface ist über <http://brautomat> erreichbar. Der Hostname ist auf maximal 15 Zeichen beschränkt
 
+## NTP Zeitserver
+
+Das Network Time Protokoll (NTP) synchronisiert die Uhrzeit alle 60 Minuten mit einem Zeitserver. Der Standard Zeitserver lautet europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalem Netzwerk ein Zeitgeber vorhanden ist, kann dieser Zeitgeber genutzt werden. Wenm bspw. ist eine Fritz.box (c) im Einsatz ist, kann als Zeitserver fritz.box eingetragen werden. Wenn ein lokaler Zeitgeber konfiguriert st, benötigt der Brautomat keinen Zugriff auf das Internet. Die Funktion WebUpdate nutzt für die SSL Verschlüsselung immer den Zeitserver ntp.org.
+
 ## Dashboard
 
 Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Ist bspw. kein Nachguss im Einsatz, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente verringern den Datenverkehr.
