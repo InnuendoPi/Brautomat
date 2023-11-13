@@ -2,7 +2,7 @@
 
 Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
 
-## Firmware flashen
+## Firmware flashen mit MS Windows
 
 Download: <https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip>
 
@@ -33,7 +33,7 @@ In diesem Beispiel wurde ein ESP Device auf COM7 gefunden. In den Zeilen 6 und 8
 Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/igrr/esptool-ck/releases>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme.\
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
 
-## Manuelles Flashen
+## Manuelles Flashen MS Windows und Linux
 
 Falls das Script nicht genutzt werden kann, muss die Firmware manuell auf den Wemos D1 mini übertragen werden.
 
@@ -48,6 +48,19 @@ Step 2 Firmware flashen:
 COM3 ist durch den tatsächlichen seriellen Anschluss zu ersetzen. Die Befehlszeilen Step 1 und 2 setzen voraus, dass die Dateien esptool, brautomat.ino.bin und Brautomat.mklittlefs.bin im gleichen Verzeichnis liegen.
 
 In seltenen Fällen wird unter MS Windows kein USB Port automatisch bereitgestellt. EIn USB Treiber ist hier verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
+
+## Firmware flashen mit macOS
+
+Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
+
+Mit macOS unterteilt sich das Flashen der Firmware in zwei Schritte. Im ersten Schritt wird mit dem Tool pyflasher die Firmware brautomat.ino.bin auf den Wemos aufgespielt.
+
+![macOS](/docs/img/flashen_macos.png)
+
+Anschließend muss der Brautomat mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem aufgespielt werden.\
+Im Browser öffnen: <http://brautomat/update>
+
+Nach einem Klick auf den Button "Filesystem" wird die Datei brautomat.mklittlefs.bin ausgewählt und mit Klick auf Update Filesystem aufgespielt.
 
 ## WLAN Konfiguration
 
