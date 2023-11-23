@@ -8,6 +8,15 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.32
+
+* Fix:          Fehler WebIf behoben (Webseite wurde teilweise geladen)
+* Fix:          Fehler WebIf behoben howler.js entfernt
+* Geändert:     Auf html5audio umgestellt
+* Neu:          GGM IDS Pin Interrupt kann deaktiviert werden: Errorcodes der IDS werden nicht ausgelesen
+* Neu:          GPIO Pin "Aus" eingefügt. Die Auswahl deaktiviert einen Aktor und gibt den GPIO frei
+* Fix:          Variablentyp mismatch korrigiert
+
 Version 1.31
 
 * Neu:          NTP Server konfigurierbar
