@@ -58,7 +58,9 @@ Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
 ## Aktiviere mDNS
 
-Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwerken verwendet. mDNS ermöglicht einen "sprechenden" Namen für den Brautomaten zu verwenden. Voreingestellt ist brautomat. Das Web Interface ist über <http://brautomat> erreichbar. Der Hostname ist auf maximal 15 Zeichen beschränkt
+Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwerken verwendet. mDNS ermöglicht einen "sprechenden" Namen für den Brautomaten zu verwenden. Voreingestellt ist der mDNS Name "brautomat". Das Web Interface ist über die Adresse <http://brautomat.local> erreichbar. Der Hostname ist auf maximal 15 Zeichen beschränkt.
+
+_Tipp: der mDNS Name wird ohne Protokoll (http://) und ohne top-level Domain (.local) in den Systemeinstellungen konfiguriert (brautomat)._
 
 ## NTP Zeitserver
 
