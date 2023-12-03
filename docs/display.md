@@ -26,3 +26,27 @@ _Hinweis: der Anschlus D4 verbleibt ungenutzt._
 ## Displaydatei flashen
 
 Vor dem ersten Betrieb muss das Display vorbereitet werden. Hierzu wird die passende Display Firmware aus der Tabelle heruntergeladen und auf eine microSD Karte gespeichert. Die microSD Karte wird in den SD Kartenslot vom Display eingesteckt und der Brautomat eingeschaltet. Der Flashvorgang startet automatisch. Der Flashstatus wird auf dem Display angezeigt. Nach Abschluss wird der Brautomat ausgeschaltet und die microSD Karte wird entfernt. Für den normalen Betrieb wird die microSD Karte nicht benötigt.
+
+## MaischeSud
+
+![MaischeSud](/docs/img/brewpage-sm.jpg)
+
+Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Dispaly werden die sekündlich die Informationen
+
+* Ist-Temperatur
+* Ziel-Temperatur (Rast-Temperatur)
+* verbleibende Rastdauer
+
+angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Die Zeitangabe links ist die Uhrzeit, zu welche die nächste Rast starten wird. Das grüne Play Symbol rechts zeigt an, dass die nächste Rast automatisch startet.
+
+## Kesselübersicht
+
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
+
+Die Kesselübersicht wurde aus dem MQTTDevice übernommen und zeigt den MaischeSud Kessel und falls vorhanden den Nachguss mit den Informationen Ist- und Ziel-Temnperatur an.
+
+## Manuelle Steuerung
+
+![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
+
+Die Seite manuelle Steuerung bietet die Möglichkeit, die GGM IDS manuell zu betreiben. Über die Buttons + und - können die Leistungsstufen hoch- bzw. heruntergeregelt werden.

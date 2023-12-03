@@ -54,10 +54,10 @@ Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unt
 
 Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werden nur Nextion ITEAD HMI 3.5 Zoll Displays unterstützt.
 
-* Braustatus Info (Infoscreen, keine Steuerung)
+* Kesselübersicht Info (Infoscreen, keine Steuerung)
 * MaischeSud Info (Infoscreen, keine Steuerung)
 * Manuelle Steuerung Kochen (manuelle Steuerung GGM IDS2)
 
-![Braustatus](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
 
 _"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
