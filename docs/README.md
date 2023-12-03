@@ -54,9 +54,9 @@ Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unt
 
 Hinweis: das Display ist eine optionale Erweiterung für den Brautomat. Es werden nur Nextion ITEAD HMI 3.5 Zoll Displays unterstützt.
 
-* Kesselübersicht Info (Infoscreen, keine Steuerung)
-* MaischeSud Info (Infoscreen, keine Steuerung)
-* Manuelle Steuerung Kochen (manuelle Steuerung GGM IDS2)
+* Kesselübersicht
+* MaischeSud
+* Manuelle Steuerung Kochen
 
 ![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
 

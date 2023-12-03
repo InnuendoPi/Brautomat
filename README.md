@@ -40,10 +40,10 @@ Der Brautomat wird über einen WebBrowser gesteuert.
 
 ## 💻 Nextion HMI Touchdisplay
 
-* Braustatus Info
-* MaischeSud Info
-* Manuelle Steuerung Brauen und Kochen (manuelle Steuerung GGM IDS2)
+* Kesselübersicht
+* MaischeSud
+* Manuelle Steuerung Kochen
 
-![Startseite](/docs/img/kettlepage-sm.jpg) ![Startseite](/docs/img/brewpage-sm.jpg) ![Startseite](/docs/img/induction-mode-sm.jpg)
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
 
 _"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
