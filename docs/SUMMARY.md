@@ -22,6 +22,7 @@
   * [Funktionen der Buttons](parameter-im-ueberblick/funktionen-der-buttons.md)
 * [Die Platine](die-platine.md)
   * [Aufbau der Platine](Aufbau-der-Platine.md)
+* [Display](display.md)
 * [Hardware](hardware.md)
 * [KleinerBrauhelfer2](kleinerbrauhelfer2.md)
 * [MQTTDevice](mqttdevice.md)
