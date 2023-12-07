@@ -1,6 +1,6 @@
 # Der Brautomat
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat/blob/main/README.en.md)
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
