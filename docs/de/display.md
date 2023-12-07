@@ -49,9 +49,9 @@ angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Di
 
 ![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
 
-Die Kesselübersicht wurde aus dem MQTTDevice übernommen und zeigt den MaischeSud Kessel und falls vorhanden den Nachguss mit den Informationen Ist- und Ziel-Temnperatur an.
+Die Kesselübersicht wurde vom MQTTDevice übernommen und zeigt den MaischeSud Kessel und falls vorhanden den Nachguss mit den Informationen Ist- und Ziel-Temnperatur an.
 
-_Hinweis: die Ansicht Kesselübersciht zeigt in der unteren Zeile die Adresse vom Brautomat: entweder den mDNS Namen oder die IP Adresse._
+_Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vom Brautomat: entweder den mDNS Namen oder die IP Adresse._
 
 ## Ansicht Manuelle Steuerung
 
