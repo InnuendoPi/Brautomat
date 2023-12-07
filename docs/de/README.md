@@ -44,11 +44,11 @@ Der Brautomat wird über einen WebBrowser gesteuert. Es wird ein Browser mit Unt
 
 Übersicht kompatibler [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility)
 
-![Startseite](/docs/img/brautomat.jpg)
+![Startseite](/img/brautomat.jpg)
 
-![Startseite](/docs/img/IDS-AutoTune-Ziel.jpg)
+![Chart](/img/IDS-AutoTune-Ziel.jpg)
 
-![Startseite](/docs/img/brautomat-2.jpg)
+![Aktoren_Sensoren](/img/brautomat-2.jpg)
 
 ## 💻 Nextion HMI Touchdisplay
 
