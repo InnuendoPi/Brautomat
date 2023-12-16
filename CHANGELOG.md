@@ -8,8 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.32
+Version 1.32b
 
+* Fix:          Fehler maximale Anzahl an Sensoren
+* Fix:          Fehler beim reload WebIf nach Neustart
+* Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
 * Fix:          Fehler WebIf behoben (Webseite wurde teilweise geladen)
 * Fix:          Fehler WebIf behoben howler.js entfernt
 * Geändert:     Auf html5audio umgestellt
