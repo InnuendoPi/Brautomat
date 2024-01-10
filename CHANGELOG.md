@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.32b
+Version 1.32c
 
+* Geändert:     Neues Format Maische Malz und mehr Rezeptimport
 * Fix:          Fehler maximale Anzahl an Sensoren
 * Fix:          Fehler beim reload WebIf nach Neustart
 * Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
