@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.34
 
+* Geändert:     Quellcode ESP8266 und ESP32 zusammengefügt.
 * Geändert:     Neues Format Maische Malz und mehr Rezeptimport
 
 Version 1.33j
@@ -216,7 +217,7 @@ Version 1.22d
 * Geändert:     PID Algorithmus IDS: Individuell oder IDS
 * Geändert:     PID Algorithmus HLT: Individuell oder Nachguss
 * Geändert:     PID Algorithmus: Button löschen entfernt
-* Geändert:     Datenmenge unr requests PID Manger IDS/HLT minimiert
+* Geändert:     Datenmenge und requests PID Manger IDS/HLT minimiert
 * Geändert:     Web Interface Reihenfolge
 * Korrektur:    Sudname nach Deaktivierung geplanter Braustart nicht korrekt angezeigt
 
