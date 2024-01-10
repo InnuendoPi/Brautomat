@@ -8,9 +8,31 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.32c
+Version 1.34
 
 * Geändert:     Neues Format Maische Malz und mehr Rezeptimport
+
+Version 1.33j
+
+* Geändert:     GPIO Auswahl für Buzzer
+* Geändert:     Zurücksetzen in Werkseinstellung angepasst (WLAN und Konfig löschen aktiviert)
+* Fix:          Standard PID Regel MaischeSud korrigiert
+* Geändert:     Standard SampleTime MaischeSud angepasst
+* Fix:          Fehler maximale Anzahl an Sensoren
+* Fix:          Fehler beim reload WebIf nach Neustart
+* Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
+* Fix:          Datei lang.js in WebUpdate hinzugefügt (keine Sprachauswahl nach Update auf 1.33f)
+* Geändert:     Auswahlliste Sensor-Typ (DS18B20, PT100x) und Sensor-Pin (2-, 3-, 4-Leiter) in Sprachfiles verschoben
+* Geändert:     Auswahlliste PID Regeln in Sprachfiles verschoben
+* Geändert:     Auswahlliste Typ IDS in Sprachfiles verschoben
+* Neu:          Toast Nachrichten an Sprachfiles angepasst
+* Fix:          Sprachfiles Auswahl Toasts und MP3 falsche Reihenfolge (on/off vertauscht)
+* Neu:          Auswahl Sprache (de, en)
+* Neu:          Verzeichnis /language
+* Neu:          offenes Format (JSON) für Sprachdateien und ToolTipps erstellt
+
+Version 1.32c
+
 * Fix:          Fehler maximale Anzahl an Sensoren
 * Fix:          Fehler beim reload WebIf nach Neustart
 * Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
