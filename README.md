@@ -1,6 +1,6 @@
 # Der Brautomat
 
-[![Brautomat32](https://img.shields.io/badge/NEW-Brautomat32-blue.svg)](https://github.com/InnuendoPi/Brautomat32)
+[![Brautomat](https://img.shields.io/badge/NEW-Brautomat32-blue.svg)](https://github.com/InnuendoPi/Brautomat32)
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
@@ -8,21 +8,34 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
 
 ## Hauptfunktionen
 
-* Steuerung der Induktionskochfelder GGM IDS1 und IDS2
-* PID-Controller integriert
+* Steuerung der Induktionskochfelder GGM
+  * GGM IDS1
+  * GGM IDS2
+* integrierter PID-Controller
 * PID-AutoTune
-* digitale Sensoren DS18B20
+* Temperatursensoren
+  * Dallas DS18B20
+  * PT100 und PT1000 (MAX31865)
+* Maischeplan
+  * Automatisches Anfahren und halten der Rasttemperaturen
+  * Würzekochen
+  * Alarmierung für Hopfengaben
+  * Bis zu 20 Teilschritte
 * Verwaltung von Maischeplänen
-* Maischepläne mit bis zu 20 Teilschritten
 * Steuerung für einen Nachguss Kessel (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * PWM für Aktoren
+* Audio Alarme
+  * MP3 Alarme
+  * Akkustische Signale (Piezo Buzzer)
+* Toasts Nachrichten
 * Temperaturverlauf im Maischeprozess als Grafik (line chart)
-* Rezept Import aus dem kleinen Brauhelfer2
-* Rezept Import aus Maische Malz und Mehr
-* Rezept Import aus BrewFather
+* Rezept Import
+  * kleinen Brauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
 * Rezept Export
-* Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
+* Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 ## 📚 Dokumentation
 
@@ -50,4 +63,23 @@ Der Brautomat wird über einen WebBrowser gesteuert.
 
 ![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
 
-_"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
+## 🗺️ Multilingual
+
+Der Brautomat unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
+
+_Unterstützte das Projekt und übersetze den Brautomat in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
+
+## 📙 Platine 2.0
+
+![Platine](docs/img/Platine20.jpg)
+
+Passend zu den Projekten Brautomat und MQTTDevice ist eine Platine für den Arduino ESP Controller verfügbar. Die Gerber Datei ist im Ordner Tools hinterlegt. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+
+## 📗 Gehäuse
+
+![Gehäuse](docs/img/brautomat_01.jpg)
+![Platine](docs/img/brautomat_02.jpg)
+
+## 🔉MP3 Dateien
+
+_Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
