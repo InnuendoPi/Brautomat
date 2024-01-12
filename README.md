@@ -1,4 +1,4 @@
-# Der Brautomat
+# Der Brautomat für ESP8266
 
 [![Brautomat](https://img.shields.io/badge/NEW-Brautomat32-blue.svg)](https://github.com/InnuendoPi/Brautomat32)
 
