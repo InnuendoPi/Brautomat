@@ -56,7 +56,7 @@
     "MISC_DISPLAY_EN": "Enable touchdisplay [D1,D2] *",
     "MISC_DISPLAY_PAGE": "default page",
     "MISC_DISPLAY_PAGE_LIST": ["Overview", "Mash tun", "manual mode"],
-    "MISC_SPI": "Enable MAX31865 Amplifier [D9,D10,D11] *",
+    "MISC_SPI": "Enable MAX31865 Amplifier [D0,D1,D2] *",
     "MISC_MDNS_EN": "Enable mDNS *",
     "MISC_MDNS_NAME": "mDNS name",
     "MISC_NTP": "NTP time server *",

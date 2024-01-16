@@ -56,7 +56,7 @@
     "MISC_DISPLAY_EN": "Aktiviere Touchdisplay [D1,D2] *",
     "MISC_DISPLAY_PAGE": "Startseite wählen",
     "MISC_DISPLAY_PAGE_LIST": ["Kesselübersicht", "MaischeSud", "manueller Modus"],
-    "MISC_SPI": "Aktiviere MAX31865 Amplifier [D9,D10,D11] *",
+    "MISC_SPI": "Aktiviere MAX31865 Amplifier [D0,D1,D2] *",
     "MISC_MDNS_EN": "Aktiviere mDNS *",
     "MISC_MDNS_NAME": "mDNS Name",
     "MISC_NTP": "NTP Zeitserver *",
