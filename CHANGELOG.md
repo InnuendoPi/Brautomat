@@ -8,6 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.35
+
+* Geändert:     Steuerbefehle für IDS, HLT und Aktoren
+
 Version 1.34a
 
 * Fix:          Übersetzung
