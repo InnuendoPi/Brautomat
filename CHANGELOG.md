@@ -8,7 +8,23 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35
+Version 1.35c
+
+* Fix:          Löschen der aller Einstellungen und WLAN Einstellungen löschen
+* Update:       ESPTool 4.7.0
+* Geändert:     Flashen.cmd
+
+* Fix:          Fehler beenden Zeileneditor behoben, wenn eine neue hinzugefügt wurde
+* Geändert:     Zeileneditor wird nun mit Klick auf ein beliebiges Symbol zum Editieren beendet
+* Geändert:     der Speichern Button wird bei Änderung Maischeplan rot angezeigt. Nach Speichern oder verlassen grün
+* Geändert:     der Button Zeileneditor verlassen ohne speichern wird bei Änderung im Maischeplan grau dargestellt
+* Geändert:     Der Fokus wird mit Klick auf Tabellenzeile editieren oder Tabellenzeile hinzufügen auf das Element Name (erste Spalte) gesetzt
+* Geändert:     Der Button Database (Zeitplaner, Maischeplan wechseln, importieren, exportieren oder löschen) wird bei Änderungen am Maischeplan ausgeblendet
+
+* Geändert:     Temperaturvorgaben Import in die Maischeplaneinstellungen Tab Voreinstellung Import verschoben
+* Geändert:     Maischeplan Wechsel, Import, Export und Löschen in Tab Verwaltung verschoben
+* Geändert:     Reihenfolge JS Dateien beim Start (lang.js vor brautomat.min.js)
+* Erweitert:    Anleitung auf gitbook
 
 * Geändert:     Steuerbefehle für IDS, HLT und Aktoren
 * Fix:          Im manuellen Modus war die Anzeige Leistung nach dem Abschalten nicht korrekt (progress bar)
