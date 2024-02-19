@@ -8,7 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35c
+Version 1.35d
+
+* Geändert:     Wird vor dem Hinzufügen einer neuen Zeile zum Maischeplan eine vorhandene Zeile angeklickt, wird die neue Zeile nach der angeklcikten Tabellenzeile eingefügt.
+* Fix:          Script Flashen.cmd Parameter --baud eingefügt
 
 * Fix:          Löschen der aller Einstellungen und WLAN Einstellungen löschen
 * Update:       ESPTool 4.7.0
