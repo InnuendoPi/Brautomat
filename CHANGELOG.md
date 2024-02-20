@@ -8,7 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35d
+Version 1.35f
+
+* Geändert:     eine Tabellenzeile wird nach einem Klick mit Markierung angezeigt
+* Geändert:     Wird eine Zeile zum Maischeplan hinzugefügt, wird die Zeile mit Markierung angezeigt und der Fokus wird auf die erste Zelle (Rastname) gesetzt
 
 * Geändert:     Wird vor dem Hinzufügen einer neuen Zeile zum Maischeplan eine vorhandene Zeile angeklickt, wird die neue Zeile nach der angeklcikten Tabellenzeile eingefügt.
 * Fix:          Script Flashen.cmd Parameter --baud eingefügt
