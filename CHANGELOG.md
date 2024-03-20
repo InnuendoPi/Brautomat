@@ -1,15 +1,16 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.86 Arduino-CLI 0.35\
+VSCode 1.87 Arduino-CLI 0.35\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.37c
+Version 1.37d
 
+* Geändert:     Standard SampleTime für Induktion auf 2000ms angepasst
 * Update:       ArduinoJSON lib 7.0.4
 * Geändert:     Initialisierung Ticker Objekte
 * Fix:          Bufferoverflow Toasts behoben
