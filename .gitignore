@@ -52,6 +52,7 @@ build.options.json
 compile_commands.json
 Brautomat.ino.elf
 Brautomat.ino.map
+infos.txt
 includes.cache
 local.eagle.flash.ld
 local.eagle.app.v6.common.ld
