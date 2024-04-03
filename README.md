@@ -1,10 +1,10 @@
 # Der Brautomat für ESP8266
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
+[![Brautomat](https://img.shields.io/badge/NEW-Brautomat32-blue.svg)](https://github.com/InnuendoPi/Brautomat32)
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
-***
+---
 
 ## Hauptfunktionen
 
@@ -39,19 +39,21 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
-Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)
+
+Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+
+Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHANGELOG.md)
 
 ## 📰 WebInterface
 
 Der Brautomat wird über einen WebBrowser gesteuert.
 
-![Startseite](docs/img/brautomat.jpg)
+![Startseite](/docs/img/brautomat.jpg)
 
-![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)
+![Startseite](/docs/img/IDS-AutoTune-Ziel.jpg)
 
-![Startseite](docs/img/brautomat-2.jpg)
+![Startseite](/docs/img/brautomat-2.jpg)
 
 ## 💻 Nextion HMI Touchdisplay
 
@@ -59,58 +61,24 @@ Der Brautomat wird über einen WebBrowser gesteuert.
 * MaischeSud
 * Manuelle Steuerung Kochen
 
-![Kesselübersicht](docs/img/kettlepage-sm.jpg) ![MaischeSud](docs/img/brewpage-sm.jpg) ![Manuelle Steueung](docs/img/induction-mode-sm.jpg)
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
 
 ## 🗺️ Multilingual
 
-Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
+Der Brautomat unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
 
-_Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
+_Unterstützte das Projekt und übersetze den Brautomat in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
 
 ## 📙 Platine 2.0
 
 ![Platine](docs/img/Platine20.jpg)
 
-Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Tools hinterlegt. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
 
 ## 📗 Gehäuse
 
 ![Gehäuse](docs/img/brautomat_01.jpg)
 ![Platine](docs/img/brautomat_02.jpg)
-
-## 📘 Pin-Belegung
-
-Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
-
-GPIO Zuordnung:
-
-![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
-
-| Bezeichner | GPIO    | Input  | Output | Beschreibung                                  |
-| ---------- | ------- | ------ | ------ | --------------------------------------------- |
-| D0         | GPIO026 | ok     | ok     |                                               |
-| D1         | GPIO022 | ok     | ok     |                                               |
-| D2         | GPIO021 | ok     | ok     |                                               |
-| D3         | GPIO017 | ok     | ok     | DS18B20                                       |
-| D4         | GPIO016 | ok     | ok     |                                               |
-| D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
-| D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
-| D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
-| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
-| D9         | GPIO027 | ok     | ok     | SCLK                                          |
-| D10        | GPIO025 | ok     | ok     | MISO                                          |
-| D11        | GPIO032 | ok     | ok     | MOSI                                          |
-| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high, strapping pin |
-| D13        | GPIO004 | ok     | ok     | CS0                                           |
-| D14        | GPIO000 | pullUp | (ok)   | must be low to enter flash mode               |
-| D15        | GPIO002 | ok     | ok     | onboard LED, must be low to enter flash mode  |
-| D16        | GPIO033 | ok     | ok     | CS1                                           |
-| D17        | GPIO014 | ok     | ok     | CS2                                           |
-| D18        | GPIO015 | ok     | ok     |                                               |
-| D19        | GPIO013 | ok     | ok     |                                               |
-||||||
-
-Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
 
 ## 🔉MP3 Dateien
 
