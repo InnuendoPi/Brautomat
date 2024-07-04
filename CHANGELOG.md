@@ -11,7 +11,6 @@ Server Sent Events (8 SSE channels)
 Version 1.42
 
 * Update:       ArduinoJSON 7.1.0
-* Update:       Arduino core 3.2.0_dev
 
 Version 1.41
 
