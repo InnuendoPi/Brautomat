@@ -1,12 +1,41 @@
 # Changelog
 
-ESP32 Arduino 2.0.14\
-VSCode 1.87 Arduino 0.6\
-VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
+ESP8266 Arduino 3.1.2\
+VSCode 1.90 Arduino 0.6 Arduino CLI 1.0.1\
+VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
+
+Version 1.42
+
+* Update:       ArduinoJSON 7.1.0
+* Update:       Arduino core 3.2.0_dev
+
+Version 1.41
+
+* Update:       Arduino CLI 1.0.1
+* Fix:          KBH2 Rezeptimport: Wassertemperatur bei Maischeschritt Typ Einmaischen korrigiert
+* Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
+* Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
+* Fix:          Display Rahmen für Anzeige Restzeit für 6 Zeichen korrigiert (das 6. Zeichen wurde nur teilweise angezeigt)
+
+Version 1.40
+
+* Neu:          Logging Bibliothek erstellt: Ausgabe auf serial [Aus, Error, Info, Verbose]
+* Neu:          Logging je Module konfigurierbar [Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, System]
+* Fix:          Änderung InnuAPID Parameter im Modus Automatic korrigiert
+* Fix:          Fehler Maischeplan umbenennen behoben, wenn neuer Maischeplanname bereits existiert
+* Fix:          MDNS typo
+* Fix:          Status Play Button nach Reset/Abschalten wurde nicht korrekt ausgewertet
+* Fix:          Sonderfunktionen Aktoren (Temperatur 0°C und Dauer 0 Minuten) wurden bei Forward/Backward nicht ausgeführt.
+
+Version 1.39
+
+* Update:       ESPtool 4.7.0
+* Update:       VSCode 1.88
+* Fix:          Korrektur Maischeplan umbenennen
 
 Version 1.38a
 
