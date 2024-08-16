@@ -1,16 +1,30 @@
 # Changelog
 
 ESP8266 Arduino 3.1.2\
-VSCode 1.90 Arduino 0.6 Arduino CLI 1.0.1\
+VSCode 1.92 Arduino 0.6 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
-Server Sent Events (8 SSE channels)
+Server Sent Events (6 SSE channels)
 
-Version 1.42
+Version 1.44
 
-* Update:       ArduinoJSON 7.1.0
+* Fix:          SSE Sensoren JSON: Unexpected non-whitespace character after JSON
+* Fix:          verlorener Server Send Event verursacht durch unexpected non-whitespace character (line 2 column 1)
+* Fix:          Überlagerung Variablenname in html get request innerhalb EventListener system
+* Fix:          Fehler im Modul checkAliveSSE behoben
+* Fix:          Fehler Sichtbarkeit von Toast Nachrichten mit Firefox behoben (toast visability not defined)
+* Fix:          unvollständiges Webfrontend (SSE) durch Fehler unexpected non-whitespace char (Test: Edge, Firefox, Chrome, Safari)
+* Optimiert:    Logging (not yet ready)
+* Neu:          neue Option Logging Maischeprozess
+* Fix:          typo in den Module initialSSE und SSEKeepAlive
+* Geändert:     SSEKeepAlive Intervall 15s
+* Update:       Arduino CLI 1.0.4
+* Neu:          InnuTicker 0.0.4 setLastTime
+* Neu:          last event id (millis) und retry für SSE
+* Optimiert:    Speicherverbrauch SSE Boradcasts und Web Interface request (avoid strings)
+* Fix:          html tag label (Neustart und Sudname)
 
 Version 1.41
 
