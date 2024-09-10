@@ -9,6 +9,19 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
+Version 1.45.2
+
+* Neu:          Die Zeitsteuerung wird nun gespeichert und bei Neustart eingelesen
+* Neu:          das Element DateTimePicker zeigt nun das ausgewählte Datum und Uhrzeit an
+* Neu:          liegt die Startzeit in der Vergangeheit (ab 1 Sekunde), wird das aktuelle Datum im DateTimePicker ausgewählt
+* Neu:          die Startzeit wird auf ganze Minuten abgerundet (die Sekunden werden abgeschnitten)
+* Fix:          Zeitvergleich Startzeit : aktuelle Zeit fehlerhaft (epochtime) nach Austausch NTP Bibliothek
+
+Version 1.45.1
+
+* Neu:          Während eines Maischeprozesses werden Leistung IDS2, HLT und Aktoren werden im Flash gespeichert
+* Fix:          der Maischeschritt wurde nicht automatisch fortgesetzt, wenn ein aktiver Schritt mit deaktiviertem autonext über den Play Button gestartet war
+
 Version 1.45
 
 todo dallas isConversionComplete()
