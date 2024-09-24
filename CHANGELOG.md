@@ -9,6 +9,53 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
+Version 1.46
+
+* Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
+* Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
+* Hinweis:      die Eingabe von Umlauten und Sonderzeichen (außer #) in Sensor- und Aktornamen im WebIf ist nicht mehr möglich
+* Hinweis:      Sensor- und Aktornamen dürfen maximal 20 Zeichen lang sein
+* Hinweis:      Maischplan Namen sind auf maximal 25 Zeichen beschränkt. Namen werden gekürzt (Begrenzung LittleFS Dateiname)
+* Fix:          Import Maischeplan Typ Brautomat Formatfehler Rezepte mit Version älter als 1.39. Überprüfung eingefügt
+* Fix:          Doppeltes Warnsignal bei Toastnachrichten Typ Error entfernt
+* Fix:          Einstelllung für das Logging Display wurde nicht korrekt gespeichert
+* Fix:          Display Anzeige Modus manuelle Steuerung fehlerhafte Status Überprüfung (typo)
+* Fix:          Abfrage AdruinoJSON containskey (deprecated) ersetzt
+* Fix:          die Vorgaben Temperatur WPH und VWH wurde nicht korrekt übertragen. Das konnte zu einem Abbruch beim Speichern der Konfiguration führen.
+* Fix:          InnuNextion Display Lib: type mismatch für das Logging
+* Fix:          InnuNextion Display Lib: wenn die Startseite auf MaischeSud oder Manuell eingestellt war, war der erste Seitenwechsel am Display fehlerhaft
+* Fix:          Toast Nachricht WebUpdate abgeschlossen wurde nach Umstellung JSON nicht mehr angezeigt
+* Fix:          Timing Problem behoben, wenn die PID Regel von manueller PID Modus auf AutoTune PID Modus umgestellt wurde (Kp, Kd und Ki blieben auf 0)
+* Fix:          fehlerhafte GPIO Zuweisung Pin D16 korrigiert
+* Fix:          Überprüfung GPIO D16 in Benutzung korrigiert
+* Fix:          Fehler korrigiert, wenn ein zweiter PT100x Sensor (an GPIO D16) hinzugefügt wurde
+* Fix:          Voreinstellung Logging System von INFO auf NONE korrigiert
+* Fix:          Überprüfung der Eingabe Aktorname korrigiert
+* Update:       ArduinoJSON 7.2.0
+* Update:       ESPTool 4.8.0
+* optimiert:    diverse Quellcode Optimierungen
+* optimiert:    avoid Strings (not yet ready)
+* optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
+* optimiert:    Ladevorgang JS/CSS/TTF durch gzip beschleunigt
+
+Weitere Entwicklung: (nicht in Version 1.46 enthalten - Brautomat32 platformIO)
+
+* Migration:    platformIO Portierung ESP32 Wemos D1 IDF4 (4.4.7) abgeschlossen
+* Migration:    platformIO Portierung ESP32 Wemos D1 IDF5 (5.1.4) abgeschlossen
+* Migration:    platformio Portierung ESP8266 Wemos D1 Mini (2.0.17) abgeschlossen
+* Hinweis:      ein WebUpdate ESP32 von IDF4 (4.x) auf IDF5 (5.x) ist nicht möglich (geänderte Paritionen)
+* Sync:         Quellcode synchronisiert ESP8266, ESP32 IDF4 und ESP32 IDF5 (pending ... )
+* Sync:         Compiler Direktiven ESP8266, ESP32, ESP_IDF4 und ESP_IDF5
+* Fix:          ESP-IDF5 WebUpdate Funktion httpUpdate flush durch clear ersetzt (libs, siehe github repository esp32)
+* Fehler:       ESP32 Task Watchdog funktioniert (noch) nicht in der Version ESP_IDF5. In ESP_IDF5 deaktiviert
+* EPS_IDF5dev:  Build EPS-IDF 5.3.1 hinzugefügt (pioarduino)
+
+Version 1.45.3
+
+* entfernt:     Funktion convertCharToHex entfernt
+* entfernt:     Funktion decToHex entfernt
+* optimiert:    avoid Strings
+
 Version 1.45.2
 
 * Neu:          Die Zeitsteuerung wird nun gespeichert und bei Neustart eingelesen
