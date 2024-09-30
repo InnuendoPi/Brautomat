@@ -4,14 +4,16 @@ ESP8266 Arduino 3.1.2\
 VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
-InnuTicker task scheduler lib\
+InnuTicker Task Scheduler lib\
 InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.1
+Version 1.46.2
 
+* Fix:          Timing Problem DS18B20 im async Modus behoben
+* Fix:          Logging Output Sensoren typo behoben
 * Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
 * Update:       InnuLog
 
@@ -56,12 +58,6 @@ Weitere Entwicklung: (nicht in Version 1.46 enthalten - Brautomat32 platformIO)
 * Fehler:       ESP32 Task Watchdog funktioniert (noch) nicht in der Version ESP_IDF5. In ESP_IDF5 deaktiviert
 * EPS_IDF5dev:  Build EPS-IDF 5.3.1 hinzugefügt (pioarduino)
 
-Version 1.45.3
-
-* entfernt:     Funktion convertCharToHex entfernt
-* entfernt:     Funktion decToHex entfernt
-* optimiert:    avoid Strings
-
 Version 1.45.2
 
 * Neu:          Die Zeitsteuerung wird nun gespeichert und bei Neustart eingelesen
@@ -77,9 +73,7 @@ Version 1.45.1
 
 Version 1.45
 
-todo dallas isConversionComplete()
-
-* Neu:          neue Option Zeitzone in den Systemeinstellungen. Tabelle Zeitzonen siehe Anleitung
+* Neu:          neue Option Zeitzone in den Systemeinstellungen. [Tabelle Zeitzonen](https://innuendopi.gitbook.io/brautomat32/parameter-im-uberblick/parameter-system#ntp-zeitzone) siehe Anleitung
 * Neu:          InnuNextion Library zur Steuerung Nextion Display
 * Fix:          Debug Ausgaben Sensoren (type mismatch)
 * Fix:          Sensortyp Variable id falsch gesetzt
@@ -118,39 +112,57 @@ Version 1.44
 * Fix:          Fehler im Modul checkAliveSSE behoben
 * Fix:          Fehler Sichtbarkeit von Toast Nachrichten mit Firefox behoben (toast visability not defined)
 * Fix:          unvollständiges Webfrontend (SSE) durch Fehler unexpected non-whitespace char (Test: Edge, Firefox, Chrome, Safari)
+* Fix:          Arduino core: httpc fix data read was less than expected (#10019) (ESP-IDF 4.4.7)
 * Optimiert:    Logging (not yet ready)
 * Neu:          neue Option Logging Maischeprozess
 * Fix:          typo in den Module initialSSE und SSEKeepAlive
 * Geändert:     SSEKeepAlive Intervall 15s
 * Update:       Arduino CLI 1.0.4
 * Neu:          InnuTicker 0.0.4 setLastTime
+* Geändert:     ESP-IDF 4.4.7 backport
 * Neu:          last event id (millis) und retry für SSE
 * Optimiert:    Speicherverbrauch SSE Boradcasts und Web Interface request (avoid strings)
 * Fix:          html tag label (Neustart und Sudname)
+
+Version 1.43
+
+* Update:       ArduinoJSON 7.1.0
+* Fix:          Arduino core: set back Pin signal polarity (#9952)
+* Entfernt:     Arduino core: httpc fix data read was less than expected (#10019): Fix verursacht fehlheraftes Laden Webfrontend
+* Fix:          Arduino core: fix RMT mutex unlock using incorrect channel number in rmtDeinit (#10034)
+* Update:       ESP-IDF v4.4.8 final
+* Update:       Arduino CLI 1.0.3
+* Fix:          html setInduction Aufruf angepasst
 
 Version 1.41
 
 * Update:       Arduino CLI 1.0.1
 * Fix:          KBH2 Rezeptimport: Wassertemperatur bei Maischeschritt Typ Einmaischen korrigiert
+* Update:       ESP32 core 2.0.17 ESP-IDF v4.4.7
 * Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
 * Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
 * Fix:          Display Rahmen für Anzeige Restzeit für 6 Zeichen korrigiert (das 6. Zeichen wurde nur teilweise angezeigt)
 
 Version 1.40
 
+* Update:       ESP32 core 2.0.16 ESP-IDF v4.4.7
 * Neu:          Logging Bibliothek erstellt: Ausgabe auf serial [Aus, Error, Info, Verbose]
 * Neu:          Logging je Module konfigurierbar [Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, System]
 * Fix:          Änderung InnuAPID Parameter im Modus Automatic korrigiert
 * Fix:          Fehler Maischeplan umbenennen behoben, wenn neuer Maischeplanname bereits existiert
 * Fix:          MDNS typo
+* Fix:          ESP32 Fehler beim Lader WebIf (unvollständig, ESP32 reboot, keine Icons, leere Maischeplan)
+* Optimiert:    Laden WebIf ESP32
 * Fix:          Status Play Button nach Reset/Abschalten wurde nicht korrekt ausgewertet
 * Fix:          Sonderfunktionen Aktoren (Temperatur 0°C und Dauer 0 Minuten) wurden bei Forward/Backward nicht ausgeführt.
 
 Version 1.39
 
+* Update:       ESP32 core 2.0.15 ESP-IDF v4.4.7
 * Update:       ESPtool 4.7.0
 * Update:       VSCode 1.88
 * Fix:          Korrektur Maischeplan umbenennen
+* Fix:          Restore 2.x RX1/TX1 RX2/TX2 pins hardwareSerial (#9502)
 
 Version 1.38a
 
