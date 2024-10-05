@@ -10,8 +10,10 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.2
+Version 1.46.4
 
+* Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging mit ESP32 möglich)
+* Neu:          Funktionen für Display Buttons im manuellen Modus implementiert
 * Fix:          Timing Problem DS18B20 im async Modus behoben
 * Fix:          Logging Output Sensoren typo behoben
 * Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
