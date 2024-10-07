@@ -10,7 +10,7 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.4
+Version 1.46.5
 
 * Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging mit ESP32 möglich)
 * Neu:          Funktionen für Display Buttons im manuellen Modus implementiert
