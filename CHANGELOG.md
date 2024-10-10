@@ -1,6 +1,6 @@
 # Changelog
 
-ESP8266 Arduino 3.1.2\
+ESP8266 Arduino 3.2.0\
 VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
@@ -10,14 +10,18 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.5
+Version 1.46.7
 
-* Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging mit ESP32 möglich)
+* Update:       Braustatus lesen/speichern/löschen im EEprom überarbeitet
+* Update:       Handling SoftwareSerial für Nextion Display angepasst
+* Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging nur mit ESP32)
 * Neu:          Funktionen für Display Buttons im manuellen Modus implementiert
 * Fix:          Timing Problem DS18B20 im async Modus behoben
 * Fix:          Logging Output Sensoren typo behoben
+* Fix:          InnuNextion Display Lib Fehler warte auf Daten SoftwareSerial behoben
 * Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
 * Update:       InnuLog
+* Update:       ESP8266 3.2.0 core libs
 
 Version 1.46
 
