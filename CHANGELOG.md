@@ -10,8 +10,10 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.7
+Version 1.46.8
 
+* Fix:          Parameter AutoTune IDS wurde nicht korrket gespeichert (typo)
+* Fix:          ON/OFF in den Sonderfunktionen für Aktoren, Nachguss oder IDS sind nicht mehr case sensitive
 * Fix:          Konvertierung Sensoradressen überarbeitet (first char lost)
 * Update:       Braustatus lesen/speichern/löschen im EEprom überarbeitet
 * Update:       Handling SoftwareSerial für Nextion Display angepasst
