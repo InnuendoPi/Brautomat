@@ -12,6 +12,7 @@ Server Sent Events (6 SSE channels)
 
 Version 1.46.7
 
+* Fix:          Konvertierung Sensoradressen überarbeitet (first char lost)
 * Update:       Braustatus lesen/speichern/löschen im EEprom überarbeitet
 * Update:       Handling SoftwareSerial für Nextion Display angepasst
 * Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging nur mit ESP32)
