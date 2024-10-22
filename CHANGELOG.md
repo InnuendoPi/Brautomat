@@ -15,6 +15,7 @@ Version 1.46.10
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das Display auf +5% bzw. -5% angepasst
 * Geändert:     Manueller Modus: neues Event Slider move eingefügt
 * Geändert:     Manueller Modus: Display Icon OnOff eingefügt
+* Fix:          Manueller Modus: Touch Event der Buttons +/- wurden nicht immer korrekt erkannt
 * Fix:          Parameter AutoTune IDS korrigiert (#Fehler SkyBandit)
 * Fix:          Parameter Kp, Ki und Kd im Modus manueller PID wurden aus dem WebIf in das falsche Profil (last statt active) übertragen (#Fehler lowPerformer)
 * Fix:          Parameter Debug AutoTune IDS wurde nicht korrket gespeichert
