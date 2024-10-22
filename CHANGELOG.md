@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.8
+Version 1.46.9
 
+* Fix:          Parameter AutoTune IDS korrigiert (#Fehler SkyBandit)
+* Fix:          Parameter Kp, Ki und Kd im Modus manueller PID wurden aus dem WebIf in das falsche Profil (last statt active) übertragen (#Fehler lowPerformer)
+* Fix:          Parameter Debug AutoTune IDS wurde nicht korrket gespeichert
 * Fix:          Parameter AutoTune IDS wurde nicht korrket gespeichert (typo)
 * Fix:          ON/OFF in den Sonderfunktionen für Aktoren, Nachguss oder IDS sind nicht mehr case sensitive
 * Fix:          Konvertierung Sensoradressen überarbeitet (first char lost)
