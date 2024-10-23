@@ -12,6 +12,9 @@ Server Sent Events (6 SSE channels)
 
 Version 1.46.10
 
+* Fix:          CheckIDSState (err state) wird nur aufgerufen, wenn PIN Interrupt (blau) gesetzt ist
+* Fix:          Bei einer Änderung IDS PID Regel wurden die Daten Kp, Ki und Kd (last/active) nicht korrekt an das WebIf gesendet
+* Entfernt:     Debugausgaben entfernt
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das Display auf +5% bzw. -5% angepasst
 * Geändert:     Manueller Modus: neues Event Slider move eingefügt
 * Geändert:     Manueller Modus: Display Icon OnOff eingefügt
