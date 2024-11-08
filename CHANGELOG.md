@@ -1,7 +1,7 @@
 # Changelog
 
 ESP8266 Arduino 3.2.0\
-VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
+VSCode 1.95 Arduino 0.7.2 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker Task Scheduler lib\
@@ -10,8 +10,23 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.12
+Version 1.47.7
 
+* Neu:          Webhook Aktoren
+* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
+* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS: ON, OF und Rasten mit Temperatur und Timer
+* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
+* Neu:          Kessel-Eigenschaft Name hinzugefügt
+* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
+* Geändert:     im Display wird auf der Seite Kesselübersicht der Name (Kessel-Eigenschaft) angezeigt
+* Geändert:     im WebIf wird für die zweite IDS und Nachguss der Name (Kessel-Eigenschaft) angezeigt
+* Fix:          Suche nach DS18B20 Adressen korrigiert
+* Fix:          Speichern aktuellen Braustatus im Eeprom um Kessel Sud erweitert
+* Update:       VSCode 1.95
+
+Version 1.46.13
+
+* Geändert:     Suche Sensoradressen angepasst (ESP8266)
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das WebIf auf +1% bzw. -1% angepasst
 * Geändert:     Manueller Modus: Shortcuts für IDS Leistung auf 0, 20, 40, 60, 80 und 100% Kreise erstellt
 * Fix:          Sync manueller Modus Display nach WebIf und WebIf
