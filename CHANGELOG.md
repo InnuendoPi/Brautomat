@@ -1,27 +1,27 @@
 # Changelog
 
-ESP8266 Arduino 3.2.0\
-VSCode 1.95 Arduino 0.7.2 Arduino CLI 1.0.4\
-VSCode plugin ESP8266LittleFS based on ESP8266fs\
-InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
-InnuTicker Task Scheduler lib\
-InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
-InnuLog Debug lib serial monitor\
-InnuFramework CSS/JS bootstrap 4.6.2\
+ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
+VSCode 1.95 Arduino 0.7 Arduino CLI 1.1.0
+VSCode plugin ESP8266LittleFS
+InnuAPID AutoTune PID lib
+InnuTicker Task Scheduler lib
+InnuNextion Display lib
+InnuLog Debug lib serial monitor
+InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
 Version 1.47.7
 
-* Neu:          Webhook Aktoren
+* Neu:          Webhook für Aktoren
+* Geändert:     im WebIf Aktoren werden PWM und invertieren passend zur Auswahl GPIO/Webhook ein- bzw. ausgeblendet
+* Fix:          default Kesselname gesetzt
+* Neu:          Eigenschaft Name hinzugefügt
 * Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
-* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS: ON, OF und Rasten mit Temperatur und Timer
+* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
 * Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
-* Neu:          Kessel-Eigenschaft Name hinzugefügt
 * Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
-* Geändert:     im Display wird auf der Seite Kesselübersicht der Name (Kessel-Eigenschaft) angezeigt
-* Geändert:     im WebIf wird für die zweite IDS und Nachguss der Name (Kessel-Eigenschaft) angezeigt
+* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
 * Fix:          Suche nach DS18B20 Adressen korrigiert
-* Fix:          Speichern aktuellen Braustatus im Eeprom um Kessel Sud erweitert
 * Update:       VSCode 1.95
 
 Version 1.46.13
