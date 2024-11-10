@@ -10,9 +10,9 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.13
+Version 1.46.14
 
-* Geändert:     Suche Sensoradressen angepasst (Fehlermeldung bergo, ESP8266)
+* Geändert:     Suche Sensoradressen angepasst
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das WebIf auf +1% bzw. -1% angepasst
 * Geändert:     Manueller Modus: Shortcuts für IDS Leistung auf 0, 20, 40, 60, 80 und 100% Kreise erstellt
 * Fix:          Sync manueller Modus Display nach WebIf und WebIf
@@ -23,7 +23,7 @@ Version 1.46.13
 * Geändert:     Manueller Modus: neues Event Slider move eingefügt
 * Geändert:     Manueller Modus: Display Icon OnOff eingefügt
 * Fix:          Manueller Modus: Touch Event der Buttons +/- wurden nicht immer korrekt erkannt
-* Fix:          Parameter AutoTune IDS korrigiert (#Fehler SkyBandit)
+* Fix:          Parameter AutoTune IDS korrigiert
 * Fix:          Parameter Kp, Ki und Kd im Modus manueller PID wurden aus dem WebIf in das falsche Profil (last statt active) übertragen (#Fehler lowPerformer)
 * Fix:          Parameter Debug AutoTune IDS wurde nicht korrket gespeichert
 * Fix:          Parameter AutoTune IDS wurde nicht korrket gespeichert (typo)
