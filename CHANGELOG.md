@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
-VSCode 1.95 Arduino 0.7 Arduino CLI 1.1.0
+VSCode 1.96 Arduino 0.7 Arduino CLI 1.1.0
 VSCode plugin ESP8266LittleFS
 InnuAPID AutoTune PID lib
 InnuTicker Task Scheduler lib
@@ -9,6 +9,8 @@ InnuNextion Display lib
 InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
+
+Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
 Version 1.47.2
 
