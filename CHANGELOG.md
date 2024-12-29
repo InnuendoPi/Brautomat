@@ -1,17 +1,21 @@
 # Changelog
 
-ESP8266 Arduino 3.2.0\
-VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
-VSCode plugin ESP8266LittleFS based on ESP8266fs\
-InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
-InnuTicker Task Scheduler lib\
-InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
-InnuLog Debug lib serial monitor\
-InnuFramework CSS/JS bootstrap 4.6.2\
+ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
+VSCode 1.95 Arduino 0.7 Arduino CLI 1.1.0
+VSCode plugin ESP8266LittleFS
+InnuAPID AutoTune PID lib
+InnuTicker Task Scheduler lib
+InnuNextion Display lib
+InnuLog Debug lib serial monitor
+InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.11
+Version 1.47.2
 
+* Fix:          Einlesen Maischeplan nach Stromunterbrechung: Zuweisung Maische, Sud, HLT, Steuerbefehl oder Aktor korrigiert
+* Fix:          Fehler Hinzufügen/Entfernen von Maischeschritte behoben, wenn der Brauprozess gestartet ist
+* Update:       Nextion Display Dateien aktualisiert
+* Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)
 * Fix:          typedef time_t
 * Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
 * Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
@@ -34,11 +38,11 @@ Version 1.47.11
 * Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
 * Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
 * Fix:          Suche nach DS18B20 Adressen korrigiert
-* Update:       VSCode 1.95
+* Update:       VSCode 1.96
 
 Version 1.46.13
 
-* Geändert:     Suche Sensoradressen angepasst (Fehlermeldung bergo, ESP8266)
+* Geändert:     Suche Sensoradressen angepasst (ESP8266)
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das WebIf auf +1% bzw. -1% angepasst
 * Geändert:     Manueller Modus: Shortcuts für IDS Leistung auf 0, 20, 40, 60, 80 und 100% Kreise erstellt
 * Fix:          Sync manueller Modus Display nach WebIf und WebIf
