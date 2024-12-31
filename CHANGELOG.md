@@ -12,8 +12,10 @@ Server Sent Events (6 SSE channels)
 
 Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
-Version 1.47.3
+Version 1.47.4
 
+* Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
+* Fix:          duration time bei Stromunterbrechung für ESP8266
 * Fix:          Casting private ArduinoJSON objects (Update 7.3)
 * Update:       ArduinoJSON 7.3
 * Update:       VSCode 1.96
