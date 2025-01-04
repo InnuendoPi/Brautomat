@@ -12,8 +12,14 @@ Server Sent Events (6 SSE channels)
 
 Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
-Version 1.47.4
+Version 1.47.6
 
+* Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
+* Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
+* Geändert:     Modul checkIDSState Kessel Sud
+* Neu:          Auswahl Gerätetyp GGM oder Relais für Maische und Sud
+* Fix:          Korrektur Sprachdateien für das Objekt SUD
+* Fix:          Korrektur Pin Interrupt handling zweite GGM IDS
 * Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
 * Fix:          duration time bei Stromunterbrechung für ESP8266
 * Fix:          Casting private ArduinoJSON objects (Update 7.3)
