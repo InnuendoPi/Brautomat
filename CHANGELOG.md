@@ -12,8 +12,12 @@ Server Sent Events (6 SSE channels)
 
 Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
-Version 1.47.6
+Version 1.47.8
 
+* Fix:          Korrekturen html und CSS
+* Fix:          Korrektur Links nach gitbook
+* Geändert:     Sensor Informationen als Tab eingefügt
+* Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
 * Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
 * Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
 * Geändert:     Modul checkIDSState Kessel Sud
