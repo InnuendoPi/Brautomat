@@ -12,8 +12,19 @@ Server Sent Events (6 SSE channels)
 
 Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
-Version 1.47.8
+Version 1.48
 
+* Update:       Release 1.48 erstellt
+
+Version 1.47.9
+
+* Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
+* Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
+* Fix:          Auswertung Sonderbefehle bei Klick auf den Button Play korrigiert
+* Fix:          der PID Controller wurde mit dem Sonderbefehl IDS nicht korrekt gestartet, wenn die IDS ausgeschaltet war
+* Fix:          Verzögerung Ablauf Maischeplan behoben, wenn die Rastdauer mit 0s eingetragen war
+* Geändert:     Parameter Temperatur Kochen wurde in die Einstellungen Maischeplan verschoben
+* Fix:          InnuAPID PID Controller debug Ausgaben aktuelle Leistung typo
 * Fix:          Korrekturen html und CSS
 * Fix:          Korrektur Links nach gitbook
 * Geändert:     Sensor Informationen als Tab eingefügt
