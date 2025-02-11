@@ -13,6 +13,7 @@ Hinweis: vor dem Update auf 1.47+ ein Backup der Konfiguration erstellen
 
 Version 1.48.8
 
+* Fix:          Fehler nach Upgrade von mklittlefs behoben. Das littlefs Image Brautomat.mklittlefs.bin war leer
 * Update:       VSCode 1.97
 * Update:       Dallas Temperature Bibliothek 4.0.4
 * Fix:          Temperatur Übergang Kochen wurde nicht korrekt an PID Controller übertragen, wenn der brauprozess aus dem Flashspeicher fortgesetzt wurde
